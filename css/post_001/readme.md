@@ -33,7 +33,7 @@ GDG에 갔을때 css에 변수가 생긴다고 들었고 다른 분들께 이말
 
 나는 스크립트로 변환해서 사용하는게 편하다.
 <a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a>여기서 less.js파일을 다운받는다.
-~~
+~~~~
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,23 +68,23 @@ GDG에 갔을때 css에 변수가 생긴다고 들었고 다른 분들께 이말
 </content>
 </body>
 
-~~
+~~~~
 이런식으로 head태그 안에 쓰면 된다.
 
 <br><br>
 1.변수
-~~
+~~~~
 @commonColor: #f1f1f1;
 @headerColor: #ff495e;
 @headerFontColor: #5b83ad;
 
 body{background-color: @commonColor;}
 header{background-color: @headerColor; color: @headerFontColor;}
-~~
+~~~~
 이런 식으로 나타낼 수 있다.
 <br><br>
 2.중첩
-~~
+~~~~
 section{
   width: 100%; margin-top: 50px;
   div{
@@ -97,7 +97,7 @@ section{
   }
 }
 
-~~
+~~~~
 내가 자주 사용하는 패턴이다.
 css보다 보기가 더 편하고 직관성이 뛰어난거 같다.
 css보다 코드수를 대폭 줄일수 있다.
@@ -106,7 +106,7 @@ css보다 코드수를 대폭 줄일수 있다.
 
 3.계산식
 
-~~
+~~~~
 bottom{
 	@width : 80px;
 	@height : @width/4*5;
@@ -119,43 +119,43 @@ p{
   background: fadeout(@color, 50%);
   padding: @padding+50;
 }
-~~
+~~~~
 간단간단한 계산식도 가능하다.
 %계산이나 사칙연산정도.
 
 <br><br>
 4.임포트
-~~
+~~~~
 @import (less) "./index";
 @import (less) "../certificate/joinConsumer";
-~~
+~~~~
 간단하게 포함시키는거다. @import뒤에 (less)를 적어서 자동으로 less파일을 포함시킨다.
 
 
 <br><br>
 5.믹스인(sass는 @mixin으로 쓴다.)
-~~
+~~~~
 .round_5(@radius: 20px){
   border-radius: @radius;
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
 }
 span.round{.round_5; float: left; border: 1px solid orange; width: 60px; height: 60px;}
-~~
+~~~~
 이런식으로 쓸 수 있다. 아주 좋은 기능이고 진짜 많이 쓰인다는데 나는 아직 안써봤다.
 
 <br><br>
 6.자바스크립트실행
 
-~~
-@wellcome: '"hello world".toUpperCase()+"~~~"';
+~~~~
+@wellcome: '"hello world".toUpperCase()+"~~~~~"';
 
-@wellcome: "HELLO WORLD~~~";
+@wellcome: "HELLO WORLD~~~~~";
 
 @screenWidth: 'document.body.clientWidth';
 @screenHeight: 'document.body.clientHeight';
 
-~~
+~~~~
 
 와우!!! css에서 스크립트를 쓴다.....
 @wellcome 라고 작성된 두가지는 똑같은 거고
