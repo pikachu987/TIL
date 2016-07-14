@@ -1,0 +1,61 @@
+/*1.변수 */
+@commonColor: #f1f1f1;
+@headerColor: #ff495e;
+@headerFontColor: #5b83ad;
+
+body{background-color: @commonColor;}
+header{background-color: @headerColor; color: @headerFontColor;}
+/*2.중첩 */
+section{
+  width: 100%; margin-top: 50px;
+  div{
+    width: 60%; height: 40px; border-bottom: 1px solid green;
+    .title{ 
+      text-align: left;
+      a{text-decoration:none; cursor:pointer;}
+    }
+    .date{text-align: center;}
+  }
+}
+/*3.계산식 */
+bottom{
+	@width : 80px;
+	@height : @width/4*5;
+	div{margin-top: 100px; width: @width; height: @height; border: 1px solid red; float: left;}
+}
+
+@color: #c1c1c1;
+@padding: 10px;
+p{
+  background: fadeout(@color, 50%);
+  padding: @padding+50;
+}
+
+/*4.임포트 */
+@import (less) "./index";
+
+
+/*5.믹스인(sass는 @mixin으로 쓴다.) */
+.round_5(@radius: 20px){
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+span.round{.round_5; float: left; border: 1px solid orange; width: 60px; height: 60px;}
+
+
+
+/*6.자바스크립트실행 */
+@wellcome: '"hello world".toUpperCase()+"~~~"';
+@screenWidth: 'document.body.clientWidth';
+@screenHeight: 'document.body.clientHeight';
+
+
+
+
+
+
+
+
+
+
