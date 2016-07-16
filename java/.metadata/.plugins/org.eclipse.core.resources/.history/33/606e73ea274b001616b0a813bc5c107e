@@ -1,0 +1,11 @@
+package ex1.process3;
+
+import ex1.process3.robot.Robot;
+
+public class TaekwonV extends Robot {
+
+	public TaekwonV(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+}

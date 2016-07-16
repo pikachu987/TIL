@@ -10,13 +10,13 @@ public class TaekwonV extends Robot {
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		System.out.println("TaekwonV Attack");
+		System.out.println("TaekwonV Attack - Missile and attack");
 	}
 
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		System.out.println("TaekwonV Move");
+		System.out.println("TaekwonV Move - only walk");
 	}
 
 }

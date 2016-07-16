@@ -1,0 +1,11 @@
+package ex1.process2;
+
+public class FlyingStrategy implements MovingStrategy {
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

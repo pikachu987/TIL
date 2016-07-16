@@ -10,13 +10,13 @@ public class Atom extends Robot {
 	@Override
 	public void attack() {
 		// TODO Auto-generated method stub
-		System.out.println("Atom attack");
+		System.out.println("Atom attack - strong punch and attack");
 	}
 
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		System.out.println("Atom move");
+		System.out.println("Atom move - fly and walk");
 	}
 
 }
