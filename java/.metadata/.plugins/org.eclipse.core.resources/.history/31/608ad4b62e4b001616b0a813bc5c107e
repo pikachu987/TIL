@@ -1,0 +1,7 @@
+package ex2.process1;
+
+public class Book {
+	private String sign;
+	private String date;
+	private int price;
+}

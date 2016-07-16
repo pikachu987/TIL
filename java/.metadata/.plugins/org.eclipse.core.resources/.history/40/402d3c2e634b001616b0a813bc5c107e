@@ -1,0 +1,9 @@
+package ex2.process1;
+
+
+public interface State {
+	public void checkout(Book book);
+	public void cancel(Book book);
+	public void bookReturn(Book book);
+	public void keep(Book book);
+}

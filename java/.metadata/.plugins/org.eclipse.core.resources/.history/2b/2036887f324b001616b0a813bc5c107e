@@ -1,0 +1,19 @@
+package ex2.process2;
+
+public class User {
+	private String name;
+	private int price = 0;
+	
+	public User(String name){
+		this.name = name;
+	}
+	public String getName(){
+		return this.name;
+	}
+	public int getPrice(){
+		return this.price;
+	}
+	public void addPrice(int price){
+		this.price += price;
+	}
+}

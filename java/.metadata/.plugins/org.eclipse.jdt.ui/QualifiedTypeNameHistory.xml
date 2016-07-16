@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Robot"/>
+<fullyQualifiedTypeName name="TaekwonV"/>
+<fullyQualifiedTypeName name="Atom"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.MoveAction"/>
+<fullyQualifiedTypeName name="ex1.process2.MovingStrategy"/>
+<fullyQualifiedTypeName name="ex1.process2.AttackStrategy"/>
+<fullyQualifiedTypeName name="ex1.process2.WalkingStrategy"/>
+<fullyQualifiedTypeName name="ex1.process2.MissileStrategy"/>
+<fullyQualifiedTypeName name="ex1.process2.PunchStrategy"/>
+<fullyQualifiedTypeName name="ex1.process2.FlyingStrategy"/>
+<fullyQualifiedTypeName name="ex2.process1.PricePolicy"/>
+<fullyQualifiedTypeName name="ex2.process1.Book"/>
+<fullyQualifiedTypeName name="ex2.process1.Buy"/>
+<fullyQualifiedTypeName name="ex2.process1.BookPricePolicy"/>
+<fullyQualifiedTypeName name="ex2.process1.NonePricePolicy"/>
+<fullyQualifiedTypeName name="ex2.process1.User"/>
+<fullyQualifiedTypeName name="ex2.process1.UserPricePolicy"/>
+<fullyQualifiedTypeName name="ex1.process1.User"/>
+<fullyQualifiedTypeName name="ex1.process2.ON"/>
+<fullyQualifiedTypeName name="ex1.process2.SLEEP"/>
+<fullyQualifiedTypeName name="ex2.process1.Loan"/>
+<fullyQualifiedTypeName name="ex2.process1.Avaliable"/>
+<fullyQualifiedTypeName name="ex2.process1.Reserved"/>
+</qualifiedTypeNameHistroy>

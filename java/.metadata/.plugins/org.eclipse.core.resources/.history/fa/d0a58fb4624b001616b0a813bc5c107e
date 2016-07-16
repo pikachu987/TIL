@@ -1,0 +1,43 @@
+package ex2.process1;
+
+public class Avaliable implements State {
+	private static Avaliable avaliable = new Avaliable();
+	private Avaliable(){};
+	public static Avaliable getInstance(){
+		return avaliable;
+	}
+	@Override
+	public void on_button_pushed(Book book) {
+		// TODO Auto-generated method stub
+		System.out.println("Sleep ON");
+		light.setState(SLEEP.getInstance());
+	}
+
+	@Override
+	public void off_button_pushed(Light light) {
+		// TODO Auto-generated method stub
+		System.out.println("Light Off");
+		light.setState(OFF.getInstance());
+	}
+	@Override
+	public void checkout(Book book) {
+		// TODO Auto-generated method stub
+		book.
+	}
+	@Override
+	public void cancel(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void bookReturn(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keep(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

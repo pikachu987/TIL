@@ -1,0 +1,17 @@
+package ex2.process1;
+
+public class Book {
+	private String sign;
+	private int year;
+	private int price;
+	
+	public String getSign(){
+		return this.sign;
+	}
+	public int getYear(){
+		return this.year;
+	}
+	public int getPrice(){
+		return this.price;
+	}
+}

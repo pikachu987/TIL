@@ -1,0 +1,12 @@
+package ex2.process1;
+
+public class Buy {
+	private User user;
+	private Book book;
+	private int volume;
+	public Buy(User user, Book book, int volume){
+		this.user = user;
+		this.book = book;
+		this.volume = volume;
+	}
+}

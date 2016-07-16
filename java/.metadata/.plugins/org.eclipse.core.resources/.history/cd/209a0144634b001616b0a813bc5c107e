@@ -1,0 +1,30 @@
+package ex2.process1;
+
+public class Avaliable implements State {
+	private static Avaliable avaliable = new Avaliable();
+	private Avaliable(){};
+	public static Avaliable getInstance(){
+		return avaliable;
+	}
+	@Override
+	public void checkout(Book book) {
+		// TODO Auto-generated method stub
+		book.setState(Loan.getInstance());
+	}
+	@Override
+	public void cancel(Book book) {
+		// TODO Auto-generated method stub
+		book.setState(Keep.getInstance());
+	}
+	@Override
+	public void bookReturn(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keep(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

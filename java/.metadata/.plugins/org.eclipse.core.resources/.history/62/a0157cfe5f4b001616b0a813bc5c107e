@@ -1,0 +1,23 @@
+package ex1.process2;
+
+public class SLEEP implements State {
+	private static SLEEP off = new SLEEP();
+	private SLEEP(){}
+	public static SLEEP getInstance(){
+		return off;
+	}
+	@Override
+	public void on_button_pushed(Light light) {
+		// TODO Auto-generated method stub
+		System.out.println("Light On");
+		light.setState(ON.getInstance());
+		
+	}
+
+	@Override
+	public void off_button_pushed(Light light) {
+		// TODO Auto-generated method stub
+		System.out.println("반응 없음");
+	}
+
+}

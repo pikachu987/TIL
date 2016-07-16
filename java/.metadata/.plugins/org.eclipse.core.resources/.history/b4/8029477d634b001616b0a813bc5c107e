@@ -1,0 +1,13 @@
+package ex2.process1;
+
+public class Book {
+	private State state;
+	
+	public Book(){
+		state = Avaliable.getInstance();
+	}
+	
+	public void setState(State state){
+		this.state = state;
+	}
+}

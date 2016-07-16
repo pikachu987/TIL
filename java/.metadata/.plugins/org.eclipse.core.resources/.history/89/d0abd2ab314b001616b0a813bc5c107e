@@ -1,0 +1,14 @@
+package ex2.process1;
+
+public class Main {
+	public static void main(String[] args) {
+		User user1 = new User("user1");
+		User user2 = new User("user2");
+
+		Book book1 = new Book("foo", 1900, 15000);
+		Book book2 = new Book("boo", 2010, 27000);
+		Book book3 = new Book("coo", 2016, 12500);
+		
+		
+	}
+}

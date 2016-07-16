@@ -1,0 +1,34 @@
+package ex2.process1;
+
+public class Kept implements State {
+	private static Kept reserved = new Kept();
+	private Kept(){};
+	public static Kept getInstance(){
+		return reserved;
+	}
+	@Override
+	public void checkout(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void reserve(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void cancel(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void timeout(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void bookReturn(Book book) {
+		// TODO Auto-generated method stub
+		
+	}
+}
