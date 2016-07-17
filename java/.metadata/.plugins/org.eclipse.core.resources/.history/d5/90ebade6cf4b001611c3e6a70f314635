@@ -1,0 +1,25 @@
+package ex3.process1;
+
+public class MoneyBox {
+	private int money = 0;
+	
+	public void insert(int money){
+		this.money += money;
+	}
+	public void dispense(int price){
+		this.money -= price;
+	}
+	public int returnMoney(){
+		int tmp = this.money;
+		this.money = 0;
+		return tmp;
+	}
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+}

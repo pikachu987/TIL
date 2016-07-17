@@ -1,0 +1,29 @@
+package ex3.process1;
+
+public class Drinking {
+	public int price;
+	public int stock;
+	
+	public Drinking(int price, int stock) {
+		super();
+		this.price = price;
+		this.stock = stock;
+	}
+	
+	public void dispense(){
+		this.stock--;
+	}
+	
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+}

@@ -1,0 +1,27 @@
+package ex3.process1;
+
+public class SoldOutState implements State {
+	private VendingMachine machine;
+	
+	public SoldOutState(VendingMachine machine){
+		this.machine = machine;
+	}
+	@Override
+	public void insertMoney(int money) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pushButton(int price) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void returnMoney() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

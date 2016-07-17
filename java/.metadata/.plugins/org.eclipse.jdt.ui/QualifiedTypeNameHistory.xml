@@ -23,4 +23,8 @@
 <fullyQualifiedTypeName name="ex2.process1.Loan"/>
 <fullyQualifiedTypeName name="ex2.process1.Avaliable"/>
 <fullyQualifiedTypeName name="ex2.process1.Reserved"/>
+<fullyQualifiedTypeName name="ex3.process1.NoMoneyState"/>
+<fullyQualifiedTypeName name="ex3.process1.MoneyBox"/>
+<fullyQualifiedTypeName name="ex3.process1.Drinking"/>
+<fullyQualifiedTypeName name="ex3.process1.VendingMachine"/>
 </qualifiedTypeNameHistroy>

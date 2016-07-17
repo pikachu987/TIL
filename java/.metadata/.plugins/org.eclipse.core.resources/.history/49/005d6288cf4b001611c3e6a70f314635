@@ -1,0 +1,22 @@
+package ex3.process1;
+
+public class VendingMachine {
+	private State noMoneyState;
+	private State noEnoughMoneyState;
+	private State enoughMoneyState;
+	private State soldOutState;
+	private State state;
+	
+	private MoneyBox moneyBox;
+	private Drinking drinking;
+	
+	public VendingMachine(int stock, int price){
+		noMoneyState = new NoMoneyState();
+		noEnoughMoneyState = new NoEnoughMoneyState();
+		enoughMoneyState = new EnoughMoneyState();
+		soldOutState = new SoldOutState();
+		
+		moneyBox = new MoneyBox();
+		drinking = new Drinking(stock, price);
+	}
+}
