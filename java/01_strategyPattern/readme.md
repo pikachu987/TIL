@@ -5,7 +5,10 @@
 * **Strategy**: 인터페이스나 추상 클래스로 외부에서 동일한 방식으로 알고리즘을 호출하는 방법을 명시한다.
 * **ConcreateStrategy1, ConcreateStrategy2, ConcreateStrategy3**: 스트래티지 패턴에서 명시한 알고리즘을 실제로 구현한 클래스다.
 * **Context**: 스트래티지 패턴을 이용하는 역활을 수행한다. 필요에 따라 동적으로 구체적인 전략을 바꿀수 있도록 setter 메서드를 제공한다.
-
+  
+  
+  
+  
 ##### ex1.process1 의문제점
 * 기존 로봇의 공격 또는 이동 방법을 수정하려면 어떤 변경 작업을 해야 하는가? 예를 들어 아톰이 날 수는 없고 오직 걷게만 만들고 싶다면? 또는 태권V를 날게 하려면?
 * 새로운 로봇을 만들어 기존의 공격 또는 이동 방법을 추가하거나 수정하려면? 예를 들어 새로운 로봇으로 지구의 용사 선가드를 만들어 태권V의 미사일 공격 기능을 추가하려면?
@@ -18,7 +21,10 @@
 * Robot, Atom, TaekwonV는 Context 역활을 한다.
 * MovingStrategy와 AttackStrategy는 각각 Strategy역활을 한다.
 * WalkingStrategy, FlyingStrategy, PunchStrategy, MissileStrategy 클래스는 ConcreateStrategy 역활을 한다.
-
+  
+  
+  
+  
 ###### ex1.process2 수정
 
 > Attack와 Moving 을 인터페이스로 만들고 할수 있는 Action을 다 인터페이스를 상속받은 클래스로 만들었다.
@@ -50,6 +56,10 @@
 > 먼저 인터페이스를 만든 뒤 Buy객체의 상속자에 넣어보자.
 > 이제 위에설명에 따라 가격정책 클래스들을 만들어보자.
 > 이제 main클래스에 멋대로 넣어보자!!!
-
+  
+  
+  
+  
+  
 ##### ex2.process1 정리
 > 패키지를 이제는 가격정책, 객체로 나눠보자!
