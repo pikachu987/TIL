@@ -1,0 +1,7 @@
+package com.company.ex2_factory;
+
+import org.springframework.beans.factory.FactoryBean;
+
+public class SearchClientFactoryBean implements FactoryBean<SearchClientFactory>{
+	
+}

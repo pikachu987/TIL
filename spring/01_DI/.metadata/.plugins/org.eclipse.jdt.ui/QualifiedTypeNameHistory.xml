@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.company.AuthException"/>
+<fullyQualifiedTypeName name="com.company.UserNotFoundException"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Configurable"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="com.company.User"/>
+<fullyQualifiedTypeName name="com.company.UserRepository"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.company.PasswordChangeService"/>
+<fullyQualifiedTypeName name="com.company.AuthFailLogger"/>
+<fullyQualifiedTypeName name="com.company.AuthenticationService"/>
+<fullyQualifiedTypeName name="org.springframework.core.annotation.AnnotationConfigurationException"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="com.company.config.Config"/>
+<fullyQualifiedTypeName name="com.company.config.Config_main2"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Import"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.ImportResource"/>
+<fullyQualifiedTypeName name="com.company.main3ExFile.Sensor"/>
+<fullyQualifiedTypeName name="com.company.main3And4ExFile.Sensor"/>
+<fullyQualifiedTypeName name="com.company.ErpOrderData"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.FactoryBean"/>
+<fullyQualifiedTypeName name="com.company.ex2_factory.SearchClientFactoryBuilder"/>
+<fullyQualifiedTypeName name="com.company.ex2_factory.SearchClientFactoryBean"/>
+<fullyQualifiedTypeName name="com.company.ex1_static.ErpClientFactory"/>
+<fullyQualifiedTypeName name="com.company.ex2_factory.SearchClientFactory"/>
+</qualifiedTypeNameHistroy>

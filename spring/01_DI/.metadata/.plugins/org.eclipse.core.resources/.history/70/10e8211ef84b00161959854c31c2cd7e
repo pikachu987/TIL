@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="authFailLogger" class="com.company.AuthFailLogger"></bean>
+	<bean id="authenticationService" class="com.company.AuthenticationService">
+		<property name="failLogger" ref="authFailLogger"/>
+	</bean>
+	<bean id="user1" class="com.company.User">
+		<constructor-arg value="user1"/>
+		<constructor-arg value="1234"/>
+	</bean>
+</beans>

@@ -1,0 +1,11 @@
+package com.company;
+
+public abstract class ErpClientFactory {
+	public static ErpClientFactory instance(){
+		return new DefaultErpClientFactory();
+	}
+	protected ErpClientFactory(){
+		
+	}
+	public abstract ErpClient create();
+}

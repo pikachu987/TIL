@@ -1,0 +1,18 @@
+package com.company;
+
+public class AuthenticationService {
+	private UserRepository userRepository;
+	private AuthFailLogger failLogger;
+	
+	public AuthInfo authenticate(String id, String password){
+		User user = userRepository.findUserById(id);
+		if(user == null){
+			throw new UserNotFoundException();
+		}
+		
+		if(!user.matchPassword(password)){
+			failLogger.insertBadPw(id, password);
+			throw new AuthException();
+		}
+	}
+}

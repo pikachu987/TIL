@@ -1,0 +1,17 @@
+package com.company;
+
+public class User {
+	private String id;
+	private String password;
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public boolean matchPassword(String password){
+		return false;
+	}
+}

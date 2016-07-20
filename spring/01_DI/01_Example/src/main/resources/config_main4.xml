@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="sensor1" class="com.company.main3And4ExFile.Sensor">
+		<property name="additionalInfo">
+			<props>
+				<prop key="threshold">1500</prop>
+				<prop key="retry">3</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="sensor2" class="com.company.main3And4ExFile.Sensor">
+		<property name="agentCodes">
+			<set>
+				<value>200</value>
+				<value>300</value>
+			</set>
+		</property>
+		<property name="additionalInfo">
+			<value>
+				threshold = 3000
+				retry = 5
+			</value>
+		</property>
+	</bean>
+</beans>

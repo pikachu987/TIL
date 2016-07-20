@@ -1,0 +1,14 @@
+package com.company;
+
+public class UserRepository {
+	private Map<String, User> userMap = new HashMap<String, User>();
+	
+	public User findUserById(String id){
+		return userMap.get(id);
+	}
+	
+	public void setUsers(List<User> users){
+		for(User u: useres)
+			userMap.put(u.getId(), u);
+	}
+}

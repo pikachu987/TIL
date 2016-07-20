@@ -1,0 +1,59 @@
+### 팩토리 방식의 스프링 빈 설정
+
+객체를 생성할 때 new 키워드를 이용하는 것이 보통이지만, 객체를 생성하기 위해 정적(static) 메서드를 사용해야 할 때가 있다. 또한, new 키워드로 객체를 생성한 뒤에 다소 복잡한 과정을 거쳐 초기화를 진행하는 경우도 있다. 지금까지 살펴본 XML 설정으로는 이 두가지 경우 즉, 정적 메서드를 이용해서 객체를 생성하는 경우와 객체 생성 과정이 다소 복잡한 경우를 처리할 수 없는데, 이런 경우를 위해 스프링은 다음과 같은 두 가지 방식의 객체 생성 방식을 제공하고 있다.
+
+* 객체 생성에 사용되는 static 메서드 지정
+* FactoryBean 인터페이스를 이용한 객체 생성 처리
+
+#### 객체 생성을 위한 정적 메서드 설정
+
+~~~~
+
+<bean id="factory" class="com.company.ErpClientFactory">
+	<contructor-arg>
+		<props>
+			<prop key="server">10.50.0.10</prop>
+		</props>
+	</contructor-arg>
+</bean>
+
+~~~~
+
+
+#### FactoryBean 인터페이스를 이용한 객체 생성 처리
+
+~~~~
+
+SearchClientFactoryBuilder builder = new SearchClientFactoryBuilder();
+builder.server("10.20.1.100")
+	.port(8181)
+	.contentType(type == null ? "json" : type)
+	.encoding("utf-8");
+SearchClientFactory searchClientFactory = builder.build();
+searchClientFactory.init();
+
+~~~~
+
+>  스프링 빈으로 정의하고 싶은 타입이 SearchClientFactory라고 할 경우, XML 설정으로 SearchClientFactory 타입의 빈을 정의하기에는 SearchClientFactory 객체를 생성하는 과정이 다소 복잡하다. 이럴 때 사용할 수 있는 것이 FactoryBean 인터페이스이다.
+
+> FactoryBean 인터페이스는 다음과 같이 정의되어 있다.
+
+~~~~
+
+package org.springframework.beans.factory;
+
+public interface FactoryBean<T>{
+	T getObject() throws Exception;
+	Class<?> getObjectType();
+	boolean isSingleton();
+}
+
+~~~~
+
+> 세개의 메서드가 정의되어 있는데, 각 메서드는 다음과 같다.
+
+* **T getObject()**: 실제 스프링 빈으로 사용될 객체를 리턴한다.
+* **Class<?> getObjectType()**: 스프링 빈으로 사용될 객체의 타입을 리턴한다.
+* **boolean isSingleton()**: getObject() 메서드가 매번 동일한 객체를 리턴하면 true, 그렇지 않고 매번 새로운 객체를 리턴하면 false를 리턴한다.
+
+> 스프링은 &lt;bean&gt; 태그에서 지정한 클래스나 @Bean 애노테이션이 적용된 메서드가 생성하는 객체가 FactoryBean 인터페이스를 구현한 경우, getObject() 메서드가 리턴하는 객체를 실제 빈 객체로 사용한다. 즉, FactoryBean 인터페이스를 알맞게 구현하면 생성자나 정적 메서드가 아닌 다른 방법으로 생성되는 개체를 스프링 빈으로 사용할 수 있게 된다.

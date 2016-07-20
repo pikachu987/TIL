@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="authFailLogger" class="com.company.AuthFailLogger">
+		<property name="threshold" value="5"></property>
+	</bean>
+	<bean id="authService" class="com.company.AuthenticationService">
+		<property name="failLogger" ref="authFailLogger"></property>
+		<property name="userRepository" ref="userRepository"></property>
+	</bean>
+	<bean id="user1" class="com.company.User">
+		<constructor-arg value="user1"/>
+		<constructor-arg value="1234"/>
+	</bean>
+	<bean id="userRepository" class="com.company.UserRepository"></bean>
+	<bean id="pwChangeSvc" class="com.company.PasswordChangeService">
+		<constructor-arg ref="userRepository"/>
+	</bean>
+</beans>

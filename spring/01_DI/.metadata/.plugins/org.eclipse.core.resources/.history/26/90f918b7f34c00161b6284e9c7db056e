@@ -1,0 +1,11 @@
+package com.company;
+
+public class DefaultErpClientFactory extends ErpClientFactory{
+
+	@Override
+	public ErpClient create() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

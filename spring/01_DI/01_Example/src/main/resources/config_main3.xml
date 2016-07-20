@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- @Configuration이 적용된 빈을 스프링 설정으로 사용하기 위함 -->
+	<context:annotation-config />
+	
+	<bean class="com.company.config.Config_main3"></bean>
+	
+	<bean id="user1" class="com.company.User">
+		<constructor-arg value="user1"/>
+		<constructor-arg value="1234"/>
+	</bean>
+	
+	<bean id="user2" class="com.company.User">
+		<constructor-arg value="user2"/>
+		<constructor-arg value="5678"/>
+	</bean>
+	
+	<bean id="userRepository" class="com.company.UserRepository">
+		<property name="users">
+			<list>
+				<ref bean="user1"/>
+				<ref bean="user2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="pwChangeSvc" class="com.company.PasswordChangeService">
+		<constructor-arg ref="userRepository"/>
+	</bean>
+	
+	<bean id="authFailLogger" class="com.company.AuthFailLogger">
+		<property name="threshold" value="5"></property>
+	</bean>
+	
+	<bean id="authService" class="com.company.AuthenticationService">
+		<property name="failLogger" ref="authFailLogger"></property>
+		<property name="userRepository" ref="userRepository"></property>
+	</bean>
+	
+</beans>
