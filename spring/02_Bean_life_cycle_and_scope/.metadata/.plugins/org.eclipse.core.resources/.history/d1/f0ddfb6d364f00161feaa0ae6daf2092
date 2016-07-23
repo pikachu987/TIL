@@ -1,0 +1,6 @@
+package com.company.ex_01;
+
+@Bean
+public class ConnPool3{
+	
+}

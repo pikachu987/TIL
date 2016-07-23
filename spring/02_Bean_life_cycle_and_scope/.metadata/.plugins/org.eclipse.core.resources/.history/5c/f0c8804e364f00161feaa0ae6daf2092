@@ -1,0 +1,9 @@
+package com.company.ex_01;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+@Bean
+public class ConnPool3{
+	
+}
