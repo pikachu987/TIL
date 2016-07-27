@@ -5,7 +5,1000 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-07-25T12:53:00Z</updated>
+  <updated>2016-07-27T13:36:46Z</updated>
+  <entry>
+    <title>Spring Data Release Train Ingalls M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/27/spring-data-release-train-ingalls-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mark Paluch</name>
+    </author>
+    <id>tag:spring.io,2016-07-27:2569</id>
+    <updated>2016-07-27T13:36:46Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I’m happy to announce the first milestone of the &lt;a href="https://en.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls,_Jr."&gt;Ingalls&lt;/a&gt; release train. The release ships &lt;a href="https://jira.spring.io/issues/?filter=15383"&gt;230 tickets&lt;/a&gt; fixed! The most noteworthy new features are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use of method handles for property access in conversion subsystem (Commons, MongoDB).&lt;/li&gt;
+  &lt;li&gt;Upgrade to Cassandra 3.0 for Spring Data Cassandra.&lt;/li&gt;
+  &lt;li&gt;Support for declarative query methods for Cassandra repositories.&lt;/li&gt;
+  &lt;li&gt;Support for Redis geo commands.&lt;/li&gt;
+  &lt;li&gt;Any-match mode for query-by-example.&lt;/li&gt;
+  &lt;li&gt;Support for XML and JSON based projections for REST payloads (see the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/master/web/projection"&gt;example&lt;/a&gt; for details)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Find a curated change log in our &lt;a href="https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Ingalls"&gt;release train wiki&lt;/a&gt; or skim through a &lt;a href="https://jira.spring.io/issues/?filter=15383"&gt;full list of changes in JIRA&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The easiest way to play with the milestone is declaring the &lt;code&gt;spring-data-releasetrain.version&lt;/code&gt; property to &lt;code&gt;Ingalls-M1&lt;/code&gt; in your Spring Boot application. If you’re using Spring Data REST, make sure to set the &lt;code&gt;spring-hateoas.version&lt;/code&gt; property to &lt;code&gt;0.21.0.M1&lt;/code&gt;. Spring Data Redis users need to upgrade to Jedis 2.9.0 (Boot users set the &lt;code&gt;jedis.version&lt;/code&gt; property accordingly). Also, please check out our updated &lt;a href="https://github.com/spring-projects/spring-data-examples"&gt;Spring Data Examples&lt;/a&gt; for more samples on integrating the particular components.&lt;/p&gt;
+&lt;p&gt;To sum things up, here&amp;rsquo;s the list of modules included in the release:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data Commons 1.13 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-commons/1.13.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.13.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.13.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/1.13.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data JPA 1.11 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-jpa/1.11.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.11.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.11.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.11.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data KeyValue 1.2 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-keyvalue/1.2.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/keyvalue/docs/1.2.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Cassandra 1.5 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-cassandra/1.5.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/cassandra/docs/1.5.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Solr 2.1 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-solr/2.1.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.1.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.1.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/solr/docs/2.1.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Gemfire 1.9 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-gemfire/1.9.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.9.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.9.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/gemfire/docs/1.9.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Neo4j 4.2 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-neo4j/4.2.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.2.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.2.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/neo4j/docs/4.2.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data MongoDB 1.10 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-mongodb/1.10.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.10.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.10.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.10.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Envers 1.1 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-envers/1.1.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/envers/docs/1.1.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/envers/docs/1.1.0.M1/reference/html"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data REST 2.6 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-rest-webmvc/2.6.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.6.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.6.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/rest/docs/2.6.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Redis 1.8 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-redis/1.8.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.8.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.8.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.8.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Elasticsearch 2.1 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-elasticsearch/2.1.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/2.1.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Couchbase 2.2 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/2.2.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On a final note, SpringOne Platform 2016 is around the corner! Meet the Spring Data team at SpringOne Platform 2016 in Las Vegas, Nevada, next week. We&amp;rsquo;ve prepared a &lt;a href="https://2016.event.springoneplatform.io/schedule/2016-08-02"&gt;lot of sessions&lt;/a&gt; to cover Spring &amp;amp; Data related topics and it&amp;rsquo;s not too late to &lt;a href="https://2016.event.springoneplatform.io/register"&gt;register&lt;/a&gt;. Vegas is never a bad place to be at, even more so with the Spring team around!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - July 26th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/26/this-week-in-spring-july-26th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-07-26:2568</id>
+    <updated>2016-07-26T21:14:29Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installation of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m mostly in San Francisco and Saint Louis, busily preparing for the big event next week!&lt;/p&gt;
+&lt;p&gt;This is my favorite time of year! As we lead to &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt;, there&amp;rsquo;s so much good stuff being released that one can hardly keep up! I am &lt;em&gt;really&lt;/em&gt; looking forward to this year&amp;rsquo;s &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt; show, coming in early August. It&amp;rsquo;s an amazing time to build applications, and SpringOne Platform is in a unique position to capture the larger discussion: why do we #devops, #cloud, #agile, or #microservice? Join the discussion August 1-4, 2016 in beautiful Las Vegas and let&amp;rsquo;s find out!&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve got a lot to cover and very little time in which to do it so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Cloud Contract &lt;a href="https://spring.io/blog/2016/07/25/spring-cloud-contract-1-0-0-m1-released"&gt;lead Marcin Grzejszczak has just announced that M1 is now available&lt;/a&gt;. The blog features a good look at the concepts behind consumer driven contracts, too, and so is well worth a read!&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Data Flow product manager Sabby Anandan wrote up a &lt;a href="https://blog.pivotal.io/big-data-pivotal/products/data-goes-cloud-native-with-the-new-spring-cloud-data-flow"&gt;very nice piece for the Pivotal blog on Spring Cloud Data Flow 1.0&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;check out this epic &lt;a href="https://www.youtube.com/watch?v=Z6_ttC33N0U"&gt;presentation by Spring Cloud Data Flow leads Dr. Pollack and Mark Fisher to learn more about data-driven microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration ninja Artem Bilan has just &lt;a href="https://spring.io/blog/2016/07/26/spring-integration-aws-1-0-0-ga-available-now"&gt;announced Spring Integration AWS 1.0.0.RELEASE&lt;/a&gt; is now available. The final Release is a recommended update &lt;a href="https://spring.io/blog/2016/04/14/spring-integration-aws-1-0-0-m1-is-now-available"&gt;for all those using Spring Integration AWS M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Never one to rest on his laurels, Artem &lt;em&gt;also&lt;/em&gt; &lt;a href="https://spring.io/blog/2016/07/26/spring-integration-4-3-1-4-2-9-4-1-9-4-0-9-are-available"&gt;announced that Spring Integration 4.3.1, 4.2.9, 4.1.9, 4.0.9 are available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;do you want to use Hazelcast on Cloud Foundry? &lt;a href="http://blog.hazelcast.com/cloud-foundry/"&gt;Take a look at the service broker and information on its features, here&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring REST Docs lead Andy Wilkinson&amp;rsquo;s &lt;a href="https://spring.io/blog/2016/07/25/spring-rest-docs-1-1-1-release"&gt;just announced Spring REST Docs 1.1.1&lt;/a&gt; which features a littany of &lt;a href="https://github.com/spring-projects/spring-restdocs/issues?q=milestone%3A1.1.1.RELEASE"&gt;small improvements and bugfixes&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/20/spring-web-flow-2-4-4-released"&gt;Rossen Stoyanchev just announced that Spring Web Flow 2.4.4&lt;/a&gt; is now available. This is a maintenance release that, among other things, ensures compatability with Hibernate 5.2 and fixes several small things in JSF.&lt;/li&gt;
+  &lt;li&gt;the good Dr. Syer has published another installment in his series on building reactive applications, &lt;a href="https://spring.io/blog/2016/07/20/notes-on-reactive-programming-part-iii-a-simple-http-server-application"&gt;this time looking at building a simple Reactive HTTP server&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Krishna Srinivasan put together a nice look at how to &lt;a href="http://www.tutorialspoint.com/articles/spring-boot-actuator-a-production-grade-feature-in-spring-boot"&gt;use some of the Spring Boot Actuator module&amp;rsquo;s exposed endpoints&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I love what they&amp;rsquo;re doing at Stormpath, &lt;a href="https://stormpath.com/blog/microservices-spring-boot-screencast"&gt;and this latest screencast is a good example of why&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Did you know that Pivotal has classes you can take to &lt;a href="http://pivotal.io/academy"&gt;learn about Pivotal Cloud Foundry and Spring Cloud Services&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;the CAS project, series 5, continues &lt;a href="https://mmoayyed.github.io/2016/07/23/cas5-m3-release/"&gt;their march to GA and to a comprehensive Spring &lt;em&gt;Bootification&lt;/em&gt; of the code in their latest release, M3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Integration AWS 1.0.0 GA available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/26/spring-integration-aws-1-0-0-ga-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2016-07-25:2566</id>
+    <updated>2016-07-26T14:56:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;It is my pleasure to announce that the Spring Integration AWS &lt;code&gt;1.0.0.RELEASE&lt;/code&gt; is available now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As usual, thanks to the community for any feedback and contributions!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release contains several critical bug fixes (mostly community driven) and aligns requirements of the upcoming &lt;a href="http://cloud.spring.io/spring-cloud-stream-app-starters/"&gt;Spring Cloud Stream Application Starters&lt;/a&gt; release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We haven&amp;#8217;t added any new features since the &lt;a href="https://spring.io/blog/2016/04/14/spring-integration-aws-1-0-0-m1-is-now-available"&gt;latest announcement&lt;/a&gt; and have concentrated mostly on improvements, bug fixes and integration testing, to deliver this product as soon as possible. For the next &lt;code&gt;1.1&lt;/code&gt; version we would like to hear from you about priorities since there are still many &lt;a href="https://aws.amazon.com/"&gt;Amazon features&lt;/a&gt; to cover.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration-aws/"&gt;Project Page&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-aws/blob/master/README.md"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Integration 4.3.1, 4.2.9, 4.1.9, 4.0.9 are available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/26/spring-integration-4-3-1-4-2-9-4-1-9-4-0-9-are-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2016-07-26:2567</id>
+    <updated>2016-07-26T14:55:35Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Dear Spring community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce that a number of Spring Integration &lt;code&gt;4.x.x&lt;/code&gt; (&lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15576"&gt;4.3.1&lt;/a&gt;, &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15577"&gt;4.2.9&lt;/a&gt;, &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15459"&gt;4.1.9&lt;/a&gt;, &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15400"&gt;4.0.9&lt;/a&gt;) maintenance versions have been released. It&amp;#8217;s strongly recommended for everyone to upgrade because these releases contain some important bug fixes and improvements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We do not anticipate releasing more versions of the for &lt;code&gt;4.1.x&lt;/code&gt; and &lt;code&gt;4.0.x&lt;/code&gt; branches. If you use these in your projects, consider upgrading to &lt;code&gt;4.3.x&lt;/code&gt; as soon as possible.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;While you can find all the changes for &lt;code&gt;4.3.1&lt;/code&gt; in its &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15576"&gt;Release Notes&lt;/a&gt;, here are some highlights:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It is a foundation for upcoming Spring Boot 1.4 GA;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Routers can now resolve &lt;code&gt;channelKey&lt;/code&gt; as a &lt;code&gt;Class&amp;lt;?&amp;gt;&lt;/code&gt; correctly. Previously such a configuration produced the following exception:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre&gt;MessagingException: unsupported return type for router [class java.lang.Class];&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Messaging Gateway now supports &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; as return type for "receive-only" methods:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Gateway(replyChannel="ingestMessages")
+Message&amp;lt;String&amp;gt; getMessage();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Previously such a configuration produced the following exception:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre&gt;ClassCastException: java.lang.String cannot be cast to org.springframework.messaging.Message&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Channel auto-creating and late binding improvements;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;IdempotentReceiverInterceptor&lt;/code&gt; (as well as any &lt;code&gt;HandleMessageAdvice&lt;/code&gt;) can now be configured as a part of &lt;code&gt;&amp;lt;request-handler-advice-chain&amp;gt;&lt;/code&gt;, although it is applied to the &lt;code&gt;MessageHandler.handleMessage()&lt;/code&gt; method;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And special thanks to good &lt;a href="https://spring.io/team/dsyer"&gt;Dr. Syer&lt;/a&gt; for his valuable contribution, as usual. This time it was a new feature with &lt;code&gt;LockRegistryLeaderInitiator&lt;/code&gt; to control leadership in your clustered application using Spring Integration distributed &lt;code&gt;LockRegistry&lt;/code&gt; implementation, e.g. &lt;code&gt;JdbcLockRegistry&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Next up: Spring Integration 5.0, based on Spring Framework 5.0 and some Reactive Streams support.
+Don&amp;#8217;t miss &lt;a href="https://springoneplatform.io/"&gt;SpringOne Platform&lt;/a&gt; conference the next week in Las Vegas to hear from us about all the new features and future plans!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-integration&lt;/code&gt; tag)&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Contract 1.0.0.M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/25/spring-cloud-contract-1-0-0-m1-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Marcin Grzejszczak</name>
+    </author>
+    <id>tag:spring.io,2016-07-25:2565</id>
+    <updated>2016-07-25T15:03:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring Cloud team it is my pleasure to announce the 1.0.0.M1 release of the new Spring Cloud project called Spring Cloud Contract. You can grab it from the &lt;a href="https://repo.spring.io/milestone/"&gt;Spring&amp;#8217;s milestone repository&lt;/a&gt; or even better - go to &lt;a href="http://start.spring.io"&gt;start.spring.io&lt;/a&gt; and pick it from there.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="spring-cloud-contract"&gt;&lt;a class="anchor" href="#spring-cloud-contract"&gt;&lt;/a&gt;Spring Cloud Contract&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The microservice approach has plenty of benefits but also introduces complexity. This is an inevitable result of working with distributed systems: with increasing complexity inevitably more questions are posed. In this article we show how to test microservices and create a better API by using the Consumer Driven Contracts approach. In order to make testing microservices easier we are more than happy to introduce a new project in the family of Spring Cloud projects - Spring Cloud Contract. This project provides support for Consumer Driven Contracts and service schemas in Spring applications, covering a range of options for writing tests, publishing them as assets, asserting that a contract is kept by producers and consumers, for HTTP and message-based interactions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This article is a companion of another recent one on &lt;a href="https://spring.io/blog/2016/05/31/zero-downtime-deployment-with-a-database"&gt;how to do zero-downtime deployment with a database&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="service-providers-and-consumers"&gt;&lt;a class="anchor" href="#service-providers-and-consumers"&gt;&lt;/a&gt;Service providers and consumers&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Before we jump into the details let&amp;#8217;s go though some theory. One of the biggest challenges related to the distributed systems is the agreement on the structure of messages that pass between nodes (by "message" we mean any well-formed, non-streaming data, so that applies to traditional HTTP APIs and also event-based microservices). Here are a few questions that arise when we think about message structure:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How can the consumer know that the producer has changed its API?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How can the producer side know if it&amp;#8217;s going to break the consumers?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the consumer is using stubs for testing, who should create those stubs?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How can you ensure the quality of stubs?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;One of the ways to solve these problems is to introduce the notion of a &lt;code&gt;contract&lt;/code&gt;. A contract is an agreement between a provider and a consumer in terms of what their communication should look like. The questions remains on who should drive the change of the API, where the contract should be stored and what the contract should contain.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this blog post we&amp;#8217;ll present the approach called "Consumer Driven Contracts"  together with the new Spring Cloud project called &lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_spring_cloud_contract_verifier"&gt;Spring Cloud Contract Verifier&lt;/a&gt; formerly known as Accurest and hosted by the &lt;a href="http://codearte.io"&gt;Codearte company&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="meanwhile-in-a-company"&gt;&lt;a class="anchor" href="#meanwhile-in-a-company"&gt;&lt;/a&gt;Meanwhile in a company&amp;#8230;&amp;#8203;&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Let&amp;#8217;s imagine a following scenario:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The producer side team finishes its sprint and changes their application by introducing a new version of the API. Since there is not much time due to tight schedules there were no consultations with the consumers of that API. The consumers had all the producer side integrations mocked in their tests and, since nobody has informed them about any changes, they didn&amp;#8217;t update those mocks. That&amp;#8217;s why all the unit and integration tests were still green but end to end tests failed miserably. When the consumers noticed that the producer side API has changed they had to invest a lot of time to adjust their production and test code in order to send and receive the new, required data. The consumer team decided that it&amp;#8217;s close to impossible (due to tight schedule and complexity of the changes) so they started filing issues to the producer side team to adjust their API. The producer side team replies that "there is no time" and that they can "talk to their product owner so he puts that requirement into their backlog".&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you took a look at the retrospectives of both teams you could see the following.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For the consumer side:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a breaking change was introduced and nobody informed us&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the producer side team hasn&amp;#8217;t consulted on their API changes - the new API is unusable&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;our integration tests didn&amp;#8217;t catch the change of the producer side API&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;we got completely ignored by the producer side team in terms of adjusting their API&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For the producer side:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;everybody is angry with us but we have to deliver business value&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;we can not update every single consumer team&amp;#8217;s tests when we change our API&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Rings a bell? Don&amp;#8217;t worry, there are ways to change this approach to make everybody less annoyed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="what-is-consumer-driven-contracts"&gt;&lt;a class="anchor" href="#what-is-consumer-driven-contracts"&gt;&lt;/a&gt;What is Consumer Driven Contracts?&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;There a few problems presented in the aforementioned scenario:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;the API change was not made in consultation with the consumers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the stubbing process is owned by the consumers thus no changes of the producer side are reflected&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Let&amp;#8217;s focus on the first problem. Do you remember the Test Driven Development (TDD) approach? You start with an expectation in a form of a test, then you write an implementation to make the test pass and finally you refactor to make the code look nicer. "Red, green, refactor" - failing test, passing test, refactored code. TDD is about making mistakes. Mistakes related to the assumption how your code API should look like. It&amp;#8217;s an iterative process that allows you to improve the quality of your code. The developer is the driver of the change of the code&amp;#8217;s API. He is its user, he knows what he wants to achieve so he alters the API until he is happy with the results. Now, let&amp;#8217;s imagine that we move this approach to the level of API design&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Since the consumers are those who use the API they should be the drivers of the API change. The main difference between that and TDD is that here you have 2 teams taking part in the process - the consumer and the prodcuer. This is where you can profit from the Consumer Driven Contract (CDC) approach. A couple of its characteristics are:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;the producer API is designed by the consumers together with the producer team (communication is crucial!)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the contracts are written down and have to suit both parties&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the work can be decoupled - once the contracts have been noted down both teams can work independently&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the producer side owns the contracts (this is a strictly defined responsibility of concrete people)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The Spring Cloud team wanted to have a tool that would allow us to:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;define contracts in a readable but also a flexible manner&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make the contracts show some use-cases and not only present structure of the messages&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;generate tests to automatically verify the contracts against the producer side&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;automatically produce stubs from the contracts so that the consumers can reuse it&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make this approach possible for HTTP and messaging based communication&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_spring_cloud_contract_verifier"&gt;Spring Cloud Contract Verifier&lt;/a&gt; solves this problem by providing automated solutions to ensure the quality and reliability of the created contracts and their stubs. It consists of the following main features:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;the core part of the library gives you the concept of a Contract&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the Verifier is used by producers (usually via the build plugins)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Cloud Contract Verifier Maven / Gradle plugins give you the functionality of converting the Contract into tests and WireMock stubs (&lt;a href="http://wiremock.org"&gt;WireMock is a HTTP server stub&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Cloud Contract Stub Runner allows consumers to automatically download stubs of upstream producers and start in memory HTTP stubbed servers in your integration tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Cloud Contract Stub Runner also allows consumers to send and receive messages (via Spring Integration, Spring Cloud Stream or Apache Camel) described in the contracts&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Let&amp;#8217;s look at the following step-by-step example how to use the tool in case of the HTTP communication.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="cdc-with-spring-cloud-contract-verifier"&gt;&lt;a class="anchor" href="#cdc-with-spring-cloud-contract-verifier"&gt;&lt;/a&gt;CDC with Spring Cloud Contract Verifier&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Let&amp;#8217;s take an example of Fraud Detection and Loan Issuance process. The business scenario is such that we want to issue loans to people but don&amp;#8217;t want them to steal the money from us. The current implementation of our system grants loans to everybody.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Let&amp;#8217;s assume that the &lt;code&gt;Loan Issuance&lt;/code&gt; is a client to the
+&lt;code&gt;Fraud Detection&lt;/code&gt; server. In the current sprint we are required to develop a new feature - if a client wants to borrow too much money then
+we mark him as fraud.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Technical remark - Fraud Detection will have artifact id &lt;code&gt;http-server&lt;/code&gt;, Loan Issuance &lt;code&gt;http-client&lt;/code&gt; and both have group id &lt;code&gt;com.example&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Social remark - both consumer and producer development teams need to communicate directly and discuss changes while
+going through the process. CDC is all about communication.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;a href="https://github.com/spring-cloud/spring-cloud-contract/tree/master/samples/standalone/http-server"&gt;producer code is available here&lt;/a&gt; and &lt;a href="https://github.com/spring-cloud/spring-cloud-contract/tree/master/samples/standalone/http-client"&gt;consumer code here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="consumer-side-loan-issuance"&gt;&lt;a class="anchor" href="#consumer-side-loan-issuance"&gt;&lt;/a&gt;Consumer side (Loan Issuance)&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As a developer of the Loan Issuance service (a consumer of the Fraud Detection server):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;start doing TDD by writing a test to your feature&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;@Test
+public void shouldBeRejectedDueToAbnormalLoanAmount() {
+	// given:
+	LoanApplication application = new LoanApplication(new Client("1234567890"),
+			99999);
+	// when:
+	LoanApplicationResult loanApplication = sut.loanApplication(application);
+	// then:
+	assertThat(loanApplication.getLoanApplicationStatus())
+			.isEqualTo(LoanApplicationStatus.LOAN_APPLICATION_REJECTED);
+	assertThat(loanApplication.getRejectionReason()).isEqualTo("Amount too high");
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We&amp;#8217;ve just written a test of our new feature. If a loan application for a big amount is received we should reject that loan application with some description.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;write the missing implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;At some point in time you need to send a request to the Fraud Detection service. Let&amp;#8217;s assume that we&amp;#8217;d like to send the request containing the id of the client and the amount he wants to borrow from us. We&amp;#8217;d like to send it to the &lt;code&gt;/fraudcheck&lt;/code&gt; url via the &lt;code&gt;PUT&lt;/code&gt; method.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;ResponseEntity&amp;lt;FraudServiceResponse&amp;gt; response =
+		restTemplate.exchange("http://localhost:" + port + "/fraudcheck", HttpMethod.PUT,
+				new HttpEntity&amp;lt;&amp;gt;(request, httpHeaders),
+				FraudServiceResponse.class);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For simplicity we&amp;#8217;ve hardcoded the port of the Fraud Detection service at &lt;code&gt;8080&lt;/code&gt; and our application is running on &lt;code&gt;8090&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If we&amp;#8217;d start the written test it would obviously break since we have no service running on port &lt;code&gt;8080&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;clone the Fraud Detection service repository locally&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We&amp;#8217;ll start playing around with the producer side. That&amp;#8217;s why we need to first clone it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;git clone https://your-git-server.com/server.git local-http-server-repo&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;define the contract locally in the repo of Fraud Detection service&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As consumers we need to define what exactly we want to achieve. We need to formulate our expectations. That&amp;#8217;s why we write the following contract.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;package contracts
+
+org.springframework.cloud.contract.spec.Contract.make {
+			request { // (1)
+				method 'PUT' // (2)
+				url '/fraudcheck' // (3)
+				body([ // (4)
+					clientId: value(consumer(regex('[0-9]{10}'))),
+					loanAmount: 99999
+					])
+				headers { // (5)
+					header('Content-Type', 'application/vnd.fraud.v1+json')
+				}
+			}
+			response { // (6)
+				status 200 // (7)
+				body([ // (8)
+					fraudCheckStatus: "FRAUD",
+					rejectionReason: "Amount too high"
+				])
+				headers { // (9)
+					 header('Content-Type': value(
+							 producer(regex('application/vnd.fraud.v1.json.*')),
+							 consumer('application/vnd.fraud.v1+json'))
+					 )
+				}
+			}
+}
+
+/*
+Since we don't want to force on the user to hardcode values of fields that are dynamic
+(timestamps, database ids etc.), one can provide parametrize those entries by using the
+`value(consumer(...), producer(...))` method. That way what's present in the `consumer`
+section will end up in the produced stub. What's there in the `producer` will end up in the
+autogenerated test. If you provide only the regular expression side without the concrete
+value then Spring Cloud Contract will generate one for you.
+
+From the Consumer perspective, when shooting a request in the integration test:
+
+(1) - If the consumer sends a request
+(2) - With the "PUT" method
+(3) - to the URL "/fraudcheck"
+(4) - with the JSON body that
+ * has a field `clientId` that matches a regular expression `[0-9]{10}`
+ * has a field `loanAmount` that is equal to `99999`
+(5) - with header `Content-Type` equal to `application/vnd.fraud.v1+json`
+(6) - then the response will be sent with
+(7) - status equal `200`
+(8) - and JSON body equal to
+ { "fraudCheckStatus": "FRAUD", "rejectionReason": "Amount too high" }
+(9) - with header `Content-Type` equal to `application/vnd.fraud.v1+json`
+
+From the Producer perspective, in the autogenerated producer-side test:
+
+(1) - A request will be sent to the producer
+(2) - With the "PUT" method
+(3) - to the URL "/fraudcheck"
+(4) - with the JSON body that
+ * has a field `clientId` that will have a generated value that matches a regular expression `[0-9]{10}`
+ * has a field `loanAmount` that is equal to `99999`
+(5) - with header `Content-Type` equal to `application/vnd.fraud.v1+json`
+(6) - then the test will assert if the response has been sent with
+(7) - status equal `200`
+(8) - and JSON body equal to
+ { "fraudCheckStatus": "FRAUD", "rejectionReason": "Amount too high" }
+(9) - with header `Content-Type` matching `application/vnd.fraud.v1+json.*`
+ */&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The Contract is written using a statically typed Groovy DSL. You might be wondering what are those &lt;code&gt;value(consumer(&amp;#8230;&amp;#8203;), producer(&amp;#8230;&amp;#8203;))&lt;/code&gt; parts. By using this notation Spring Cloud Contract allows you to define parts of a JSON / URL / etc. which are dynamic. In case of an identifier or a timestamp you don&amp;#8217;t want to hardcode a value. You want to allow some different ranges of values. That&amp;#8217;s why for the consumer side you can set regular expressions matching those values. You can provide the body either by means of a map notation or String with interpolations. &lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_contract_dsl"&gt;Consult the docs for more information.&lt;/a&gt; We highly recommend using the map notation!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The aforementioned contract is an agreement between two sides that:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;if an HTTP request is sent with&lt;/p&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a method &lt;code&gt;PUT&lt;/code&gt; on an endpoint &lt;code&gt;/fraudcheck&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JSON body with &lt;code&gt;clientId&lt;/code&gt; matching the regular expression &lt;code&gt;[0-9]{10}&lt;/code&gt; and &lt;code&gt;loanAmount&lt;/code&gt; equal to &lt;code&gt;99999&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and with a header &lt;code&gt;Content-Type&lt;/code&gt; equal to &lt;code&gt;application/vnd.fraud.v1+json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;then an HTTP response would be sent to the consumer that&lt;/p&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;has status &lt;code&gt;200&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;contains JSON body with the &lt;code&gt;fraudCheckStatus&lt;/code&gt; field containing a value &lt;code&gt;FRAUD&lt;/code&gt; and the &lt;code&gt;rejectionReason&lt;/code&gt; field having value &lt;code&gt;Amount too high&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and a &lt;code&gt;Content-Type&lt;/code&gt; header with a value of &lt;code&gt;application/vnd.fraud.v1+json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Once we&amp;#8217;re ready to check the API in practice in the integration tests we need to just install the stubs locally&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;add the Spring Cloud Contract Verifier plugin to the server side&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We can add either Maven or Gradle plugin - in this example we&amp;#8217;ll show how to add Maven. First we need to add the &lt;code&gt;Spring Cloud Contract&lt;/code&gt; BOM.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependencyManagement&amp;gt;
+	&amp;lt;dependencies&amp;gt;
+		&amp;lt;dependency&amp;gt;
+			&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+			&amp;lt;artifactId&amp;gt;spring-cloud-contract-dependencies&amp;lt;/artifactId&amp;gt;
+			&amp;lt;version&amp;gt;${spring-cloud-contract.version}&amp;lt;/version&amp;gt;
+			&amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;
+			&amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;
+		&amp;lt;/dependency&amp;gt;
+	&amp;lt;/dependencies&amp;gt;
+&amp;lt;/dependencyManagement&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Next, the &lt;code&gt;Spring Cloud Contract Verifier&lt;/code&gt; Maven plugin&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;plugin&amp;gt;
+	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;spring-cloud-contract-maven-plugin&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;${spring-cloud-contract.version}&amp;lt;/version&amp;gt;
+	&amp;lt;extensions&amp;gt;true&amp;lt;/extensions&amp;gt;
+	&amp;lt;configuration&amp;gt;
+		&amp;lt;baseClassForTests&amp;gt;com.example.fraud.MvcTest&amp;lt;/baseClassForTests&amp;gt;
+	&amp;lt;/configuration&amp;gt;
+&amp;lt;/plugin&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Since the plugin was added we get the &lt;code&gt;Spring Cloud Contract Verifier&lt;/code&gt; features which from the provided contracts:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;generate and run tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;produce and install stubs&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We don&amp;#8217;t want to generate tests since we, as consumers, want only to play with the stubs. That&amp;#8217;s why we need to skip the tests generation and execution. When we execute:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;cd local-http-server-repo
+./mvnw clean install -DskipTests&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In the logs we&amp;#8217;ll see something like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;[INFO] --- spring-cloud-contract-maven-plugin:1.0.0.BUILD-SNAPSHOT:generateStubs (default-generateStubs) @ http-server ---
+[INFO] Building jar: /some/path/http-server/target/http-server-0.0.1-SNAPSHOT-stubs.jar
+[INFO]
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ http-server ---
+[INFO] Building jar: /some/path/http-server/target/http-server-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.0.BUILD-SNAPSHOT:repackage (default) @ http-server ---
+[INFO]
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ http-server ---
+[INFO] Installing /some/path/http-server/target/http-server-0.0.1-SNAPSHOT.jar to /path/to/your/.m2/repository/com/example/http-server/0.0.1-SNAPSHOT/http-server-0.0.1-SNAPSHOT.jar
+[INFO] Installing /some/path/http-server/pom.xml to /path/to/your/.m2/repository/com/example/http-server/0.0.1-SNAPSHOT/http-server-0.0.1-SNAPSHOT.pom
+[INFO] Installing /some/path/http-server/target/http-server-0.0.1-SNAPSHOT-stubs.jar to /path/to/your/.m2/repository/com/example/http-server/0.0.1-SNAPSHOT/http-server-0.0.1-SNAPSHOT-stubs.jar&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This line is extremely important&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;[INFO] Installing /some/path/http-server/target/http-server-0.0.1-SNAPSHOT-stubs.jar to /path/to/your/.m2/repository/com/example/http-server/0.0.1-SNAPSHOT/http-server-0.0.1-SNAPSHOT-stubs.jar&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;It&amp;#8217;s confirming that the stubs of the &lt;code&gt;http-server&lt;/code&gt; have been installed in the local repository.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;run the integration tests&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In order to profit from the Spring Cloud Contract Stub Runner functionality of automatic stub downloading you have to do the following in our consumer side project (&lt;code&gt;Loan Application service&lt;/code&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Add the &lt;code&gt;Spring Cloud Contract&lt;/code&gt; BOM&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependencyManagement&amp;gt;
+	&amp;lt;dependencies&amp;gt;
+		&amp;lt;dependency&amp;gt;
+			&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+			&amp;lt;artifactId&amp;gt;spring-cloud-contract-dependencies&amp;lt;/artifactId&amp;gt;
+			&amp;lt;version&amp;gt;${spring-cloud-contract.version}&amp;lt;/version&amp;gt;
+			&amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;
+			&amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;
+		&amp;lt;/dependency&amp;gt;
+	&amp;lt;/dependencies&amp;gt;
+&amp;lt;/dependencyManagement&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Add the dependency to &lt;code&gt;Spring Cloud Contract Stub Runner&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;spring-cloud-contract-wiremock&amp;lt;/artifactId&amp;gt;
+	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;spring-cloud-starter-contract-stub-runner&amp;lt;/artifactId&amp;gt;
+	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Provide the group id and artifact id for the Stub Runner to download stubs of your collaborators. Also provide the offline work switch since you&amp;#8217;re playing with the collaborators offline (optional step).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;stubrunner:
+  work-offline: true
+  stubs.ids: 'com.example:http-server:+:stubs:8080'&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Annotate your test class with &lt;code&gt;@AutoConfigureStubRunner&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureStubRunner
+public class LoanApplicationServiceTests {&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now if you run your tests you&amp;#8217;ll see sth like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;2016-07-19 14:22:25.403  INFO 41050 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Desired version is + - will try to resolve the latest version
+2016-07-19 14:22:25.438  INFO 41050 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Resolved version is 0.0.1-SNAPSHOT
+2016-07-19 14:22:25.439  INFO 41050 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Resolving artifact com.example:http-server:jar:stubs:0.0.1-SNAPSHOT using remote repositories []
+2016-07-19 14:22:25.451  INFO 41050 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Resolved artifact com.example:http-server:jar:stubs:0.0.1-SNAPSHOT to /path/to/your/.m2/repository/com/example/http-server/0.0.1-SNAPSHOT/http-server-0.0.1-SNAPSHOT-stubs.jar
+2016-07-19 14:22:25.465  INFO 41050 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Unpacking stub from JAR [URI: file:/path/to/your/.m2/repository/com/example/http-server/0.0.1-SNAPSHOT/http-server-0.0.1-SNAPSHOT-stubs.jar]
+2016-07-19 14:22:25.475  INFO 41050 --- [           main] o.s.c.c.stubrunner.AetherStubDownloader  : Unpacked file to [/var/folders/0p/xwq47sq106x1_g3dtv6qfm940000gq/T/contracts100276532569594265]
+2016-07-19 14:22:27.737  INFO 41050 --- [           main] o.s.c.c.stubrunner.StubRunnerExecutor    : All stubs are now running RunningStubs [namesAndPorts={com.example:http-server:0.0.1-SNAPSHOT:stubs=8080}]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Which means that Stub Runner has found your stubs and started a server for app with group id &lt;code&gt;com.example&lt;/code&gt;, artifact id &lt;code&gt;http-server&lt;/code&gt; with version &lt;code&gt;0.0.1-SNAPSHOT&lt;/code&gt; of the stubs and with &lt;code&gt;stubs&lt;/code&gt; classifier on port &lt;code&gt;8080&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;file a PR&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;What we did until now is an iterative process. We can play around with the contract, install it locally and work on the consumer side until we&amp;#8217;re happy with the contract.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Once we&amp;#8217;re satisfied with the results and the test passes publish a PR to the producer side. At this point the consumer side work is done.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="producer-side-fraud-detection-server"&gt;&lt;a class="anchor" href="#producer-side-fraud-detection-server"&gt;&lt;/a&gt;Producer side (Fraud Detection server)&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As a developer of the Fraud Detection server (a producer of messages consumed by the Loan Issuance service):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;initial implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As a reminder here you can see the initial implementation&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@RequestMapping(
+		value = "/fraudcheck",
+		method = PUT,
+		consumes = FRAUD_SERVICE_JSON_VERSION_1,
+		produces = FRAUD_SERVICE_JSON_VERSION_1)
+public FraudCheckResult fraudCheck(@RequestBody FraudCheck fraudCheck) {
+return new FraudCheckResult(FraudCheckStatus.OK, NO_REASON);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;take over the PR&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;git checkout -b contract-change-pr master
+git pull https://your-git-server.com/server-side-fork.git contract-change-pr&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You have to add the dependencies needed by the autogenerated tests&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;spring-cloud-starter-contract-verifier&amp;lt;/artifactId&amp;gt;
+	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In the configuration of the Maven plugin we passed the &lt;code&gt;baseClassForTests&lt;/code&gt; property&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;plugin&amp;gt;
+	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;spring-cloud-contract-maven-plugin&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;${spring-cloud-contract.version}&amp;lt;/version&amp;gt;
+	&amp;lt;extensions&amp;gt;true&amp;lt;/extensions&amp;gt;
+	&amp;lt;configuration&amp;gt;
+		&amp;lt;baseClassForTests&amp;gt;com.example.fraud.MvcTest&amp;lt;/baseClassForTests&amp;gt;
+	&amp;lt;/configuration&amp;gt;
+&amp;lt;/plugin&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;That&amp;#8217;s because all the generated tests will extend that class. Over there you can set up your Spring Context or whatever is necessary. In our case we&amp;#8217;re using &lt;a href="http://rest-assured.io/"&gt;Rest Assured MVC&lt;/a&gt; to start the producer side &lt;code&gt;FraudDetectionController&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;package com.example.fraud;
+
+import com.example.fraud.FraudDetectionController;
+import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
+
+import org.junit.Before;
+
+public class MvcTest {
+
+	@Before
+	public void setup() {
+		RestAssuredMockMvc.standaloneSetup(new FraudDetectionController());
+	}
+
+	public void assertThatRejectionReasonIsNull(Object rejectionReason) {
+		assert rejectionReason == null;
+	}
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now, if you run the &lt;code&gt;./mvnw clean install&lt;/code&gt; you would get sth like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;Results :
+
+Tests in error:
+  ContractVerifierTest.validate_shouldMarkClientAsFraud:32 » IllegalState Parsed...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;That&amp;#8217;s because you have a new contract from which a test was generated and it failed since you haven&amp;#8217;t implemented the feature. The autogenerated test would look like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Test
+public void validate_shouldMarkClientAsFraud() throws Exception {
+    // given:
+        MockMvcRequestSpecification request = given()
+                .header("Content-Type", "application/vnd.fraud.v1+json")
+                .body("{\"clientId\":\"1234567890\",\"loanAmount\":99999}");
+
+    // when:
+        ResponseOptions response = given().spec(request)
+                .put("/fraudcheck");
+
+    // then:
+        assertThat(response.statusCode()).isEqualTo(200);
+        assertThat(response.header("Content-Type")).matches("application/vnd.fraud.v1.json.*");
+    // and:
+        DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
+        assertThatJson(parsedJson).field("fraudCheckStatus").matches("[A-Z]{5}");
+        assertThatJson(parsedJson).field("rejectionReason").isEqualTo("Amount too high");
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As you can see all the &lt;code&gt;producer()&lt;/code&gt; parts of the Contract that were present in the &lt;code&gt;value(consumer(&amp;#8230;&amp;#8203;), producer(&amp;#8230;&amp;#8203;))&lt;/code&gt; blocks got injected into the test.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;What&amp;#8217;s important here to note is that on the producer side we also are doing TDD. We have expectations in form of a test. This test is shooting a request to our own application to an URL, headers and body defined in the contract. It also is expecting very precisely defined values in the response. In other words you have is your &lt;code&gt;red&lt;/code&gt; part of &lt;code&gt;red&lt;/code&gt;, &lt;code&gt;green&lt;/code&gt; and &lt;code&gt;refactor&lt;/code&gt;. Time to convert the &lt;code&gt;red&lt;/code&gt; into the &lt;code&gt;green&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;write the missing implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now since we now what is the expected input and expected output let&amp;#8217;s write the missing implementation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@RequestMapping(
+		value = "/fraudcheck",
+		method = PUT,
+		consumes = FRAUD_SERVICE_JSON_VERSION_1,
+		produces = FRAUD_SERVICE_JSON_VERSION_1)
+public FraudCheckResult fraudCheck(@RequestBody FraudCheck fraudCheck) {
+if (amountGreaterThanThreshold(fraudCheck)) {
+	return new FraudCheckResult(FraudCheckStatus.FRAUD, AMOUNT_TOO_HIGH);
+}
+return new FraudCheckResult(FraudCheckStatus.OK, NO_REASON);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If we execute &lt;code&gt;./mvnw clean install&lt;/code&gt; again the tests will pass. Since the &lt;code&gt;Spring Cloud Contract Verifier&lt;/code&gt; plugin adds the tests to the &lt;code&gt;generated-test-sources&lt;/code&gt; you can actually run those tests from your IDE.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;deploy your app&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Once you&amp;#8217;ve finished your work it&amp;#8217;s time to deploy your change. First merge the branch&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;git checkout master
+git merge --no-ff contract-change-pr
+git push origin master&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Then we assume that your CI would run sth like &lt;code&gt;./mvnw clean deploy&lt;/code&gt; which would publish both the application and the stub artifcats.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect2"&gt;
+&lt;h3 id="consumer-side-loan-issuance-final-step"&gt;&lt;a class="anchor" href="#consumer-side-loan-issuance-final-step"&gt;&lt;/a&gt;Consumer side (Loan Issuance) final step&lt;/h3&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As a developer of the Loan Issuance service (a consumer of the Fraud Detection service):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;merge branch to master&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-bash" data-lang="bash"&gt;git checkout master
+git merge --no-ff contract-change-pr&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;strong&gt;work online&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now you can disable the offline work for Spring Cloud Contract Stub Runner ad provide where the repository with your stubs is placed. At this moment the stubs of the producer side will be automatically downloaded from Nexus / Artifactory.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;stubrunner.stubs:
+  ids: 'com.example:http-server:+:stubs:8080'
+  repositoryRoot: http://repo.spring.io/libs-snapshot&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;And that&amp;#8217;s it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this example you could see how to use the &lt;code&gt;Spring Cloud Contract Verifier&lt;/code&gt; in order to do the Consumer Driven Contracts approach. That way we have achieved:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;an API that suits the consumer and the producer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;readable contracts that were tested against the producer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;verified stubs that can be used by all consumers in their integration tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;consumer-side tool that automatically downloads latest stubs and sets up stubs for you&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="additional-reading"&gt;&lt;a class="anchor" href="#additional-reading"&gt;&lt;/a&gt;Additional Reading&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://martinfowler.com/articles/consumerDrivenContracts.html"&gt;Consumer Driven Contracts by Ian Robinson&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/"&gt;Spring Cloud Contract repository&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html"&gt;Spring Cloud Contract documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_spring_cloud_contract_verifier"&gt;Spring Cloud Contract Verifier documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract-maven-plugin/"&gt;Spring Cloud Contract Verifier Maven Plugin documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract.html#_spring_cloud_contract_wiremock"&gt;Spring Cloud Contract WireMock documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Spring REST Docs 1.1.1.RELEASE</title>
     <link rel="alternate" href="https://spring.io/blog/2016/07/25/spring-rest-docs-1-1-1-release" />
@@ -197,7 +1190,7 @@ Tomcat allocates 100 threads for processing HTTP requests by default. That is ex
 &lt;div class="title"&gt;Note&lt;/div&gt;
 &lt;/td&gt;
 &lt;td class="content"&gt;
-Spring Reactive started as a standalone project, but is folded into the Spring Framework in version 5.0 (first milestone June 2016).
+Spring Reactive started as a standalone project, but is folded into the Spring Framework in version 5.0 (first milestone July 2016).
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
@@ -920,140 +1913,5 @@ The current &lt;code&gt;1.2&lt;/code&gt; version will be still supported, but ju
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Additional details and further mitigations can be found in &lt;a href="http://pivotal.io/security/cve-2016-5007"&gt;CVE-2016-5007&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring IO Platform 2.0.6.RELEASE</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/08/spring-io-platform-2-0-6-release" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2016-07-08:2548</id>
-    <updated>2016-07-08T13:05:38Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; 2.0.6.RELEASE is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Boot 1.3.6.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring Framework 4.2.7.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring Integration 4.2.8.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring REST Docs 1.0.1.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring Retry 1.1.3.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring Security OAuth 2.0.10.RELEASE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/2.0.6.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 4.1.1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/07/spring-security-4-1-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2016-07-07:2547</id>
-    <updated>2016-07-07T12:25:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;I&amp;#8217;m pleased to announce the release of Spring Security 4.1.1.RELEASE which resolves over &lt;a href="https://github.com/spring-projects/spring-security/milestone/87?closed=1"&gt;50 issues&lt;/a&gt;. This release provides mitigation for &lt;a href="https://spring.io/blog/2016/07/08/cve-2016-5007-spring-security-mvc-path-matching-inconsistency"&gt;CVE-2016-5007&lt;/a&gt; There are also lots of bug fixes, but there are also a few notable enhancements.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#mvc-requestmatcher"&gt;MvcRequestMatcher&lt;/a&gt; provides deep integration with Spring MVC to ensure consistent path matching strategies for authorization rules&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#cors"&gt;CORS Support&lt;/a&gt; that can leverage Spring MVC&amp;#8217;s CORS configuration&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#csrf-cookie"&gt;CookieCsrfTokenRepository.withHttpOnlyFalse()&lt;/a&gt; for easily integrating with AngularJS applications&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h1 id="contributions" class="sect0"&gt;&lt;a class="anchor" href="#contributions"&gt;&lt;/a&gt;Contributions&lt;/h1&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Without the community we couldn&amp;#8217;t be the successful project we are today. I&amp;#8217;d like to thank everyone that created issues &amp;amp; provided feedback.&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id="feedback-please" class="sect0"&gt;&lt;a class="anchor" href="#feedback-please"&gt;&lt;/a&gt;Feedback Please&lt;/h1&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you have feedback on this release, I encourage you to reach out via &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/issues"&gt;GitHub Issues&lt;/a&gt;, or via the comments section. You can also ping me &lt;a href="https://twitter.com/rob_winch"&gt;@rob_winch&lt;/a&gt; or Joe &lt;a href="https://twitter.com/joe_grandja"&gt;@joe_grandja&lt;/a&gt; on Twitter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Of course the best feedback comes in the form of &lt;a href="https://github.com/spring-projects/spring-security/blob/master/CONTRIBUTING.md"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.1.RELEASE/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.1.RELEASE/guides/html5/"&gt;Guides&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tool Suite 3.8.0 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/06/spring-tool-suite-3-8-0-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2016-07-06:2546</id>
-    <updated>2016-07-06T08:50:11Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 3.8.0 release of the Spring Tool Suite, our Eclipse-based tooling.&lt;/p&gt;
-&lt;p&gt;Highlights from this release include:&lt;/p&gt;
-&lt;ul&gt;&#xD;
-&lt;li&gt;updated to Eclipse Neon 4.6 GA&lt;/li&gt;&#xD;
-&lt;li&gt;all new Spring Boot code templates&lt;/li&gt;&#xD;
-&lt;li&gt;improved Spring Boot YML and property editors (more advanced content-assist, quick-fixes, and more)&lt;/li&gt;&#xD;
-&lt;li&gt;many small improvements to improve developer productivity&lt;/li&gt;&#xD;
-&lt;li&gt;Pivotal tc Server updated to 3.1.4&lt;/li&gt;&#xD;
-&lt;/ul&gt;
-&lt;p&gt;To download the distributions, please go visit:&lt;/p&gt;
-&lt;ul&gt;&#xD;
-&lt;li&gt;Spring Tool Suite: &lt;a href="https://spring.io/tools/sts/all"&gt;https://spring.io/tools/sts/all&lt;/a&gt;&lt;/li&gt;&#xD;
-&lt;/ul&gt;
-&lt;p&gt;Detailed new and noteworthy notes can be found here: &lt;a href="http://docs.spring.io/sts/nan/v380/NewAndNoteworthy.html"&gt;STS 3.8.0 New &amp;amp; Noteworthy&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 1.4.0.RC1 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/05/spring-boot-1-4-0-rc1-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2016-07-05:2545</id>
-    <updated>2016-07-05T12:23:55Z</updated>
-    <content type="html">&lt;p&gt;It is my pleasure to announce that the release candidate of Spring Boot 1.4 is available now from the &lt;a href="http://repo.spring.io/milestone/"&gt;Spring milestone repository&lt;/a&gt;. This milestone concludes 6 months of work in the 1.4 line, closing over &lt;a href="https://github.com/spring-projects/spring-boot/issues?q=milestone%3A1.4.0.RC1+is%3Aclosed"&gt;140 issues and pull requests&lt;/a&gt;! Thanks to everyone that has contributed.&lt;/p&gt;
-&lt;p&gt;Highlights of the new release include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unified &lt;code&gt;@EntityScan&lt;/code&gt; for JPA, MongoDB, Neo4j, Couchbase and Cassandra&lt;/li&gt;
-  &lt;li&gt;Auto-configured &lt;code&gt;RestTemplateBuilder&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Support for pure rest client tests via &lt;code&gt;@RestClientTest&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Support for Jest (Elasticsearch rest client)&lt;/li&gt;
-  &lt;li&gt;Upgrades to Spring Integration 4.3, Spring AMQP 1.6, Spring REST Docs 1.1, MongoDB Java Driver 3 and more&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For a complete list of changes, and upgrade instructions, see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.4-Release-Notes"&gt;Spring Boot 1.4 Release Notes&lt;/a&gt; on the WIKI and the updated &lt;a href="http://docs.spring.io/spring-boot/docs/1.4.0.RC1/reference/htmlsingle/"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;At this point, it is &lt;em&gt;very&lt;/em&gt; important for us that you give &lt;code&gt;1.4.0.RC1&lt;/code&gt; a try on your projects. Check &lt;a href="http://projects.spring.io/spring-boot/"&gt;the QuickStart instruction&lt;/a&gt; to upgrade your project to &lt;code&gt;1.4.0.RC1&lt;/code&gt; or generate an empty project on &lt;a href="https://start.spring.io"&gt;https://start.spring.io&lt;/a&gt; for a concrete example. &lt;/p&gt;
-&lt;p&gt;In particular, we&amp;rsquo;ve decided to revert to Hibernate 5.0 and have already identified a few binary incompatible changes in 5.2. It would be extremely helpful for us to &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;get some feedback&lt;/a&gt;, in particular if you are using &lt;code&gt;HibernateTemplate&lt;/code&gt; in your project.&lt;/p&gt;
-&lt;p&gt;Our next stop is &lt;code&gt;1.4.0.RELEASE&lt;/code&gt; scheduled alongside Spring Framework &lt;code&gt;4.3.2.RELEASE&lt;/code&gt; at the end of the month. Stay tuned!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - July 5th, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/05/this-week-in-spring-july-5th-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-07-05:2544</id>
-    <updated>2016-07-05T08:55:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in rainy but beautiful Seoul, South Korea and &lt;a href="https://jsug.doorkeeper.jp/events/47900"&gt;Tokyo (come join me for a talk on Wednesday!)&lt;/a&gt;, &lt;a href="http://kanjava.connpass.com/event/35302/"&gt;Osaka&lt;/a&gt;, and Hiroshima, Japan where I&amp;rsquo;ll be doing a few meetups and talking to businesses of all shapes and sizes. If you&amp;rsquo;re in either region, &lt;a href="http://twitter.com/starbuxman"&gt;please hit me up&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;This is my favorite time of year! As we lead to &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt;, there&amp;rsquo;s so much good stuff being released that one can hardly keep up! I am &lt;em&gt;really&lt;/em&gt; looking forward to this year&amp;rsquo;s &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt; show, coming in early August. It&amp;rsquo;s an amazing time to build applications, and SpringOne Platform is in a unique position to capture the larger discussion: why do we #devops, #cloud, #agile, or #microservice? Join the discussion August 1-4, 2016 in beautiful Las Vegas and let&amp;rsquo;s find out!&lt;/p&gt;
-&lt;p&gt;So, let&amp;rsquo;s get to it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;JDriven&amp;rsquo;s very own Mr. Haki put together a really cool post &lt;a href="http://blog.jdriven.com/2016/07/spring-sweets-using-groovy-configuration-propertysource/"&gt;on using the Groovy language&amp;rsquo;s ConfigSlurper as a Spring framework &lt;code&gt;PropertySource&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://toomuchcoding.com/blog/2016/06/24/accurest-becomes-part-of-the-spring-cloud-contract"&gt;the Accurest framework has been integrated into Spring Cloud as the basis for the upcoming Spring Cloud Contract&lt;/a&gt; (due to be released in Spring Cloud Camden), designed to promote CDC (contract driven consumers).&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/04/spring-boot-1-3-6-available-now"&gt;Spring Boot 1.3.6 is now available&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/04/spring-framework-4-3-1-and-4-2-7-available-now"&gt;Spring Framework 4.3.1 and 4.2.7 are now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/04/spring-for-apache-kafka-1-0-and-spring-integration-kafka-2-0-go-ga"&gt;Spring for Apache Kafka 1.0 and Spring Integration Kafka 2.0 go GA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/01/spring-cloud-brixton-sr2-is-available"&gt;Spring Cloud Brixton SR2 is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/06/30/spring-session-1-2-1-released"&gt;Spring Session lead Rob Winch has just announced Spring Session 1.2.1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/06/29/spring-for-apache-hadoop-2-4-0-ga-released"&gt;Spring for Apache Hadoop 2.4.0.GA has been released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring test ninja &lt;a href="https://twitter.com/sam_brannen/status/750070377339097092"&gt;Sam Brannen just pushed JUnit 5 support to master for Spring Framework 5&lt;/a&gt;! This is really cool and a natural next step given all the work Pivotal, and Sam in particular, has done as a contributor to JUnit.&lt;/li&gt;
-  &lt;li&gt;the OpenCredo blog has a nice post &lt;a href="https://opencredo.com/hal-hypermedia-api-spring-hateoas/"&gt;on using HAL and (Spring) HATEOAS&lt;/a&gt; when implementing Microservices&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>

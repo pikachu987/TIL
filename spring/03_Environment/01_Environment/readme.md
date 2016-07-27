@@ -250,7 +250,51 @@ public class SpringConfig{
 
 
 
+### 프로퍼티 파일을 이용한 프로퍼티 설정
+###### readme가 너무 길어지고 있다 ㅜㅜ
 
+스프링은 빈 객체의 프로퍼티나 생성자 값을 설정하기 위해 Environment를 직접 사용하는 경우는 드물다. 사실, 스프링에 Envrionemnt가 추가되기 전부터 스프링은 외부의 프로퍼티 파일을 이용해서 스프링은 외부의 프로퍼티 파일을 이용해서 스프링 빈을 설정하는 방법을 제공하고 있었다. 앞에서 언급했던 db.properties 파일을 xml에서 사용한다.
 
+~~~~
+<beans ......>
+	<context:property-placeholder location="classpath:/db.properties" />
+	<bean id="connProvider" class="com.company.Ex_6_ConnectionProvider" init-method="init">
+		<property name="driver" value="${db.driver}" />
+		<property name="url" value="${db.jdbcUrl}" />
+		<property name="user" value="${db.user}" />
+		<property name="password">
+			<value>${db.password}</value>
+		</property>
+	</bean>
+</beans>
+~~~~
 
+> &lt;context:property-placeholder&gt; 태그는 location속성으로 지정된 프로퍼티 파일로부터 정보를 읽어와 빈 설정에 입력한 플레이스홀더의 값을 프로퍼티 파일에 존재하는 값으로 변경한다. 플레이스홀더는 사용할 프로퍼티 이름을 지정하며, &lt;context:property-placeholder&gt;는 플레이스홀더를 동일한 이름을 갖는 프로퍼티의 값으로 치환한다. 
 
+> location 속성 외에 &lt;context:property-placeholder&gt; 태그가 제공하는 주요 속성은 다음과 같다.
+> * file-encoding
+> 파일을 읽어올 때 사용할 인코딩을 지정한다. 이 값이 없으면, 자바 프로퍼티 파일 인코딩을 따른다.(JDK에서 제공하는 native2ascii 도구를 이용해서 생성 가능한 인코딩)
+> * ignore-resource-not-found
+> 이 속성의 값이 true면, location 속성에 지정한 자원이 존재하지 않아도 익셉션을 발생시키지 않는다. false면, 자원이 존재하지 않을 때 익셉션을 발생시킨다. 기본값은 false이다.
+> * ignore-unresolvable
+> 이 값이 true면, 플레이스홀더에 일치하는 프로퍼티가 없어도 익셉션을 발생시키지 않는다. false면 플레이스홀더와 일치하는 프로퍼티가 없을 경우 익셉션을 발생시킨다. 기본값은 false이다.
+
+&lt;context:property-placeholder&gt; 태그는 내부적으로 PropertySourcesPlaceholderConfigurer를 빈으로 등록한다. PropertySourcesPlaceholderConfigurer는 location으로 지정한 파일에서 프로퍼티 값을 찾을 수 없는 경우 Environment의 프로퍼티를 확인하며, Environment가 해당 프로퍼티를 갖고 있으면 그 값을 사용한다.
+
+&lt;context:property-placeholder&gt; 태그를 사용할 때 주의점은 전체 설정에서 이 태그를 두 번 이상 사용할 경우, 첫 번째 사용한 태그의 값이 우선순위를 갖는다.
+
+config파일을 두개 이상만들어서 사용하면 익셉션이 나는데 이럴때는 xml파일을 하나로 합쳐서
+
+~~~~
+<beans ...>
+	<context:property-placeholder location="classpath:/db.properties, classpath:/app.properties" />
+</beans>
+~~~~
+이런식으로 작성 하거나 애스터리크를 사용할 수도 있다.
+~~~~
+<context:property-placeholder location="classpath:/*.properties" />
+~~~~
+
+> PropertySourcesPlaceholderConfigurer의 동작방식
+> &lt;context:property-placeholder&gt; 태그는 내부적으로 PropertySourcesPlaceholderConfigurer 객체를 빈으로 등록한다. PropertySourcesPlaceholderConfigurer는 다른 빈 객체를 생성하기 전에 먼저 생성되어, 다른 빈들의 설정 정보에 있는 플레이스홀더의 값을 프로퍼티의 값으로 변경한다. PropertySourcesPlaceholderConfigurer클래스는 BeanFactoryPostProcessor 인터페이스를 구현하고 있는데, 스프링은 BeanFactoryPostProcessor 인터페이스를 구현한 객체를 특수한 방식으로 사용한다.
+> 스프링은 설정 정보를 읽은 뒤에, BeanFactoryPostProcessor를 구현한 클래스가 있으면, 그 빈 객체를 먼저 생성한다. 그런 뒤에 다른 빈의 메타 정보를 BeanFactoryPostProcessor를 구현한 빈 객체에 전달해서 메타 정보를 변경할 수 있도록 한다. PropertySourcesPlaceholderConfigurer의 경우, 전달받은 메타 정보에 플레이스홀더가 포함되어 있으면, 플레이스홀더를 읽치하는 프로퍼티 값으로 치환하는 방식으로 메타 정보를 변경하게 된다.
