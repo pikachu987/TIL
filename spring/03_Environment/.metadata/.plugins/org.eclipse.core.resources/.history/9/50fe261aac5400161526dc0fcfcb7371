@@ -1,0 +1,302 @@
+## Environment
+어플리케이션을 개발하다보면 동일한 코드를 사용하면서 일부 정보만 변경하고 싶은 경우가 흔히 발생한다. 이 경우 프로그램 코드를 바꾸기 보다는 별도 파일을 이용해서 설정 정보를 변경하도록 만든다. 예를 들어, Tomcat Server는 server.xml이라는 파일에 사용할 포트 번호를 설정하며, 아파치 웹 서버는 httpd.conf 파일에 포트 번호와 디렉토리 경로를 설정한다.
+
+스프링도 비슷하게 스프링 설정 변경 없이 외부에서 입력한 정보를 이용해서 설정 값을 변경하는 방법들을 제공하고 있으며, 그중 한 가지 방법이 Environment 이다.
+
+스프링의 Environment는 다음의 두 가지 기능을 제공한다.
+* 프로퍼티 통합 관리
+* 프로필을 이용해서 선택적으로 설정 정보를 사용할 수 있는 방법 제공
+
+Environment는 시스템 환경 변수, JVM 시스템 프로퍼티, 프로퍼티 파일 등의 프로퍼티를 PropertySource라는 것으로 통합 관리한다. 따라서 설정 파일이나 클래스 수정없이 시스템 프로퍼티나 프로퍼티 파일 등을 이용해서 설정 정보의 일부를 변경할 수 있다.
+
+또한, Environment는 여러 프로필(Profile) 중에서 특정 프로필을 활성화하는 기능을 제공하고 있다. 이 기능을 사용하면 개발환경, 통합테스트 환경, 실 서비스 환경에 따라 서로 다른 스프링 빈 설정을 선택할 수 있기 때문에, 서로 다른 환경을 휘한 설정 정보를 편리하게 관리할 수 있다.
+
+
+### Environment  구하기
+org.springframework.env.Environment를 직접 사용할 일이 많진 않지만, 코드에서 프로필을 선택하거나 Environment에 새로운 PropertySource를 직접 추가해주어야 한다면 ConfigurableApplcationContext에 정의된 getEnvironment() 메서드를 이용해서 Environment를 구할 수 있다.
+
+~~~~
+import org.springframework.core.env.ConfigurableEnvironment;
+
+...
+ConfigurableApplicationContext context = new ApplcationConfigApplcationContext();
+ConfigurableEnvironment environment = context.getEnvironment();
+environment.setActiveProfiles("dev");
+~~~~
+
+getEnvironment() 메서드가 리턴하는 타입은 Environment의 하위 타입인 org.springframework.core.env.ConfigurableEnvironment 타입이다. ConfigurableEnvironment 타입은 사용할 프로필을 선택하는 기능과 PropertySource를 추가하는데 필요한 기능을 제공한다.
+
+
+## Environment 와 PropertySource
+Environment에서 살펴 볼 첫 번째 기능은 프로퍼티 값을 제공하는 기능이다. 스프링 컨테이너가 기본으로 사용하는 Environment의 구현체는 다수의 PropertySource로부터 프로퍼티 값을 읽어온다. 실제 Environment로부터 프로퍼티를 읽어오는 과정은 다음과 같다.
+
+
+1. 프로퍼티 값 요청
+ConfigurableEnvironment
+
+2. 프로퍼티 값 요청
+MutablePropertySources
+
+3. 정해준 순서대로 프로퍼티 값 요청
+시스템 프로퍼티(PropertySource),	환경변수(PropertySource),	자바Properties(PropertySource),	JNDI(PropertySource)
+
+
+org.springframework.env.MutablePropertySources에 두 개 이상의 PropertySource가 등록되어 있을 경우, 프로퍼티 값을 구할 때까지 등록된 순서에 따라 차례대로 확인한다. 예를 들어, 이름이 JAVA_HOME인 환경변수가 존재하고, PropertySource의 우선 순위가 왼쪽이 높고 오른쪽이 낮다고 가정해보자. 이 때 Environment로 부터 "JAVA_HOME" 프로퍼티의 값을 구하면, 먼저 시스템 프로퍼티 PropertySource로 부터 프로퍼티 값을 찾는다. 시스템 프로퍼티에는 "JAVA_HOME" 프로퍼티가 존재하지 않으므로, 두 번째 PropertySource는 환경 변수로부터 값을 읽어오므로 환경 변수인 JAVA_HOME에 담긴 값을 "JAVA_HOME" 프로퍼티의 값으로 리턴하며, Environment는 이 값을 사용하게 된다.
+
+스프링은 시스템 프로퍼티와 환경 변수를 사용하는 두 개의 PropertySourc를 기본적으로 사용하며, 이 중 우선순위는 시스템 프로퍼티를 사용하는 PropertySource가 높다.
+즉, Environment의 설정을 변경하지 않는 이상, 시스템 프로퍼티로부터 먼저 값을 찾고 그 다음에 환경변수로부터 값을 찾는다.
+
+> ### 자바의 시스템 프로퍼티
+> 자바의 시스템 프로퍼티는 크게 두 가지로 설정할 수 있다. 첫 번째 방법은 java 명령어를 실행할때 -D 옵션을 지정하는 것이다. -D 옵션에서 '=' 이전의 값이 프로퍼티 이름이고 '=' 이후의 값이 프로퍼티 값이다. 예를 들어, 다음 코드는 -D 옵션을 이용해서 jdbc.user 시스템 프로퍼티의 값으로 dbuser1로 지정하는 방법을 보여준다.
+>  $ java -Djdbc.user=dbuser1...
+> 시스템 프로퍼티를 설정하는 두 번째 방법은 System.setProperty() 메서드를 사용하는 것이다. 예를 들어, 다음은 이름이 "jdbc.user"인 시스템 프로퍼티의 값을 "dbuser1"로 설정하는 코드를 보여주고 있다.
+> System.setProperty("jdbc.user", "dbuser1");
+
+### Environment에서 프로퍼티 읽기
+
+> Environment로부터 프로퍼티를 읽어오는 방법은 간단하다. Environment를 구한 뒤에 Environment가 제공하는 프로퍼티 관련 메서드를 이용하면 된다. 예를 들어, 다음은 이름이 "java.version"인 프로퍼티의 값을 구하는 코드를 보여주고 있다.
+
+~~~~
+ConfigurableApplicationContext context = new GenericXmlApplicationContext();
+ConfigurableEnvironemnt env = context.getEnvironment();
+String javaVersion = env.getProperty("java.version");
+System.out.printf("Java version is %s", javaVersion);
+~~~~
+
+> "java.version"은 시스템 프로퍼티로서 사용중인 자바 버전을 값으로 갖는다. 앞서 설명했듯이 Environment는 시스템 프로퍼티에서 값을 가져오기 때문에, 자바 1.7 버전에서 위 코드를 실행하면 다음과 같은 결과가 출력된다.
+
+~~~~
+Java version is 1.7
+~~~~
+
+Environment가 제공하는 프로퍼티 관련 주요 메서드는 다음과 같다.
+
+> * boolean containsProperty(String key)
+> 지정한 key에 해당하는 프로퍼티가 존재하는지 확인한다.
+> *  String getProperty(String key)
+> 지정한  key에 해당하는 프로퍼티 값을 구한다. 존재하지 않으면 null을 리턴한다.
+> * String getProperty(String key, String defaultValue)
+> 지정한 key에 해당하는 프로퍼티 값을 구한다. 좆ㄴ재하지 않으면 defaultValue를 리턴한다.
+> *  String getRequiredProperty(String key) throws IllegalStateException
+>  지정한 key에 해당하는 프로퍼티 값을 구한다. 존재하지 않으면 익셉션을 발생시킨다.
+>  * <T> T getProperty(String key, Class<T> targetType)
+>  지정한 key에 해당하는 프로퍼티의 값을 targetType으로 변환해서 구한다. 존재하지 않을 경우 null을 리턴한다.
+>  * <T> T getProperty(String key, Class<T> targetType, T defaultValue)
+>  지정한 key에 해당하는 프로퍼티의 값을 targetType으로 변환해서 구한다. 존재하지 않을 경우 defaultValue를 리턴한다.
+>  * <T> T getRequiredProperty(String key, Class<T> targetType) throws IllegalStateException
+>  지정한 key에 해당하는 프로퍼티의 값을 targetType으로 변환해서 구한다. 존재하지 않을 경우 익셉션을 발생시킨다.
+
+### Environment에 새로운 PropertySource 추가하기
+클래스패스에 위치한 db.properties 파일을 다음과 같이 작성했다고 하자.
+
+~~~~
+db.driver=com.mysql.jdbc.Driver
+db.jdbcUrl=jdbc:mysql://host/test
+db.user=pikachu987
+db.password=pikapika
+~~~~
+
+> 위 파일에 포함된 프로퍼티를 스프링 Environment 의 프로퍼티로 사용하고 싶지만, 스프링은 기본적으로 환경 변수와 시스템 프로퍼티만 Environment의 프로퍼티로 사용한다. 따라서, 프로퍼티 파일을 Environment의 프로퍼티로 추가해주고 싶다면, 그에 맞는 PropertySource를 추가해야 한다.
+
+> 다음은 특정 프로퍼티 파일을 사용하는 PropertySource를 Environment에 추가하는 예제 코드이다.
+
+~~~~
+ConfigurableEnvironment env = context.getEnvironment();
+MutablePropertySources propertySources = env.getPropertySources();
+propertySources.addLast(new ResourcePropertySource("classpath:/db.properties"));
+System dbUser = env.getProperty("db.user"); //pikachu987 리턴
+~~~~
+
+> MutablePropertySources는 새로운 PropertySource를 추가해주는 메서드를 제공하고 있는데, 위 코드에서는 addLast()  메서드를 사용했다. addLast() 메서드를 사용하면, 파라미터로 전달한 PropertySource를 마지막 PropertySource로 등록한다. 즉, 프로퍼티 탐색 과정에서 우선순위가 제일 낮다. 반대로 addFirst() 메서드를 사용하면 첫 번째 PropertySource가 되어 우선순위가 제잎 높아진다.
+
+> org.springframework.core.io.support.ResourcePropertySource 클래스는 자바 프로퍼티 파일로부터 값을 읽어오는 PropertySource 구현 클래스이며, 이 외에도 스프링은 자바 Properties 객체로부터 프로퍼티 값을 읽어오는 PropertiesPropertySource, 디렉토리 서버에서 프로퍼티 값을 읽어오는 JndiPropertySource 등을 제공하고 있다.
+
+> @Configuration 애노테이션 기반 자바 설정을 사용하고 있다면, 다음과 같이 @PropertySource 애노테이션을 사용해서 간단하게 프로퍼티 파일의 내용을 PropertySource에 추가할 수 있다.
+
+~~~~
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource("classpath:/db.properties")
+public class Config{
+
+	@Autowired
+	private Environment env;
+~~~~
+
+두 개 이상의 프로퍼티 파일을 사용하고 싶다면, @PropertySource의 값을 배열로 지정하면 된다. 자원이 없는 경우 익셉션을 발생하지 않고 무시하고 싶다면 ignoreResourceNotFound 속성을 true로 지정한다. (ignoreSourceNotFound 속성의 기본값은 false이다.)
+
+~~~~
+@PropertySource(
+	value={"classpath:/db.properties", "classpath:/app.properties"},
+	ignoreResourceNotFound=true
+)
+public class Config2{
+...
+}
+~~~~
+
+@PropertySource 자체를 두 개 이상 설정할 때에는 @PropertySources 애노테이션을 사용하면 된다.
+
+~~~~
+@PropertySources({
+	@PropertySource("classpath:/db.properties"),
+	@PropertySource(value="classpath:/app.properties", ignoreResourceNotFound=true)
+})
+public class Config3{
+...
+~~~~
+
+@PropertySource 애노테이션은 자바 8의 @Repeatable을 적용하고 있으므로, 자바 8을 사용하면 다음과 같이 @PropertySource 애노테이션을 여러 번 사용해도 된다.
+
+~~~~
+@ProertySource("classpath:/db.properties"),
+@PropertySource(value="classpath:/app.properties", ignoreResourceNotFound=true)
+public class Config4{
+...
+~~~~
+
+### Environment를 스프링 빈에서 사용하기
+
+Environment와 PropertySource에 대해서 알아봤는데, 스프링 빈은 Environment에 직접 접근해서 Environment가 제공하는 프로퍼티를 사용할 수 있다. 스프링 빈 객체에서 Environment에 접근할 필요가 있다면, 다음의 두 가지 방법 중의 하나를 사용하면 된다.
+
+* org.springframework.context.EnvironmentAware 인터페이스를 구현
+* @Autowired 애노테이션을 Environment 필드에 적용
+
+EnvironmentAware 인터페이스를 Environment 필드에 적용
+
+~~~~
+package org.springframework.context;
+
+import org.springframework.beans.factory.Aware;
+import org.springframework.core.env.Environment;
+
+public interface EnvironmentAware extends Aware{
+	void setEnvironment(Environment environment);
+}
+~~~~
+
+스프링 빈 객체가 EnvironmentAware 인터페이스를 구현하고 있을 경우, 스프링 컨테이너는 빈 객체를 생성한 뒤에 빈 객체의 setEnvironment() 메서드를 호출해서 컨테이너가 사용하는 Environment 객체를 전달한다. 따라서, EnvironmentAware 인터페이스를 구현한 스프링 빈은 아래 코드처럼 setEnvironment() 메서드에서 전달받은 Environment 객체를 필드에 보관하고, Environment의 프로퍼티가 필요한 곳에도 이 필드를 사용하면 된다.
+
+~~~~
+public class ConnectionProvider implements EnvironmentAware{
+
+	private String driver;
+	private String user;
+	private String password;
+	private String url;
+	private Environment env;
+
+	@Override
+	public void setEnvironment(Environment environment){
+		this.env = environment;
+	}
+
+	public void init(){
+		driver = env.getProperty("db.driver");
+		url = env.getProperty("db.url");
+		user = env.getProperty("db.user");
+		driver = env.getProperty("db.driver");
+		password = env.getProperty("db.password");
+	}
+	....
+~~~~
+
+> 애노테이션 기반 의존 설정 기능이 활성화되어 있다면, 다음과 같이 @Autowired 애노테이션을 이용해서 Environment에 접근할 수 있다.
+
+~~~~
+public class ConnectionProvider{
+
+	@Autowired
+	private Environment environment;
+
+	public void init(){
+		driver = env.getProperty("db.driver");
+		url = env.getProperty("db.url");
+		user = env.getProperty("db.user");
+		driver = env.getProperty("db.driver");
+		password = env.getProperty("db.password");
+	}
+}
+~~~~
+
+> @Configuration 기반 자바 설정 코드에서도 동일한 방법으로 Environment를 구할 수 있다. 다음 코드는 @Autowired 애노테이션을 이용해서 Environment를 구하는 코드를 보여주고 있다.
+
+~~~~
+import org.springframework.core.env.Environment;
+
+@Configuration
+public class SpringConfig{
+
+	@Autowired
+	private Environment env;
+
+
+	@Bean(initMethod = "init")
+	public ConnectionProvider connectionProvider(){
+		//ConnectionProvider에서 직접 Environment에 접근하지 않는다고 가정
+		ConnectionProvider connectionProvider = new ConnectionProvider();
+		connectionProvider.setDriver(env.getProperty("db.driver"));
+		connectionProvider.setUrl(env.getProperty("db.jdbcUrl"));
+		connectionProvider.setUser(env.getProperty("db.user"));
+		connectionProvider.setPassword(env.getProperty("db.password"));
+		return connetionProvider;
+	}
+	.....
+}
+
+~~~~
+
+
+
+
+### 프로퍼티 파일을 이용한 프로퍼티 설정
+###### readme가 너무 길어지고 있다 ㅜㅜ
+
+스프링은 빈 객체의 프로퍼티나 생성자 값을 설정하기 위해 Environment를 직접 사용하는 경우는 드물다. 사실, 스프링에 Envrionemnt가 추가되기 전부터 스프링은 외부의 프로퍼티 파일을 이용해서 스프링은 외부의 프로퍼티 파일을 이용해서 스프링 빈을 설정하는 방법을 제공하고 있었다. 앞에서 언급했던 db.properties 파일을 xml에서 사용한다.
+
+~~~~
+<beans ......>
+	<context:property-placeholder location="classpath:/db.properties" />
+	<bean id="connProvider" class="com.company.Ex_6_ConnectionProvider" init-method="init">
+		<property name="driver" value="${db.driver}" />
+		<property name="url" value="${db.jdbcUrl}" />
+		<property name="user" value="${db.user}" />
+		<property name="password">
+			<value>${db.password}</value>
+		</property>
+	</bean>
+</beans>
+~~~~
+
+> &lt;context:property-placeholder&gt; 태그는 location속성으로 지정된 프로퍼티 파일로부터 정보를 읽어와 빈 설정에 입력한 플레이스홀더의 값을 프로퍼티 파일에 존재하는 값으로 변경한다. 플레이스홀더는 사용할 프로퍼티 이름을 지정하며, &lt;context:property-placeholder&gt;는 플레이스홀더를 동일한 이름을 갖는 프로퍼티의 값으로 치환한다. 
+
+> location 속성 외에 &lt;context:property-placeholder&gt; 태그가 제공하는 주요 속성은 다음과 같다.
+> * file-encoding
+> 파일을 읽어올 때 사용할 인코딩을 지정한다. 이 값이 없으면, 자바 프로퍼티 파일 인코딩을 따른다.(JDK에서 제공하는 native2ascii 도구를 이용해서 생성 가능한 인코딩)
+> * ignore-resource-not-found
+> 이 속성의 값이 true면, location 속성에 지정한 자원이 존재하지 않아도 익셉션을 발생시키지 않는다. false면, 자원이 존재하지 않을 때 익셉션을 발생시킨다. 기본값은 false이다.
+> * ignore-unresolvable
+> 이 값이 true면, 플레이스홀더에 일치하는 프로퍼티가 없어도 익셉션을 발생시키지 않는다. false면 플레이스홀더와 일치하는 프로퍼티가 없을 경우 익셉션을 발생시킨다. 기본값은 false이다.
+
+&lt;context:property-placeholder&gt; 태그는 내부적으로 PropertySourcesPlaceholderConfigurer를 빈으로 등록한다. PropertySourcesPlaceholderConfigurer는 location으로 지정한 파일에서 프로퍼티 값을 찾을 수 없는 경우 Environment의 프로퍼티를 확인하며, Environment가 해당 프로퍼티를 갖고 있으면 그 값을 사용한다.
+
+&lt;context:property-placeholder&gt; 태그를 사용할 때 주의점은 전체 설정에서 이 태그를 두 번 이상 사용할 경우, 첫 번째 사용한 태그의 값이 우선순위를 갖는다.
+
+config파일을 두개 이상만들어서 사용하면 익셉션이 나는데 이럴때는 xml파일을 하나로 합쳐서
+
+~~~~
+<beans ...>
+	<context:property-placeholder location="classpath:/db.properties, classpath:/app.properties" />
+</beans>
+~~~~
+이런식으로 작성 하거나 애스터리크를 사용할 수도 있다.
+~~~~
+<context:property-placeholder location="classpath:/*.properties" />
+~~~~
+
+> PropertySourcesPlaceholderConfigurer의 동작방식
+
+> &lt;context:property-placeholder&gt; 태그는 내부적으로 PropertySourcesPlaceholderConfigurer 객체를 빈으로 등록한다. PropertySourcesPlaceholderConfigurer는 다른 빈 객체를 생성하기 전에 먼저 생성되어, 다른 빈들의 설정 정보에 있는 플레이스홀더의 값을 프로퍼티의 값으로 변경한다. PropertySourcesPlaceholderConfigurer클래스는 BeanFactoryPostProcessor 인터페이스를 구현하고 있는데, 스프링은 BeanFactoryPostProcessor 인터페이스를 구현한 객체를 특수한 방식으로 사용한다.
+
+> 스프링은 설정 정보를 읽은 뒤에, BeanFactoryPostProcessor를 구현한 클래스가 있으면, 그 빈 객체를 먼저 생성한다. 그런 뒤에 다른 빈의 메타 정보를 BeanFactoryPostProcessor를 구현한 빈 객체에 전달해서 메타 정보를 변경할 수 있도록 한다. PropertySourcesPlaceholderConfigurer의 경우, 전달받은 메타 정보에 플레이스홀더가 포함되어 있으면, 플레이스홀더를 읽치하는 프로퍼티 값으로 치환하는 방식으로 메타 정보를 변경하게 된다.

@@ -14,6 +14,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile"/>
 			<item value="/Users/guanho/Desktop/gitAdd/03_Environment/01_Environment"/>
 		</list>
 		<list key="projectNameTemplate">

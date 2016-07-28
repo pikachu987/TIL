@@ -296,5 +296,80 @@ config파일을 두개 이상만들어서 사용하면 익셉션이 나는데 �
 ~~~~
 
 > PropertySourcesPlaceholderConfigurer의 동작방식
+
 > &lt;context:property-placeholder&gt; 태그는 내부적으로 PropertySourcesPlaceholderConfigurer 객체를 빈으로 등록한다. PropertySourcesPlaceholderConfigurer는 다른 빈 객체를 생성하기 전에 먼저 생성되어, 다른 빈들의 설정 정보에 있는 플레이스홀더의 값을 프로퍼티의 값으로 변경한다. PropertySourcesPlaceholderConfigurer클래스는 BeanFactoryPostProcessor 인터페이스를 구현하고 있는데, 스프링은 BeanFactoryPostProcessor 인터페이스를 구현한 객체를 특수한 방식으로 사용한다.
+
 > 스프링은 설정 정보를 읽은 뒤에, BeanFactoryPostProcessor를 구현한 클래스가 있으면, 그 빈 객체를 먼저 생성한다. 그런 뒤에 다른 빈의 메타 정보를 BeanFactoryPostProcessor를 구현한 빈 객체에 전달해서 메타 정보를 변경할 수 있도록 한다. PropertySourcesPlaceholderConfigurer의 경우, 전달받은 메타 정보에 플레이스홀더가 포함되어 있으면, 플레이스홀더를 읽치하는 프로퍼티 값으로 치환하는 방식으로 메타 정보를 변경하게 된다.
+
+
+
+
+### Configuration 애노테이션을 이용하는 자바 설정에서의 프로퍼티 사용
+> @Configuration을 이용한 자바 설정에서 프로퍼티 파일을 사용하고 싶을 때에는 PropertySourcesPlaceholderConfigurer와 @Value 애노테이션을 함께 쓴다.
+> ~~~~
+> import org.springframework.beans.factory.annotation.Value;
+> import org.springframework.context.PropertySourcesPlaceholderConfigurer;
+> import org.springframework.core.io.ClassPathResource;
+> 
+> @Configuration
+> public class Config{
+> @Value("${db.driver}")
+> private String driver;
+> @Value("${db.jdbcUrl}")
+> private String jdbcUrl;
+> @Value("${db.user}")
+> private String user;
+> @Value("${db.password}")
+> private String password;
+> 
+> @Bean
+> public static PropertySourcesPlaceholderConfigurer properties(){
+> 	PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
+> 	configurer.setLocation(new ClassPathResource("db.properties"));
+> 	return configurer;
+> }
+> 
+> @Bean(initMethod = "init")
+> public ConnectionProvider connectionProvider(){
+> ConnectionProvider connectionProvider = new ConnectionProvider();
+> 	connectionProvider.setDriver(driver);
+> 	connectionProvider.setUrl(jdbcUrl);
+> 	connectionProvider.setUser(user);
+> 	connectionProvider.setPassword(password);
+> 	return connectionProvider;
+> }
+> ~~~~
+>  위 코드에서 주의해볼 점은 PropertySourcesPlaceholderConfigurer 타입의 빈을 설정하는 메서드는 정적(static) 메서드라는 것이다. 이는 PropertySourcesPlaceholderConfigurer 클래스가 특수한 목적의 빈이기 때문으로 정적 메서드로 지정하지 않으면 원하는 방식으로 동작하지 않는다.
+>  
+>  @Value 애노테이션이 플레이스홀더를 값으로 가질 경우, PropertySourcesPlaceholderConfigurer는 플레이스홀더의 값을 프로퍼티의 값으로 치환한다. 위 예의 경우 &amp;{db.driver} 플레이스홀더를 db.properties에 정의되어 있는 "db.driver" 프로퍼티의 값으로 치환한다. 따라서, 실제 빈을 생성하는 메서드는 @Value 애노테이션이 붙은 필드를 통해서 해당 프로퍼티의 값을 사용할 수 있게 된다.
+>  
+>  PropertySourcesPlaceholderCOnfigurer 클래스를 직접 사용할 때에는 다음의 메서드를 이용해서 동작 방식을 설정할 수 있다.
+>  
+>  * **setLocation(Resource location)** : location을 프로퍼티 파일로 사용한다.
+>  * **setLocations(Resource[] locations)** : locations를 프로퍼티 파일로 사용한다.
+>  * **setFileEncoding(String encoding)** : 프로퍼티 파일을 읽어올 때 사용할  인코딩을 지정한다. 지정하지 않을 경우 자바 프로퍼티 파일 인코딩을 따른다.
+>  * **setIgnoreResourceNotFound(boolean b)** : true를 전달하면, 자원을 발견할 수 없어도 익셉션을 발생하지 않고 무시한다.
+>  * **setIgnoreUnresolvablePlaceholders(boolean b)** : true를 전달하면, 플레이스홀더에 해당하는 프로퍼티를 발견할 수 없어도 익센션을 발생하지 않고 무시한다.
+>> Resource 인터페이스
+>> org.springframework.core.io.Resource 인터페이스는 스프링에서 자원을 표현할 때 사용하는데, 대표적인 구현 클래스로 다음의 두 가지가 있다.
+>> * org.springframework.core.io.ClassPathResource : 클래스패스에 위치한 자원으로부터 데이터를 읽음
+>> * org.springframework.core.io.FileSystemResource : 파일 시스템에 위치한 자원으로부터 데이터를 읽음
+>> @Configuration 애노테이션 기반의 자바 설정에서 PropertySourcesPlaceholderConfigurer 클래스의 setLocation()이나 setLocations() 메서드를 직접 호출할 경우에 이들 Resource 구현 클래스를 주로 사용한다.
+
+> @Value 애노테이션에 대해서 설명하지 않았는데, @Value애노테이션은 스프링에서 프로퍼티 값을 설정할 때 사용할 수 있는 애노테이션이다. 그런데, @Configuration애노테이션을 사용한 설정 클래스 역시 스프링에서는 빈 객체로 생성된다. 따라서, **@Configuration 애노테이션 사용 클래스에서 @Value가 붙은 필드는 스프링에서 빈의 프로퍼티로 인식되며**, @Value가 플레이스 홀더를 가질 경우 PropertySourcePlaceholderConfigurer의 치환 대상이된다.
+
+@PropertySource 애노테이션과 PropertySourcesPlaceholderConfigurer를 함께 사용하면 좀 더 쉽게 코드를 작성할 수 있다. @PropertySource는 프로퍼티 파일을 이용해서 Environment에 프로퍼티를 추가할 때 사용되는데, PropertySourcesPlaceholderConfigurer는 자신의 설정에서 사용한 파일에 프로퍼티가 존재하지 않을 경우 Environment의 프로퍼티 값을 사용하도록 되어있다.
+
+~~~~
+@Configuration
+@PropertySources(@PropertySource("classpath:/db.properties"))
+public class Config{
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer properties(){
+		PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
+		return configurer;
+	}
+
+	@Value("${db.driver}")
+	private String driver;
+~~~~

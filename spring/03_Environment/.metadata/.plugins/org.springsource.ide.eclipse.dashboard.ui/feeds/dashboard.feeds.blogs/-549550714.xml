@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-07-27T13:36:46Z</updated>
+  <updated>2016-07-28T11:01:10Z</updated>
+  <entry>
+    <title>Spring Boot 1.3.7 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/28/spring-boot-1-3-7-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2016-07-28:2571</id>
+    <updated>2016-07-28T11:01:10Z</updated>
+    <content type="html">&lt;p&gt;It is my pleasure to announce that Spring Boot 1.3.7 has been released and is available now from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This maintenance release includes a &lt;a href="https://github.com/spring-projects/spring-boot/milestone/70?closed=1"&gt;number of fixes&lt;/a&gt; and 3rd party dependency updates. Stay tuned for more release announcement with Spring Boot &lt;code&gt;1.4.0.RELEASE&lt;/code&gt; coming up next!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Data Release Train Ingalls M1 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2016/07/27/spring-data-release-train-ingalls-m1-released" />
@@ -14,11 +27,11 @@
       <name>Mark Paluch</name>
     </author>
     <id>tag:spring.io,2016-07-27:2569</id>
-    <updated>2016-07-27T13:36:46Z</updated>
+    <updated>2016-07-27T13:36:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the Spring Data team, I’m happy to announce the first milestone of the &lt;a href="https://en.wikipedia.org/wiki/Daniel_Henry_Holmes_Ingalls,_Jr."&gt;Ingalls&lt;/a&gt; release train. The release ships &lt;a href="https://jira.spring.io/issues/?filter=15383"&gt;230 tickets&lt;/a&gt; fixed! The most noteworthy new features are:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Use of method handles for property access in conversion subsystem (Commons, MongoDB).&lt;/li&gt;
-  &lt;li&gt;Upgrade to Cassandra 3.0 for Spring Data Cassandra.&lt;/li&gt;
+  &lt;li&gt;Upgrade to Cassandra 3.0 for Spring Data Cassandra (see the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/master/cassandra"&gt;updated examples&lt;/a&gt; for details).&lt;/li&gt;
   &lt;li&gt;Support for declarative query methods for Cassandra repositories.&lt;/li&gt;
   &lt;li&gt;Support for Redis geo commands.&lt;/li&gt;
   &lt;li&gt;Any-match mode for query-by-example.&lt;/li&gt;
@@ -1049,7 +1062,7 @@ git merge --no-ff contract-change-pr&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;private RestTemplate restTemplate = new RestTemplate();
 
 private HttpStatus block(int value) {
-    return this.restTemplate.getForEntity("http://example.com", String.class, value)
+    return this.restTemplate.getForEntity("http://example.com/{value}", String.class, value)
             .getStatusCode();
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1190,7 +1203,7 @@ Tomcat allocates 100 threads for processing HTTP requests by default. That is ex
 &lt;div class="title"&gt;Note&lt;/div&gt;
 &lt;/td&gt;
 &lt;td class="content"&gt;
-Spring Reactive started as a standalone project, but is folded into the Spring Framework in version 5.0 (first milestone July 2016).
+Spring Reactive started as a standalone project, but is folded into the Spring Framework in version 5.0 (first milestone June 2016).
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
@@ -1893,25 +1906,6 @@ The current &lt;code&gt;1.2&lt;/code&gt; version will be still supported, but ju
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-java-dsl"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-java-dsl/wiki/Spring-Integration-Java-DSL-Reference"&gt;Documentation&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-java-dsl/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE-2016-5007 Spring Security / MVC Path Matching Inconsistency</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/08/cve-2016-5007-spring-security-mvc-path-matching-inconsistency" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2016-07-08:2549</id>
-    <updated>2016-07-08T13:56:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2016/07/04/spring-framework-4-3-1-and-4-2-7-available-now"&gt;Spring Framework 4.3.1&lt;/a&gt; and &lt;a href="https://spring.io/blog/2016/07/07/spring-security-4-1-1-released"&gt;Spring Security 4.1.1&lt;/a&gt; provide fixes for &lt;a href="http://pivotal.io/security/cve-2016-5007"&gt;CVE-2016-5007&lt;/a&gt; "Spring Security / MVC Path Matching Inconsistency".&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Applications using Spring Security and Spring MVC should upgrade to Spring Security 4.1.1+ and Spring Framework 4.3.1+ and use the &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#mvc-requestmatcher"&gt;MvcRequestMatcher&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Additional details and further mitigations can be found in &lt;a href="http://pivotal.io/security/cve-2016-5007"&gt;CVE-2016-5007&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;</content>
   </entry>
 </feed>
