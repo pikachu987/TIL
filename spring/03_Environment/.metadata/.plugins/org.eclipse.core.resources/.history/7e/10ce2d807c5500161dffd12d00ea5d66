@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:property-placeholder location="classpath:/db.properties" />
+	
+	<beans profile="dev">
+		<bean id="connProvider" class="com.company.ConnectionProvider" init-method="init">
+			<property name="driver" value="${db.driver}" />
+			<property name="url" value="${db.url}" />
+			<property name="user" value="${db.user}" />
+			<property name="password" value="${db.password}" />
+		</bean>
+	</beans>
+	<beans profile="prod">
+		<bean id="connProvider" class="com.company.Ex_1_ConnectionProvider" init-method="init">
+			<property name="jndiName" value="java:/comp/env/jdbc/db" />
+		</bean>
+	</beans>
+	
+</beans>
+

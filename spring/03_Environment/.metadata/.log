@@ -1946,3 +1946,760 @@ Java Model Exception: Java Model Status [Ex_7_config.java [in com.company [in sr
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-28 20:47:49.514
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2016-07-29 19:12:25.051 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/guanho/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/guanho/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.jface 2 0 2016-07-29 19:12:36.971
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-07-29 19:12:36.971
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3aae9e8f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2086f336,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.net 1 0 2016-07-29 19:12:37.549
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:12:47.613
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:12:47.630
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:12:48.081
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:12:48.084
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:40:11.555
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:40:11.559
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:58:38.067
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:58:38.076
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:07.220
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:07.225
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:21.816
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:21.819
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:34.329
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:34.332
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:46.799
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:46.802
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:54.368
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:54.371
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:59.362
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 19:59:59.365
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:02:33.949
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:02:33.955
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:04:19.695
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:04:19.700
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:05:37.155
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:05:37.159
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:05:58.004
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:05:58.013
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 20:06:02.672
+!MESSAGE Ex_6_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Ex_6_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 20:06:02.674
+!MESSAGE Ex_6_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:02.813
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:02.815
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:11.351
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:11.355
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 20:06:22.226
+!MESSAGE Ex_1_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Ex_1_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 20:06:22.227
+!MESSAGE Ex_1_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:22.346
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:22.348
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:27.758
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:27.762
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:29.800
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:29.803
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:35.612
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:35.615
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:37.692
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:37.695
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:42.172
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:42.175
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:44.465
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:06:44.467
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:07:31.185
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:07:31.187
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:08:22.170
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:08:22.172
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:08:47.749
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:08:47.752
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:08:58.555
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:08:58.558
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:09:41.285
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:09:41.288
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 969 2016-07-29 20:09:52.112
+!MESSAGE package net.madvirus.spring4.chap04 [in [Working copy] ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:09:53.568
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:09:53.570
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:01.057
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:01.059
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 20:10:07.776
+!MESSAGE Ex_6_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Ex_6_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 20:10:07.776
+!MESSAGE Ex_6_ConnectionProvider.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:07.912
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:07.913
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:27.534
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:27.536
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:32.071
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:32.074
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:34.124
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:34.127
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:35.141
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:10:35.143
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:11:38.349
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:11:38.351
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:12:52.632
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:12:52.635
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 20:12:56.024
+!MESSAGE Profile_Dev.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Profile_Dev.java [in com.company [in src/main/java [in 02_Profile]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 20:12:56.024
+!MESSAGE Profile_Dev.java [in com.company [in src/main/java [in 02_Profile]]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:12:56.152
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:12:56.154
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:13:21.401
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:13:21.403
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:15:42.923
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:15:42.926
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:15:48.562
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:15:48.564
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.481
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.485
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.615
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.619
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.687
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.690
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.753
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.756
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.809
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.812
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.866
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:17:46.869
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:19:21.171
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:19:21.173
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:19:23.442
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 20:19:23.443
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 23:56:03.908
+!MESSAGE ConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [ConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 23:56:03.909
+!MESSAGE ConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 23:56:03.910
+!MESSAGE JavaConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [JavaConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 23:56:03.911
+!MESSAGE JavaConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 23:56:03.912
+!MESSAGE JndiConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [JndiConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 23:56:03.912
+!MESSAGE JndiConnectionProvider.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 23:56:03.914
+!MESSAGE Profile_Prod.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Profile_Prod.java [in com.company [in src/main/java [in 03_Message]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 23:56:03.914
+!MESSAGE Profile_Prod.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-07-29 23:56:03.915
+!MESSAGE Profile_reiteration.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [Profile_reiteration.java [in com.company [in src/main/java [in 03_Message]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-07-29 23:56:03.915
+!MESSAGE Profile_reiteration.java [in com.company [in src/main/java [in 03_Message]]] does not exist
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:56:04.030
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:56:04.033
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:56:50.568
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:56:50.571
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:56:51.585
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:56:51.588
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:57:46.822
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:57:46.824
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:58:25.293
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:58:25.295
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:23.929
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:23.931
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:50.555
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:50.557
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:55.851
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:55.856
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:59.370
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-29 23:59:59.372
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-30 00:00:24.668
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-30 00:00:24.671
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!

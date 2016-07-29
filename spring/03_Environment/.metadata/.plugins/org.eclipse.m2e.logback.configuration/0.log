@@ -194,3 +194,244 @@
 2016-07-28 20:47:49,512 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-07-28 20:47:49,513 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-07-28 20:47:49,514 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/01_Environment/src/test/resources
+2016-07-29 19:12:47,607 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:12:47,620 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-07-29 19:12:47,630 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:12:47,631 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/01_Environment/src/test/resources
+2016-07-29 19:12:48,081 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:12:48,082 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-07-29 19:12:48,083 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:12:48,084 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:40:11,554 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:40:11,558 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-07-29 19:40:11,559 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:40:11,560 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:58:38,066 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:58:38,069 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:58:38,075 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:58:38,076 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:59:07,220 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:07,221 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:59:07,225 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:07,225 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:59:21,815 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:21,816 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:59:21,819 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:21,820 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:59:34,329 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:34,330 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:59:34,332 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:34,333 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:59:46,798 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:46,799 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:59:46,802 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:46,805 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:59:54,368 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:54,369 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:59:54,371 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:54,371 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 19:59:59,362 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:59,363 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 19:59:59,364 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 19:59:59,365 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:02:33,949 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:02:33,950 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:02:33,955 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:02:33,955 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:04:19,695 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:04:19,696 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:04:19,700 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:04:19,701 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:05:37,155 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:05:37,156 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:05:37,158 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:05:37,159 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:05:58,004 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:05:58,012 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:05:58,013 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:05:58,013 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:02,813 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:02,813 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:06:02,815 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:02,815 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:11,351 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:11,352 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:06:11,354 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:11,355 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:22,346 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:22,347 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:06:22,348 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:22,349 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:27,758 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:27,759 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:06:27,762 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:27,762 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:29,799 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:29,800 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:06:29,803 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:29,804 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:35,612 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:35,613 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:06:35,615 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:35,616 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:37,692 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:37,693 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:06:37,695 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:37,696 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:42,172 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:42,173 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:06:42,174 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:42,175 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:06:44,465 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:44,466 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:06:44,467 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:06:44,468 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:07:31,184 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:07:31,186 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:07:31,187 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:07:31,187 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:08:22,170 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:08:22,171 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:08:22,172 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:08:22,172 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:08:47,749 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:08:47,750 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:08:47,751 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:08:47,752 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:08:58,555 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:08:58,556 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:08:58,557 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:08:58,558 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:09:41,285 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:09:41,286 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:09:41,287 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:09:41,288 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:09:53,567 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:09:53,569 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:09:53,570 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:09:53,570 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:10:01,057 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:01,058 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:10:01,059 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:01,059 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:10:07,911 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:07,912 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:10:07,913 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:07,913 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:10:27,534 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:27,534 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:10:27,536 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:27,536 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:10:32,071 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:32,072 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:10:32,074 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:32,074 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:10:34,124 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:34,125 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:10:34,126 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:34,127 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:10:35,140 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:35,141 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 20:10:35,142 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:10:35,143 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:11:38,349 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:11:38,350 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:11:38,351 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:11:38,351 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:12:52,632 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:12:52,633 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:12:52,634 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:12:52,635 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:12:56,151 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:12:56,152 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:12:56,153 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:12:56,154 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:13:21,400 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:13:21,401 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:13:21,403 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:13:21,403 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:15:42,923 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:15:42,924 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:15:42,925 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:15:42,926 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:15:48,562 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:15:48,563 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:15:48,564 [Worker-49] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:15:48,565 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 20:17:45,422 [Worker-46] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.company:03_Message:0.0.1-SNAPSHOT @ /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/pom.xml.
+2016-07-29 20:17:45,596 [Worker-46] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /03_Message/src/main/java
+2016-07-29 20:17:45,597 [Worker-46] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /03_Message/src/main/resources
+2016-07-29 20:17:45,597 [Worker-46] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /03_Message/src/test/java
+2016-07-29 20:17:45,661 [Worker-46] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2016-07-29 20:17:46,481 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,482 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:17:46,485 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,485 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:17:46,615 [Worker-51] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,616 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:17:46,619 [Worker-51] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,619 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:17:46,687 [Worker-51] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,688 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:17:46,690 [Worker-51] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,691 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:17:46,752 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,753 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:17:46,756 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,756 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:17:46,809 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,810 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:17:46,812 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,813 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:17:46,865 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,866 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 20:17:46,869 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:17:46,869 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:19:21,170 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:19:21,172 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-07-29 20:19:21,172 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:19:21,173 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 20:19:23,442 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:19:23,442 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-07-29 20:19:23,443 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 20:19:23,443 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/02_Profile/src/test/resources
+2016-07-29 23:56:04,030 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:56:04,031 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-29 23:56:04,033 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:56:04,033 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:56:50,567 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:56:50,568 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2016-07-29 23:56:50,571 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:56:50,571 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:56:51,585 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:56:51,586 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-07-29 23:56:51,587 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:56:51,588 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:57:46,821 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:57:46,822 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 23:57:46,824 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:57:46,824 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:58:25,292 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:58:25,293 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2016-07-29 23:58:25,295 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:58:25,295 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:59:23,929 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:23,930 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2016-07-29 23:59:23,931 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:23,931 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:59:50,555 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:50,555 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 23:59:50,557 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:50,557 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:59:55,851 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:55,852 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-07-29 23:59:55,856 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:55,857 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-29 23:59:59,369 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:59,370 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-07-29 23:59:59,372 [Worker-166] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-29 23:59:59,372 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources
+2016-07-30 00:00:24,668 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-30 00:00:24,669 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2016-07-30 00:00:24,670 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-30 00:00:24,671 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/guanho/Documents/git/TIL/spring/03_Environment/03_Message/src/test/resources

@@ -1,2 +1,6 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/01_Environment/src/main/resources/config_lifecycle.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/02_Profile/src/main/resources/profile-dev.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/02_Profile/src/main/resources/profile-prod.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/02_Profile/src/main/resources/profile-reiteration.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/03_Message/src/main/resources/message-config.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 eclipse.preferences.version=1

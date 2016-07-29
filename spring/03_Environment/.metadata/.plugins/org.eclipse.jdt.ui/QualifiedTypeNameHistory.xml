@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.core.env.ConfigurableEnvironment"/>
 <fullyQualifiedTypeName name="org.springframework.core.env.MutablePropertySources"/>
 <fullyQualifiedTypeName name="org.springframework.core.io.support.ResourcePropertySource"/>
 <fullyQualifiedTypeName name="org.springframework.context.EnvironmentAware"/>
 <fullyQualifiedTypeName name="org.springframework.core.env.Environment"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
 <fullyQualifiedTypeName name="org.springframework.core.io.ClassPathResource"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 <fullyQualifiedTypeName name="com.company.ConnectionProvider2"/>
 <fullyQualifiedTypeName name="com.company.Ex_6_ConnectionProvider"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.PropertySources"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.PropertySource"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Profile"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="com.company.ConnectionProvider"/>
+<fullyQualifiedTypeName name="com.company.JndiConnectionProvider"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
 </qualifiedTypeNameHistroy>
