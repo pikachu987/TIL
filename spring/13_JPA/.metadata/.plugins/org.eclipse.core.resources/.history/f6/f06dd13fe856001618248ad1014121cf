@@ -1,0 +1,9 @@
+package com.company.application;
+
+import java.util.List;
+
+import com.company.Entity.Employee;
+
+public interface SelectEmployeeService {
+	public List<Employee> getEmployee(String id);
+}

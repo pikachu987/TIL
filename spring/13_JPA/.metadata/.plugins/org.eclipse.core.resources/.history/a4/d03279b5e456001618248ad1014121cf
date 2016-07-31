@@ -1,0 +1,10 @@
+package com.company.application;
+
+import java.util.List;
+
+import com.company.Entity.Employee;
+
+public interface EmployeeListService {
+
+	public List<Employee> getEmployee(String keyword, Long teamId);
+}

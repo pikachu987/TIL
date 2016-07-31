@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="AnnotationConfigUtils.processCommonDefinitionAnnotations"/>
+			<item value="entityManagerFactory"/>
+			<item value="tx"/>
+			<item value="context"/>
+			<item value="&lt;dependency&gt;&#x0A;&#x09;&#x09;    &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;&#x0A;&#x09;&#x09;    &lt;artifactId&gt;spring-data-jpa&lt;/artifactId&gt;&#x0A;&#x09;&#x09;    &lt;version&gt;1.10.2.RELEASE&lt;/version&gt;&#x0A;&#x09;&#x09;&lt;/dependency&gt;&#x0A;&#x09;&#x09;&lt;dependency&gt;&#x0A;&#x09;&#x09;&#x09;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;version&gt;4.3.4.Final&lt;/version&gt;&#x0A;&#x09;&#x09;&lt;/dependency&gt;&#x0A;&#x09;&#x09;&lt;dependency&gt;&#x0A;&#x09;&#x09;&#x09;&lt;groupId&gt;org.springframework&lt;/groupId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;artifactId&gt;spring-orm&lt;/artifactId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;version&gt;4.0.4.RELEASE&lt;/version&gt;&#x0A;&#x09;&#x09;&lt;/dependency&gt;&#x0A;&#x09;&#x09;&lt;dependency&gt;&#x0A;&#x09;&#x09;&#x09;&lt;groupId&gt;org.springframework&lt;/groupId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;artifactId&gt;spring-tx&lt;/artifactId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;version&gt;4.0.4.RELEASE&lt;/version&gt;&#x0A;&#x09;&#x09;&lt;/dependency&gt;&#x0A;&#x09;&#x09;&lt;dependency&gt;&#x0A;&#x09;&#x09;&#x09;&lt;groupId&gt;org.springframework&lt;/groupId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;artifactId&gt;spring-context&lt;/artifactId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;version&gt;4.0.4.RELEASE&lt;/version&gt;&#x0A;&#x09;&#x09;&lt;/dependency&gt;&#x0A;&#x09;&#x09;&lt;dependency&gt;&#x0A;&#x09;&#x09;&#x09;&lt;groupId&gt;org.aspectj&lt;/groupId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;&#x0A;&#x09;&#x09;&#x09;&lt;version&gt;1.7.4&lt;/version&gt;&#x0A;&#x09;&#x09;&lt;/dependency&gt;"/>
+			<item value="transactionManager"/>
+			<item value="jpaMappingContext"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="265" key="DIALOG_WIDTH"/>
+		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+		<item value="399" key="DIALOG_HEIGHT"/>
+		<item value="551" key="DIALOG_X_ORIGIN"/>
+		<item value="106" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

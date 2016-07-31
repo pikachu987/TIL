@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+	PUBLIC "-//mybatis.org//DTD Config3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>	
+	<typeAliases>
+		<typeAlias type="com.company.management.AdminVo" alias="adminVo"/>
+		<typeAlias type="com.company.main.CategoryVo" alias="categoryVo"/>
+		<typeAlias type="com.company.main.ColorVo" alias="colorVo"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/company/version/Version.xml"/>
+		<mapper resource="com/company/main/Index.xml"/>
+		<mapper resource="com/company/jundan/Jundan.xml"/>
+		<mapper resource="com/company/updown/Updown.xml"/>
+		<mapper resource="com/company/jundanSub/JundanSub.xml"/>
+		<mapper resource="com/company/board/Board.xml"/>
+		<mapper resource="com/company/pay/Pay.xml"/>
+		<mapper resource="com/company/stats/Stats.xml"/>
+		<mapper resource="com/company/developer/Developer.xml"/>
+		<mapper resource="com/company/management/Management.xml"/>
+		<mapper resource="com/company/draw/Draw.xml"/>
+		<mapper resource="com/company/draw/DrawImage.xml"/>
+		<mapper resource="com/company/gcm/Gcm.xml"/>
+		
+		<mapper resource="com/company/drawLeaflet/DrawLeaflet.xml"/>
+	</mappers>
+</configuration>
