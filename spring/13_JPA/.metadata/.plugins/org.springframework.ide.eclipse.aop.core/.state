@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="Ex_1_JPA"/>
+<aop-project name="Ex_2_JPA"/>
+<aop-project name="Ex_3_JPA"/>
 </aop-reference-model>
