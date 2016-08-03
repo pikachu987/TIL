@@ -159,6 +159,8 @@ Specification을 이용해서 검색 조건을 지정하려면 다음 작접을 
 * Specification을 입력 받도록 Repository 인터페이스를 정의하기
 * 검색 조건을 모아 놓은 클래스 만들기
 * 검색 조건을 조합한 Specification 인스턴스를 이용해서 검색하기
+
 <br>
 <br>
+
 #### 리파지터리 인터페이스에 Specification 타입 파라미터 추가하기
