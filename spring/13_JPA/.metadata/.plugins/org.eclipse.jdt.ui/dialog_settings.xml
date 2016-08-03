@@ -49,6 +49,9 @@
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="3" key="pageIndex"/>
+	</section>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="AddGetterSetterDialog">

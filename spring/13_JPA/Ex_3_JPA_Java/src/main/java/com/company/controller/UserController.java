@@ -1,17 +1,14 @@
 package com.company.controller;
 
 import java.util.HashMap;
-import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
-import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,39 +24,17 @@ public class UserController {
 	@Resource
 	UserRepository userRepository;
 	
-	
-	@RequestMapping(value="/user" ,method=RequestMethod.GET)
-	public String user(){
-		return "user/user";
+	@RequestMapping(value="/login" ,method=RequestMethod.GET)
+	public String login(){
+		return "user/login";
 	}
-	@RequestMapping(value="/list/{page}" ,method=RequestMethod.GET)
-	public String list(@PathVariable("page") Integer page, HttpServletRequest request){
-		int pageValue = page-1;
-		System.out.println(pageValue);
-		Pageable pageable = new PageRequest(pageValue, 5);
-		List<User> list = userRepository.findBySeqGreaterThan(0, pageable);
-		request.setAttribute("list", list);
-		System.out.println(list);
-		System.out.println(list.size());
-		for(User user : list){
-			System.out.println(user);
-		}
-		return "user/list";
-	}
-	
-	@RequestMapping(value="/list/{page}/{id}" ,method=RequestMethod.GET)
-	public String list(@PathVariable("page") Integer page,@PathVariable("id") String id, HttpServletRequest request){
-		User user = userRepository.findById(id);
-		request.setAttribute("user", user);
-		return "user/get";
-	}
-	
 	
 	
 	@RequestMapping(value="/join" ,method=RequestMethod.GET)
 	public String join(){
 		return "user/join";
 	}
+	
 	@RequestMapping(value="/join" ,method=RequestMethod.POST)
 	@ResponseBody
 	public HashMap<String, Object> join_post(
@@ -69,17 +44,110 @@ public class UserController {
 			@RequestParam("hp") String hp
 			){
 		HashMap<String, Object> map = new HashMap<>();
+		map.put("code", 0);
 		try{
-			int count = userRepository.countByIdAndNickname(id, nickname);
-			if(count > 0){
-				map.put("code", -1);
+			int idOverlap = userRepository.countById(id);
+			if(idOverlap == 0){
+				int nickoverlap = userRepository.countByNickname(nickname);
+				if(nickoverlap == 0){
+					userRepository.save(new User(id, password, nickname, hp));
+				}else{
+					map.put("code", 2);
+				}
 			}else{
-				//userRepository.save(new User(id, password, nickname, hp));
-				map.put("code", 0);
+				map.put("code", 1);
 			}
 		}catch(Exception e){
 			e.printStackTrace();
+			map.put("code", -1);
 		}
 		return map;
 	}
+	
+	
+	@RequestMapping(value="/list/{pageNum}" ,method=RequestMethod.GET)
+	public String list(Model model, HttpServletRequest requeset, @PathVariable("pageNum") Integer pageNum){
+		try{
+			Pageable pageable = new PageRequest(--pageNum, 5);
+			Page<User> page = userRepository.findBySeqNotNull(pageable);
+			model.addAttribute("page",page);
+			requeset.setAttribute("page", page);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return "user/list";
+	}
+	
+	@RequestMapping(value="/list/{page}/{userSeq}" ,method=RequestMethod.GET)
+	public String get(HttpServletRequest request,@PathVariable("page") Integer page, @PathVariable("userSeq") Integer userSeq){
+		try{
+			User user = userRepository.findOne(userSeq);
+			request.setAttribute("user", user);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return "user/get";
+	}
+	
+	
+	@RequestMapping(value="/update/{userSeq}" ,method=RequestMethod.GET)
+	public String update(HttpServletRequest request,@PathVariable("userSeq") Integer userSeq){
+		try{
+			User user = userRepository.findOne(userSeq);
+			request.setAttribute("user", user);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return "user/update";
+	}
+	
+	@RequestMapping(value="/update/{userSeq}" ,method=RequestMethod.POST)
+	@ResponseBody
+	public HashMap<String, Object> update(
+			@PathVariable("userSeq") Integer userSeq,
+			@RequestParam("id") String id,
+			@RequestParam("nickname") String nickname,
+			@RequestParam("hp") String hp,
+			@RequestParam("password") String password
+			){
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("code", 0);
+		try{
+			User originUser = userRepository.findOne(userSeq);
+			if(originUser.getNickname().equals(nickname)){
+				userRepository.save(new User(userSeq, id, password, nickname, hp));
+			}else{
+				int nickOver = userRepository.countByNickname(nickname);
+				if(nickOver == 0){
+					userRepository.save(new User(userSeq, id, password, nickname, hp));
+				}else{
+					map.put("code", 1);
+				}
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+			map.put("code", -1);
+		}
+		return map;
+	}
+	
+	
+	@RequestMapping(value="/delete/{userSeq}" ,method=RequestMethod.DELETE)
+	@ResponseBody
+	public HashMap<String, Object> delete(
+			@PathVariable("userSeq") Integer userSeq
+			){
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("code", 0);
+		try{
+			userRepository.delete(userSeq);
+		}catch(Exception e){
+			e.printStackTrace();
+			map.put("code", -1);
+		}
+		return map;
+	}
+	
+	
+	
 }

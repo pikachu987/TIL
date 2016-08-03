@@ -3,4 +3,5 @@
 <aop-project name="Ex_1_JPA"/>
 <aop-project name="Ex_2_JPA"/>
 <aop-project name="Ex_3_JPA"/>
+<aop-project name="Ex_3_JPA_Java"/>
 </aop-reference-model>

@@ -1,0 +1,14 @@
+package com.company.repository;
+
+import java.util.List;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.CrudRepository;
+
+import com.company.domain.User;
+
+public interface UserRepository extends CrudRepository<User, Integer>{
+	public int countById(String id);
+	public int countByNickname(String nickname);
+	public List<User> findBySeqNotNull(Pageable pageable);
+}

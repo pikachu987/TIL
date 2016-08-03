@@ -8,36 +8,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name="user")
 public class User {
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	private Integer seq;
 	private String id;
 	private String password;
 	private String nickname;
 	private String hp;
-	
-	public User(){}
-	public User(String id, String password, String nickname, String hp) {
-		super();
-		this.id = id;
-		this.password = password;
-		this.nickname = nickname;
-		this.hp = hp;
-	}
-	public void setSeq(Integer seq) {
-		this.seq = seq;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-	public void setHp(String hp) {
-		this.hp = hp;
-	}
 	public Integer getSeq() {
 		return seq;
 	}
@@ -53,5 +30,23 @@ public class User {
 	public String getHp() {
 		return hp;
 	}
+	public User(){}
+	
+	public User(Integer seq, String id, String password, String nickname, String hp) {
+		super();
+		this.seq = seq;
+		this.id = id;
+		this.password = password;
+		this.nickname = nickname;
+		this.hp = hp;
+	}
+	public User(String id, String password, String nickname, String hp) {
+		super();
+		this.id = id;
+		this.password = password;
+		this.nickname = nickname;
+		this.hp = hp;
+	}
+	
 	
 }

@@ -1,15 +1,13 @@
 package com.company.repository;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.Repository;
 
 import com.company.domain.User;
 
-public interface UserRepository extends Repository<User, Integer>{
-	public int countByIdAndNickname(String id, String nickname);
-	public List<User> findBySeqGreaterThan(int seq, Pageable pageable);
-	public User findById(String id);
+public interface UserRepository extends CrudRepository<User, Integer>{
+	public int countById(String id);
+	public int countByNickname(String nickname);
+	public Page<User> findBySeqNotNull(Pageable pageable);
 }

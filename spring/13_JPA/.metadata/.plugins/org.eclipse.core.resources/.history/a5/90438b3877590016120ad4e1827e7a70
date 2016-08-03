@@ -1,0 +1,75 @@
+package utils.config;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp.BasicDataSource;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+/***
+ * 
+ * root-context.xml
+ * @author guanho
+ *
+ */
+@Configuration
+public class RootConfig {
+	@Value("${jdbc.driverClassName}")
+	private String jdbcDriverClassName;
+	
+	@Value("${jdbc.url}")
+	private String jdbcUrl;
+	
+	@Value("${jdbc.username}")
+	private String jdbcUsername;
+	
+	@Value("${jdbc.password}")
+	private String jdbcPassword;
+	
+	private static final String APP_CONFIG_FILE_PATH = "application.xml";
+	
+	@Bean
+	public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer(){
+		PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
+        ppc.setLocations(new Resource[] {new ClassPathResource(APP_CONFIG_FILE_PATH)});
+        return ppc;
+	}
+	
+	@Bean
+    public DataSource dataSource(){
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDriverClassName(this.jdbcDriverClassName);
+        dataSource.setUrl(this.jdbcUrl);
+        dataSource.setUsername(this.jdbcUsername);
+        dataSource.setPassword(this.jdbcPassword);
+        dataSource.setValidationQuery("select 1");
+        dataSource.setTestWhileIdle(true);
+        dataSource.setTimeBetweenEvictionRunsMillis(60000);
+        return dataSource;
+    }
+	
+//	@Bean
+//    public SqlSessionFactory sqlSessionFactory() throws Exception {
+//        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+//        sqlSessionFactoryBean.setDataSource(this.dataSource());
+//        sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(MYBATIS_CONFIG_FILE_PATH));
+//        return sqlSessionFactoryBean.getObject();
+//    }
+	
+//	@Bean
+//    public SqlSession sqlSession() throws Exception{
+//        SqlSession sqlSession = new SqlSessionTemplate(this.sqlSessionFactory());
+//        return sqlSession;
+//    }
+	
+	@Bean
+	public DataSourceTransactionManager transactionManager(){
+		DataSourceTransactionManager transaction = new DataSourceTransactionManager();
+		transaction.setDataSource(this.dataSource());
+		return transaction;
+	}
+}
