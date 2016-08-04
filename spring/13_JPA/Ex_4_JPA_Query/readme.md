@@ -132,7 +132,7 @@ public class JpaEmployeeListService implements EmployeeListService{
             			cb.equal(employee.get("employeeNumber"), keyword)
 					),cb.equal(employee.get("team").get("id"), teamId)
 				));            		
-            }
+			}
 		}else{
 			Calendar cal = Calendar.getInstance();
 			cal.add(Calendar.DATE, -30);
@@ -164,3 +164,188 @@ Specification을 이용해서 검색 조건을 지정하려면 다음 작접을 
 <br>
 
 #### 리파지터리 인터페이스에 Specification 타입 파라미터 추가하기
+
+리파지터리 인터페이스에 Specification 타입의 파라미터를 추가하는 것은 간단하다.
+org.springframework.data.jpa.domain.Specification<엔티티타입>의 파라미터를 추가해주기만 하면 된다.
+
+~~~~
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.repository.Repository;
+
+public interface EmployeeRepository extends Repository<Employee, Long>{
+	public List<Employee> findAll(Specification<Employee> spec);
+....
+~~~~
+
+다른 조회 메서드와 마찬가지로 Specification 타입 뒤에 정렬이나 페이징 처리를 위한 Sort나 Pageable 파라미터를 추가할 수 있으며, Pageable파라미터를 가질 경우 리턴 타입으로 Page를 사용할 수 있다.
+
+~~~~
+public List<Employee> findAll(Specification<Employee> spec, Sort sort);
+public Page<Employee> findAll(Specification<Employee> spec, Pageable pageable);
+~~~~
+
+#### Specification을 생성해주는 클래스 만들기
+
+Specification인터페이스는 다음과 같이 되어 있다.
+~~~~
+package org.springframework.data.jpa.domain;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
+public interface Specification<T>{
+	Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder cb);
+}
+~~~~
+
+Specification 구현 클래스는 toPredicate() 메서드에서 검색 조건에 해당하는 Predicate객체를 생성해주어야 한다. 예를 들어, Employee 엔티티의 name이 특정 값과 같은지 확인하는 조건을 나타내는 Specification 객체는 다음과 같이 생성할 수 있다.
+
+~~~~
+final String name = "...";
+Specification<Employee> spec = new Specification<Employee>(){
+	@Override
+	public Predicate toPredicate(Root<Employee> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+		return cb.equal(root.get("name"), name);
+	}
+};
+List<Employee> empList = employeeRepository.findAll(spec);
+~~~~
+
+모든 Specification 객체를 위 코드처럼 임의 객체를 이용해서 생성할 수 있지만, 그것보다는 엔티티별로 알맞은 Specification 객체를 생성해주는 클래스를 만들어서 사용하는 것이 코드 가독성과 관리면에서 좋다.
+
+~~~~
+public class EmployeeSpec{
+
+	public static Specification<Employee> nameEq(final String name){
+		return new Specification<Employee>(){
+			@Override
+			public Predicate toPredicate(Root<Employee> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+				return cb.equal(root.get("name"), name);
+			}
+		};
+	}
+
+	public static Specification<Employee> employeeNumberEq(final String num){
+		return new Specification<Employee>(){
+			@Override
+			publci Predicate toPredcate(Root<Employee> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+				return cb.equal(root.get("employeeNumber"), num);
+			}
+		};
+	}
+}
+
+~~~~
+
+> #### JPA 메타 모델 클래스
+> 앞서 코드를 보면, 조건을 생성할 때 다음과 같이 엔티티의 프로퍼티 이름을 문자열로 지정하고 있다.
+> ~~~~
+> public static Specification<Employee> nameEq(final String name){
+> 	return new Specification<Employee>(){
+> 		@Override
+> 		public Predicate toPredicate(Root<Employee> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+> 			return cb.equal(root.get("name"), name);
+> 		}
+> 	};
+> }
+> ~~~~
+> 그런데 프로퍼티 이름을 문자열로 입력하면 오타와 같은 실수를 하기 쉽다. 이런 단순 실수를 줄이기 위한 방법이 있는데, 그것은 바로 JPA의 메타 모델 클래스를 사용하는 것이다. 메타모델 클래스는 다음과 같이 생겼다.
+> ~~~~
+> import java.util.Date;
+> import javax.persistence.metamodel.SingularAttribute;
+> import javax.persistence.metamodel.StaticMetamodel;
+> @StaticMetamodel(Employee.class)
+> public calss Employee_{
+> 	public static volatile SingularAttritube<Employee, Long> id;
+> 	public static volatile SingularAttritube<Employee, String> employeeNumber;
+> 	public static volatile SingularAttritube<Employee, String> name;
+> 	public static volatile SingularAttritube<Employee, Address> address;
+> 	public static volatile SingularAttritube<Employee, Integer> birthYear;
+> 	public static volatile SingularAttritube<Employee, Team> team;
+> 	public static volatile SingularAttritube<Employee, Date> joinedDate;
+> }
+> ~~~~
+> 메타 모델 클래스의 이름은 모델 클래스 이름 뒤에 밑줄('_')을 붙인 것을 사용한다. 위 코드는 Employee클래스에 대한 메타 모델 클래스가 된다. 메타 모델 클래스는 정적 필드를 이용해서 실제 모델 클래스에 대한 프로퍼티 정보를 기술한다. 
+> 이렇게 모델에 대한 메타 모델 클래스를 작성하면, 검색 조건을 생성할 때 문자열 대신 메타 모델 클래스를 이용해서 프로퍼티를 지정할 수 있다.
+> ~~~~
+> public static Specification<Employee> nameEq(final String name){
+> 	return new Specification<Employee>(){
+> 		@Override
+> 		public Predicate toPredicate(Root<Employee> root, CriteriaQuery<?> query, CriteriaBuilder cb){
+> 			return cb.equal(root.get(Employee_.name), name);
+> 		}
+> 	};
+> }
+> ~~~~
+> 위 코드처럼 메타 모델 클래스를 사용하면, 오타를 사전에 알 수 있고, 이클립스와 같은 개발환경에서는 코드 자동완성 기능을 사용할 수 있다.
+> 메타 모델 클래스의 코드를 직접 작성할 수 있지만, 모델 코드로부터 자동 생성하는 기능이 있다.
+> 하이버네이트의 경우 <a href="http://goo.gl/EJDso1" target="_blank">http://goo.gl/EJDso1</a> 문서에 나와있는 방법을 이용해서 메이븐 플러그인이나 이클립스를 사용해서 메타 모델 클래스의 소스 코드를 생성할 수 있다.
+
+#### 검색 조건 조합해서 리파지터리 사용하기
+
+주요 검색 조건별로 Specification 객체를 생성해주는 클래스르 만들면, 다음과 같이 간결한 코드를 이용해서 EmployeeRepository에 전달할 Specification 객체를 생성 할 수 있다.
+
+~~~~
+List<Employee> empList = employeeRepository.findAll(EmployeeSpec.nameEq(name));
+~~~~
+
+복합적인 검색 조건을 사용해야 한다면, org.springframework.data.jpa.domain.Specifications 클래스를 이용해서 각 Specification을 AND와 OR로 조합할 수 있다. 다음은 Specifications을 이용해서 두 Specification을 AND로 조합하는 코드를 보여준다.
+
+~~~~
+Specifications<Employee> specs = Specifications.where(spec1);
+Specifications<Emlpyee> andSpecs = specs.and(spec2);
+List<Employee> empList = employeeRepository.findAll(andSpecs);
+~~~~
+
+Specifications.where() 메서드는 Specification을 파라미터로 전달받고 검색 조건을 조합할 수 있는 Specifications 객체를 리턴한다. Specifications 클래스의 and() 메서드는 검색조건을 AND로 조합한 새로운 Specifications 객체를 리턴한다. OR 조합을 하려면 and() 대신 or()을 사용하면 된다.
+
+~~~~
+Specifications<Employee> specs = Specifications.where(spec1);
+Specifications<Emlpyee> andSpecs = specs.and(spec2, spec3);
+List<Employee> empList = employeeRepository.findAll(andSpecs);
+~~~~
+이런식으로도 가능하다.
+
+~~~~
+Specifications<Employee> specs = Specifications.where(spec1).or(spec2, spec3);
+~~~~
+
+이런식으로도 가능하다.
+
+* **검색어가 있다면** : 검색어와 같은 name을 갖거나 같은 employeeNumber을 같는 employee를 검색한다.
+* **검색 조건에 팀ID가있다면** : 해당 팀에 속하는 Employee를 검색한다.
+* **검색어와 팀ID가 없다면** : 최근 한 달 내에 입사한 Employee를 검색한다.
+
+~~~~
+public class SpecEmployeeListService implements EmployeeListService{
+	private EmployeeRepository employeeRepository;
+
+	@Transactional
+	@Override
+	public List<Employee> getEmployee(String keyword, Long teamId){
+		if(hasValue(keyword) || hasValue(teamId)){
+			if(hasValue(keyword) && !hasValue(teamId)){
+				return employeeRepository.findAll(
+					where(nameEq(keyword)).or(employeeNumberEq(keyword))
+				);
+			}else if(!hasValue(keyword) && hasValue(teamId)){
+				return employeeRepository.findAll(teamIdEq(teamId));
+			} else{
+				Specifications<Employee> spec1 = where(nameEq(keyword)).or(employeeNumberEq(keyword));
+				return employeeRepository.findAll(spec1.and(teamIdEq(teamId));
+			}
+		}else{
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.DATE, -30);
+			return employeeRepository.findAll(joinedDateGt(cal.getTime()));
+		}
+	}
+	
+	private boolean hasValue(Object value){
+		return value != null;
+	}
+	.....
+~~~~
+
+위 코드를 보면 EmployeeSpec의 정적 멤버와 Specifications.where 메서드를 정적 임포트했다. 이렇게 하면 EmployeeSpec.nameEq() 대신에 nameEq()메서드르 ㄹ그리고 Specifications.where() 대신에 where() 메서드를 바로 사용할 수 있으므로, 검색 조건 생성 코드의 가독성이 향상된다. 또한 위 코드를 보면 joinedDateGt()나 nameEq()처럼 Criteria API를 직접 사용하는 경우와 비교해서 검색 조건의 의미를 더 잘 드러내는 것을 알 수 있다.

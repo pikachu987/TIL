@@ -1,0 +1,18 @@
+package com.company.repository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.company.domain.User;
+
+public interface UserRepository extends CrudRepository<User, Integer>{
+	public int countById(String id);
+	public int countByNickname(String nickname);
+	public Page<User> findBySeqNotNull(Pageable pageable);
+	@Modifying
+	@Query("insert into user(id, password, nickname, hp) values(?1, HEX(AES_ENCRYPT(?2,'abcd1234')), ?3, ?4)")
+	public int joinHex(String id, String password, String nickname, String hp); 
+}

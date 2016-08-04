@@ -14,6 +14,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/guanho/Documents/git/TIL/spring/13_JPA/Ex_4_JPA_Query"/>
 			<item value="/Users/guanho/Documents/git/TIL/spring/13_JPA/Ex_3_JPA_Java"/>
 			<item value="/Users/guanho/Documents/git/TIL/spring/13_JPA/Ex_3_JPA"/>
 			<item value="/Users/guanho/Documents/git/TIL/spring/13_JPA/Ex_2_JPA"/>
