@@ -1,0 +1,7 @@
+package com.company.repository2;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class CustomRepositoryFactory implements JpaRepository<T, ID> {
+
+}

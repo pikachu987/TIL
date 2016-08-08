@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;common&apos; to &apos;company&apos;&#x0A;- Original project: &apos;spring4-chap14&apos;&#x0A;- Destination element: &apos;company&apos;&#x0A;- Original element: &apos;common&apos;" description="Copy folder" element1="src/main/java/net/madvirus/spring4/chap14/common" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1470401527294" target="/Ex_5_JPA_Custom/src/main/java/com/company" units="0" version="1.0"/>
+</session>

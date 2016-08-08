@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
-<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-<fullyQualifiedTypeName name="com.company.Entity.Team"/>
-<fullyQualifiedTypeName name="javax.persistence.Temporal"/>
-<fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="org.aspectj.apache.bcel.util.Repository"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-<fullyQualifiedTypeName name="com.company.Entity.EmployeeRepository"/>
-<fullyQualifiedTypeName name="com.company.Entity.Employee"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
-<fullyQualifiedTypeName name="com.company.application.SelectEmployeeService"/>
-<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
@@ -34,7 +14,6 @@
 <fullyQualifiedTypeName name="org.springframework.data.domain.Sort.Order"/>
 <fullyQualifiedTypeName name="org.springframework.data.domain.Sort.Direction"/>
 <fullyQualifiedTypeName name="org.springframework.web.client.HttpServerErrorException"/>
-<fullyQualifiedTypeName name="org.springframework.data.repository.Repository"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.EnableTransactionManagement"/>
 <fullyQualifiedTypeName name="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"/>
 <fullyQualifiedTypeName name="org.springframework.orm.jpa.JpaVendorAdapter"/>
@@ -51,7 +30,6 @@
 <fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
 <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-<fullyQualifiedTypeName name="com.company.domain.User"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Modifying"/>
@@ -60,4 +38,26 @@
 <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
+<fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+<fullyQualifiedTypeName name="com.company.repository.UserCustomRepository"/>
+<fullyQualifiedTypeName name="com.company.domain.User"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.support.SimpleJpaRepository"/>
+<fullyQualifiedTypeName name="com.company.repository.CustomRepository"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.support.JpaEntityInformation"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.support.JpaRepositoryFactory"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.core.RepositoryMetadata"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.core.support.RepositoryFactorySupport"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="com.company.repository2.CustomRepositoryFactoryBean"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.Repository"/>
+<fullyQualifiedTypeName name="com.company.domain.Option2"/>
+<fullyQualifiedTypeName name="com.company.domain.Option"/>
+<fullyQualifiedTypeName name="com.company.common.CustomRepositoryFactoryBean"/>
+<fullyQualifiedTypeName name="com.company.common.CustomRepository"/>
+<fullyQualifiedTypeName name="com.company.repository.UserRepository2"/>
 </qualifiedTypeNameHistroy>

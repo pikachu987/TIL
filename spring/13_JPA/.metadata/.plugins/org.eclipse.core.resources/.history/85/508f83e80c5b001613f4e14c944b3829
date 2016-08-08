@@ -1,0 +1,23 @@
+package com.company.domain;
+
+public class Option2<T> {
+	public static <V> Option2<V> value(V value) {
+		return new Option2<V>(value);
+	}
+
+	private T value;
+
+	public Option2(T value) {
+		this.value = value;
+	}
+
+	public boolean hasValue() {
+		return value != null;
+	}
+
+	public T get() {
+		if (value == null)
+			throw new IllegalStateException("no value");
+		return value;
+	}
+}

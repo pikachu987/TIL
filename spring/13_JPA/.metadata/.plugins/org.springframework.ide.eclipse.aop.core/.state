@@ -2,5 +2,7 @@
 <aop-reference-model>
 <aop-project name="Ex_1_JPA"/>
 <aop-project name="Ex_2_JPA"/>
+<aop-project name="Ex_5_JPA_Custom"/>
 <aop-project name="Ex_3_JPA_Java"/>
+<aop-project name="Ex_4_JPA_Query"/>
 </aop-reference-model>

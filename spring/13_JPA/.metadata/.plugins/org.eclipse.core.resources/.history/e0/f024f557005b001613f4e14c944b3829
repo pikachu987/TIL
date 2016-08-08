@@ -1,0 +1,16 @@
+package com.company.repository2;
+
+import java.io.Serializable;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean;
+import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.core.support.RepositoryFactorySupport;
+
+public class CustomRepositoryFactoryBean <T extends Repository<S, SEQ>, S, SEQ extends Serializable> extends JpaRepositoryFactoryBean<T, S, SEQ>{
+	@Override
+	protected RepositoryFactorySupport createRepositoryFactory(EntityManager entityManager){
+        return new CustomRepositoryFactory(entityManager);
+    }
+}

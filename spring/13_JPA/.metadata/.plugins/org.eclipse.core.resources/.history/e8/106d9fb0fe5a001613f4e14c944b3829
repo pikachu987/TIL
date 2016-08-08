@@ -1,0 +1,11 @@
+package com.company.repository2;
+
+import org.springframework.data.repository.Repository;
+
+import com.company.domain.Option;
+import com.company.domain.User;
+
+public interface UserRepository extends Repository<User, Long>{
+    public Option<User> getOption(Long id);
+}
+

@@ -1,0 +1,18 @@
+package com.company.repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.company.domain.Option;
+import com.company.domain.User;
+
+public class UserRepositoryImpl implements UserCustomRepository{
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	@Override
+	public Option<User> getOptionUser(Integer seq){
+		User user = entityManager.find(User.class, seq);
+		return Option.value
+	}
+}

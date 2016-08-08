@@ -1,0 +1,12 @@
+package com.company.repository;
+
+import org.springframework.data.repository.Repository;
+
+import com.company.common.CustomRepository;
+import com.company.domain.Option;
+import com.company.domain.User;
+
+public interface UserRepository2 extends Repository<User, Integer>, CustomRepository<User, Integer>{
+	public Option<User> getOption(Integer seq);
+}
+
