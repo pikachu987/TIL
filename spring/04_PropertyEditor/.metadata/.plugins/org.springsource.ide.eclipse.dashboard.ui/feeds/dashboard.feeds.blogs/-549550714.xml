@@ -5,7 +5,174 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-07-29T20:41:17Z</updated>
+  <updated>2016-08-09T11:33:00Z</updated>
+  <entry>
+    <title>This Week in Spring - August 9th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/09/this-week-in-spring-august-9th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-08-09:2582</id>
+    <updated>2016-08-09T11:33:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m recovering from a &lt;em&gt;crazy&lt;/em&gt; awesome week at SpringOne Platform while visiting customers here in summer-time London.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the &lt;a href="https://blog.jetbrains.com/idea/2016/08/webinar-recording-whats-new-in-intellij-idea-2016-2-for-spring-developers"&gt;IntelliJ IDEA folks have updated their coverage on Spring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;there were several wrapup blogs from last week&amp;rsquo;s SpringOne Platform event, including the two we published on this very blog for &lt;a href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-1"&gt;day 1&lt;/a&gt;&lt;br/&gt; and &lt;a href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-2"&gt;day 2&lt;/a&gt; and the posts on Pivotal&amp;rsquo;s main blog for &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/springone-platform-a-movement-comes-of-age"&gt;day 1&lt;/a&gt;, &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/taking-on-the-monolith-with-people-and-tech-springone-platform-day-2"&gt;day 2&lt;/a&gt;, &lt;a href="https://blog.pivotal.io/big-data-pivotal/features/positive-sum-software-springs-new-bounce-springone-platform-day-3"&gt;day 3&lt;/a&gt;, and &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/final-call-parting-shots-from-springone-platform"&gt;final call&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;while we&amp;rsquo;re at the Pivotal blog, those of you &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/products/blockchain-use-cases-for-blockchain-on-cloud-foundry"&gt;wondering about Blockchain on Cloud Foundry might appreciate this post&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SpringOne Platform was filled with &lt;em&gt;excellent&lt;/em&gt; keynotes, all of which will be available online already (or soon). Naturally, you &lt;em&gt;have&lt;/em&gt; to watch &lt;a href="http://twitter.com/adrianco"&gt;Adrian Cockroft (@adrianco)&lt;/a&gt; &amp;rsquo;s excellent &lt;a href="https://www.youtube.com/watch?v=DGK6jjamzfY&amp;feature=youtu.be"&gt;&lt;em&gt;Simplifying the Future&lt;/em&gt; keynote&lt;/a&gt;: &amp;ldquo;Let&amp;rsquo;s just do Spring Boot on Cloud Foundry.&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;want to know about the future of the leading application server on the JVM, Apache Tomcat, for whose development Pivotal is a large sponsor? Check out this InfoQ interview with Pivotal&amp;rsquo;s &lt;a href="https://www.infoq.com/news/2016/08/tomcat9-vs-javaee8?utm_source=infoq&amp;utm_medium=popular_widget&amp;utm_campaign=popular_content_list&amp;utm_content=homepage"&gt;own Mark Thomas&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Last week we had the likes of James Governor from Redmonk and Charles Humble from InfoQ taking in the show and talking about it. I liked &lt;a href="https://www.infoq.com/news/2016/08/springone-diversity?utm_campaign=rightbar_v2&amp;utm_source=infoq&amp;utm_medium=news_link&amp;utm_content=link_text"&gt;Charles Humble&amp;rsquo;s coverage of the first day keynote - &lt;em&gt;Diversity Takes Centre Stage on First Day of the SpringOne Platform Conference&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;and his coverage of the second day, which &lt;a href="https://www.infoq.com/news/2016/08/spring5-m1?utm_campaign=rightbar_v2&amp;utm_source=infoq&amp;utm_medium=news_link&amp;utm_content=link_text"&gt;focused on the Spring 5 framework roadmap&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I also really &lt;a href="https://www.youtube.com/watch?v=m_qndEudyLY"&gt;liked James Governor&amp;rsquo;s quick vlog on SpringOne Platform and his talk&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved &lt;a href="https://www.youtube.com/watch?time_continue=2&amp;v=n-gehEPgHy4"&gt;Pivotal CEO Rob Mee&amp;rsquo;s short-and-sweet keynote, as well&lt;/a&gt;. Thanks Rob!&lt;/li&gt;
+  &lt;li&gt;Last week Ordina&amp;rsquo;s JWorks division &lt;a href="https://github.com/ordina-jworks/microservices-dashboard"&gt;announced 1.0 of their Microservices Dashboard, as well&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Last week Stormpath unveiled 1.0 of their Spring Boot SDK &lt;em&gt;live&lt;/em&gt; at the show. &lt;a href="http://go.stormpath.com/spring-boot-security-and-user-management?utm_content=buffer58d04&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"&gt;Want to learn more? Check out this upcoming webinar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Recap: Day 2</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-2" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-08-04:2581</id>
+    <updated>2016-08-03T20:08:00Z</updated>
+    <content type="html">&lt;p&gt;by &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt; and &lt;a href="http://twitter.com/pieterhumphrey"&gt;Pieter Humphrey&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The excitement has continued at full speed ahead! Today we continued the exploration of how Pivotal is empowering developers to deliver better software and business value for their organizations.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring" class="anchor" name="spring"&gt;&lt;/a&gt;Spring&lt;/h2&gt;
+&lt;p&gt;Reactive has been a key theme at SpringOne Platform 2016. Microservices highlight the need for reactive programming. It&amp;rsquo;s a truly intense moment for the Spring team as they (re)consider a decade of synchronous programming practices and implementation. While we are starting with the an MVC-like model in web applications, modern cloud native application will ultimately require reactive options from end to end. This is just the beginning.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Reactive streams enable subscribers to use backpressure to tell publishers know when to consume more data &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/r1TZ1yi9vv"&gt;pic.twitter.com/r1TZ1yi9vv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kenny Bastani (@kennybastani) &lt;a href="https://twitter.com/kennybastani/status/760898610292678656"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Explaining the importance of non-blocking IO and prioritizing incoming requests based on latency &lt;a href="https://twitter.com/smaldini"&gt;@smaldini&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/ZRPI46aRIQ"&gt;pic.twitter.com/ZRPI46aRIQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kenny Bastani (@kennybastani) &lt;a href="https://twitter.com/kennybastani/status/760895711344857088"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Reactive programming is but the latest in a torrent of innovations, as evidenced by the download stats:&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;In the last 9 months, &lt;a href="https://t.co/xJZy2D0Wj7"&gt;&lt;a href="https://t.co/xJZy2D0Wj7"&gt;https://t.co/xJZy2D0Wj7&lt;/a&gt;&lt;/a&gt; has generated 1,080,533 projects. Awesome community! &lt;a href="https://twitter.com/springboot"&gt;@springboot&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt;&lt;/p&gt;&amp;mdash; Stéphane Nicoll (@snicoll) &lt;a href="https://twitter.com/snicoll/status/760944228687974401"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-partner="tweetdeck"&gt;&lt;p lang="en" dir="ltr"&gt;Good job guys! &lt;a href="https://twitter.com/tedtollefson"&gt;@tedtollefson&lt;/a&gt; &lt;a href="https://twitter.com/shawn_sherwood"&gt;@shawn_sherwood&lt;/a&gt; &lt;a href="https://t.co/MGn1ZnnFxx"&gt;&lt;a href="https://t.co/MGn1ZnnFxx"&gt;https://t.co/MGn1ZnnFxx&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nicholas Drone (@ndrone81) &lt;a href="https://twitter.com/ndrone81/status/761016239510532096"&gt;August 4, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Today we saw talks on distributed tracing..&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;here&amp;#39;s the &lt;a href="https://twitter.com/hashtag/zipkin?src=hash"&gt;#zipkin&lt;/a&gt; demo app I showed at &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/v9kAk8XsSW"&gt;&lt;a href="https://t.co/v9kAk8XsSW"&gt;https://t.co/v9kAk8XsSW&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Adrian Cole (@adrianfcole) &lt;a href="https://twitter.com/adrianfcole/status/760988597382098944"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and on how to consume Spring Cloud Services to move above the value line for cloud-native applications and focus instead on the business logic.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Excellent session by &lt;a href="https://twitter.com/royclarkson"&gt;@royclarkson&lt;/a&gt; &lt;a href="https://twitter.com/habuma"&gt;@habuma&lt;/a&gt; for Spring Cloud Services. Many thanks! &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt; &lt;a href="https://twitter.com/pivotal"&gt;@pivotal&lt;/a&gt; &lt;a href="https://t.co/q0QV4wiE4i"&gt;pic.twitter.com/q0QV4wiE4i&lt;/a&gt;&lt;/p&gt;&amp;mdash; Matthias Haeussler (@maeddes) &lt;a href="https://twitter.com/maeddes/status/760920752153432064"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;We saw exciting new project announcements..&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Big crowd of people come to hear how &lt;a href="https://twitter.com/SpringData"&gt;@SpringData&lt;/a&gt; Cassandra has become an officially supported project. &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/NpLyrqsvj5"&gt;pic.twitter.com/NpLyrqsvj5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Greg L. Turnquist (@gregturn) &lt;a href="https://twitter.com/gregturn/status/760964140814917632"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and updates to old favorites..&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Slides of my &amp;quot;Next Level Redis With Spring&amp;quot; talk &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/9U6A9Lux1e"&gt;&lt;a href="https://t.co/9U6A9Lux1e"&gt;https://t.co/9U6A9Lux1e&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Christoph Strobl (@stroblchristoph) &lt;a href="https://twitter.com/stroblchristoph/status/760636544445054976"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and examples on how developers are winning at scale with Spring, Spring Boot and Spring Cloud:&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Watching how &lt;a href="https://twitter.com/Domotalk"&gt;@Domotalk&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/checketts"&gt;@checketts&lt;/a&gt; impl&amp;#39;ed &lt;a href="https://twitter.com/hashtag/Spring?src=hash"&gt;#Spring&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Cloud?src=hash"&gt;#Cloud&lt;/a&gt; Config Server at &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Domo?src=hash"&gt;#Domo&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/EverythingAsCode?src=hash"&gt;#EverythingAsCode&lt;/a&gt; &lt;a href="https://t.co/aO9tXn6MD8"&gt;pic.twitter.com/aO9tXn6MD8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Rick Osowski (@rosowski) &lt;a href="https://twitter.com/rosowski/status/760944373613801472"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#keynote-highlights" class="anchor" name="keynote-highlights"&gt;&lt;/a&gt;Keynote Highlights&lt;/h2&gt;
+&lt;p&gt;We saw Google make a splash during their appearance in the keynote..&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Using Google cloud lets you have Google be your SRE team: &lt;a href="https://twitter.com/wattersjames"&gt;@wattersjames&lt;/a&gt; chats with &lt;a href="https://twitter.com/jjhollywood"&gt;@jjhollywood&lt;/a&gt;. &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/DUr2XslMfi"&gt;pic.twitter.com/DUr2XslMfi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bridget Kromhout (@bridgetkromhout) &lt;a href="https://twitter.com/bridgetkromhout/status/760879727980711936"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;where we learned that we&amp;rsquo;ll be able to consume Google Cloud Platform&amp;rsquo;s capabilities with PivotalCF by the end of the year which means Spring Boot developers will be able to consume Google’s data services natively.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;By the end of the year, you’ll be able to consume Google data services natively on &lt;a href="https://twitter.com/pivotalcf"&gt;@pivotalcf&lt;/a&gt;. &lt;a href="https://twitter.com/jjhollywood"&gt;@jjhollywood&lt;/a&gt; to &lt;a href="https://twitter.com/wattersjames"&gt;@wattersjames&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bridget Kromhout (@bridgetkromhout) &lt;a href="https://twitter.com/bridgetkromhout/status/760881072565587968"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and then we learned that PivotalCF is a &lt;em&gt;key enabler&lt;/em&gt; for Java workloads on Microsoft!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;“ &lt;a href="https://twitter.com/pivotalcf"&gt;@PivotalCF&lt;/a&gt; is the enabler to bring &lt;a href="https://twitter.com/hashtag/Java?src=hash"&gt;#Java&lt;/a&gt; to &lt;a href="https://twitter.com/Azure"&gt;@Azure&lt;/a&gt; “ — &lt;a href="https://twitter.com/CoreySandersWA"&gt;@CoreySandersWA&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; cc &lt;a href="https://twitter.com/ealeyner"&gt;@ealeyner&lt;/a&gt; &lt;a href="https://twitter.com/johnjahnke"&gt;@johnjahnke&lt;/a&gt; &lt;a href="https://t.co/ZX64qE2LGL"&gt;pic.twitter.com/ZX64qE2LGL&lt;/a&gt;&lt;/p&gt;&amp;mdash; F a i z P a r k a r (@_CloudNinja) &lt;a href="https://twitter.com/_CloudNinja/status/760888205025484800"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;Microsoft Azure is offering an OSS bear hug!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;It&amp;#39;s hard not to be impressed by &lt;a href="https://twitter.com/Azure"&gt;@Azure&lt;/a&gt; geographic reach, services, and bear hug of OSS. &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/5waNPyPGAg"&gt;pic.twitter.com/5waNPyPGAg&lt;/a&gt;&lt;/p&gt;&amp;mdash; Richard Seroter (@rseroter) &lt;a href="https://twitter.com/rseroter/status/760918913362255872"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;And we&amp;rsquo;re looking forward to hearing from Java luminary &lt;a href="http://twitter.com/speakjava"&gt;Simon Ritter&lt;/a&gt; tomorrow as he presents on Java 8 and JDK 9.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;.&lt;a href="https://twitter.com/AzulSystems"&gt;@AzulSystems&lt;/a&gt;&amp;#39;s &lt;a href="https://twitter.com/speakjava"&gt;@speakjava&lt;/a&gt; presents JDK 8: Lessons Learnt With Lambdas and Streams at &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/bZRS7k6S6A"&gt;&lt;a href="https://t.co/bZRS7k6S6A"&gt;https://t.co/bZRS7k6S6A&lt;/a&gt;&lt;/a&gt; &lt;a href="https://t.co/Lb4tD0M9mF"&gt;pic.twitter.com/Lb4tD0M9mF&lt;/a&gt;&lt;/p&gt;&amp;mdash; SpringOne Platform (@spring1platform) &lt;a href="https://twitter.com/spring1platform/status/755192687184252928"&gt;July 19, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#winning-with-software-amp-developers" class="anchor" name="winning-with-software-amp-developers"&gt;&lt;/a&gt;Winning with Software &amp;amp; Developers&lt;/h2&gt;
+&lt;p&gt;Software is what is making or breaking modern organizations. Developers are the kingmakers of this new era where the pace of change has hit unprecedented levels. From telco to finance, media to manufacturing, change is happening.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Our data team&amp;#39;s &lt;a href="https://twitter.com/jeffreyfkelly"&gt;@jeffreyfkelly&lt;/a&gt; summarizes the emerging theme for &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt;: Making developers happy. &lt;a href="https://t.co/hbxuiXtpAl"&gt;&lt;a href="https://t.co/hbxuiXtpAl"&gt;https://t.co/hbxuiXtpAl&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pivotal Big Data (@PivotalBigData) &lt;a href="https://twitter.com/PivotalBigData/status/760980320812462080"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Great comment from &lt;a href="https://twitter.com/wattersjames"&gt;@wattersjames&lt;/a&gt; at &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; - how risk management has changed - the real high risk is not being able to deliver code fast.&lt;/p&gt;&amp;mdash; Charles Humble (@charleshumble) &lt;a href="https://twitter.com/charleshumble/status/760884993488924672"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&amp;quot;if you keep treating developers as a commodity, then you&amp;#39;re on a race to the bottom.&amp;quot; doug safford, allstate. &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; it&amp;#39;s the economics&lt;/p&gt;&amp;mdash; Sticky Touchthing (@monkchips) &lt;a href="https://twitter.com/monkchips/status/760922278569717762"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;And that&amp;rsquo;s a wrap! &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - SpringOne Platform 2016 edition! - August 2nd, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/03/this-week-in-spring-springone-platform-2016-edition-august-2nd-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-08-03:2580</id>
+    <updated>2016-08-03T05:30:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another very special installment of &lt;em&gt;This Week in Spring&lt;/em&gt; - this week Pivotal is out in force at SpringOne Platform 2016. This year saw more people, more topics and more sponsors than ever! &lt;a href="https://spring.io/blog/2016/08/02/springone-platform-2016-recap-day-1"&gt;For more, check out our SpringOne Platform recap blog&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; here, then fear not all the talks will be available online, but until then.. &lt;em&gt;wish you were here&lt;/em&gt;! As with previous years, the race to SpringOne was filled with awesome releases that should keep you more than busy while you wait for the talks to be available online as replays! Let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Boot co-lead Phillip Webb &lt;a href="https://spring.io/blog/2016/07/28/spring-boot-1-4-released"&gt;announced Spring Boot 1.4&lt;/a&gt;, &lt;em&gt;just&lt;/em&gt; in time for SpringOne Platform!&lt;/li&gt;
+  &lt;li&gt;..and Spring Boot ninja Stephane Nicoll &lt;a href="https://spring.io/blog/2016/07/28/spring-boot-1-3-7-available-now"&gt;announced Spring Boot 1.3.7&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data ninja Mark Paluch announced &lt;a href="https://spring.io/blog/2016/07/27/spring-data-release-train-ingalls-m1-released"&gt;Spring Data Ingalls M1&lt;/a&gt;, packed with lots of new features (and 250 tickets fixed!) include for property access in conversion subsystem (Commons, MongoDB), an update to Cassandra 3.0 for Spring Data Cassandra,&lt;br/&gt;support for declarative query methods for Cassandra repositories, support for Redis geo commands, any-match mode for query-by-example, support for XML and JSON based projections for REST payloads and &lt;em&gt;so much&lt;/em&gt; more!&lt;/li&gt;
+  &lt;li&gt;Spring framework lead &lt;a href="https://spring.io/blog/2016/07/28/spring-framework-5-0-m1-released"&gt;Juergen Hoeller just announced Spring framework 5.0.0 M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring web maestro Rossen Stoyanchev introduced the &lt;a href="https://spring.io/blog/2016/07/28/reactive-programming-with-spring-5-0-m1"&gt;reactive programming support in Spring Framework 5.0.0 M1&lt;/a&gt; - this has been a &lt;em&gt;long&lt;/em&gt; time in coming and is definitely worth a look!&lt;/li&gt;
+  &lt;li&gt;Janne Valkealahti just &lt;a href="https://spring.io/blog/2016/07/29/spring-cloud-data-flow-for-apache-yarn-1-0-1-released"&gt;announced Spring Cloud Data Flow for Apache YARN 1.0.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Platform lead &lt;a href="https://spring.io/blog/2016/07/29/spring-io-platform-2-0-7-release"&gt;Andy Wilkinson announced Spring IO Platform 2.0.7&lt;/a&gt;. Spring IO Platform is a Maven bill-of-materials release train dependency that manages dependencies across different libraries and lets you focus not on playing whack-a-mole with dependency versions.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Task lead &lt;a href="https://spring.io/blog/2016/07/29/spring-cloud-task-1-0-2-release-is-now-available"&gt;Michael Minella just announced Spring Cloud Task 1.0.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring tools lead Martin Lippert &lt;a href="https://spring.io/blog/2016/08/03/spring-tool-suite-3-8-1-released"&gt;just released Spring Tool Suite 3.8.1&lt;/a&gt; which fixes some minor issues.&lt;/li&gt;
+  &lt;li&gt;I really enjoyed &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/products/get-closure-deploy-apps-to-production-in-seconds-not-weeks"&gt;Richard Seroter&amp;rsquo;s blog&lt;/a&gt; on deploying to production quickly&lt;/li&gt;
+  &lt;li&gt;This is pretty interesting, there&amp;rsquo;s a post on using Excelsior JET - which is an implementation of the Java SE technology for Microsoft Windows, Apple OS X, and Linux that turns code into a native application - &lt;a href="http://www.excelsiorjet.com/kb/38/howto-natively-compile-a-spring-boot-application"&gt;to turn a Spring Boot application into a native application&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I liked this post &lt;a href="http://www.baeldung.com/akka-with-spring"&gt;on using Spring and Akka together&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Recap: Day 1</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-1" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-08-03:2579</id>
+    <updated>2016-08-03T00:25:00Z</updated>
+    <content type="html">&lt;p&gt;by &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt; and &lt;a href="https://twitter.com/pieterhumphrey"&gt;Pieter Humphrey&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring&amp;rsquo;s central to a key message: software is business differentiating functionality, and everything that defers an organization&amp;rsquo;s from delivering better software, faster and safer, should be automated or eliminated. SpringOne &lt;em&gt;Platform&lt;/em&gt; captures that narrative with talks on all things continuous delivery.&lt;/p&gt;
+&lt;p&gt;The SpringOne Platform 2016 event &lt;em&gt;shows&lt;/em&gt; how everything about this show has been bigger and better than ever! We&amp;rsquo;ve doubled the conference attendance from 2015, with &lt;em&gt;record&lt;/em&gt; (2000+) attendees, 200+ talks, 30+ sponsors, amazing speakers from Netflix, Paypal, Microsoft, Google, Rakuten, Heroku, Red Hat, and many others.&lt;/p&gt;
+&lt;p&gt;The show &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/springone-platform-a-movement-comes-of-age"&gt;kicked off on monday night&lt;/a&gt; with hands on training, ignite talks, sponsor workshops, and open Cloud Foundry feedback forums. And yes, we are recording &lt;strong&gt;everything&lt;/strong&gt; for you, even the ignite talks.&lt;/p&gt;
+&lt;p&gt;Tuesday morning, after kickoff from &lt;a href="https://www.twitter.com/pieterhumphrey"&gt;Pieter Humphrey&lt;/a&gt; and &lt;a href="https://www.twitter.com/littleidea"&gt;Andrew Shafer&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Our heroes &lt;a href="https://twitter.com/littleidea"&gt;@littleidea&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/PieterHumphrey"&gt;@PieterHumphrey&lt;/a&gt; kick off &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; to roaring applause&lt;a href="https://twitter.com/pivotal"&gt;@pivotal&lt;/a&gt; &lt;a href="https://twitter.com/springcentral"&gt;@springcentral&lt;/a&gt; &lt;a href="https://t.co/6hvDICkISd"&gt;pic.twitter.com/6hvDICkISd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Josh Long (龙之春, जोश) (@starbuxman) &lt;a href="https://twitter.com/starbuxman/status/760507315858444288"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;The general sessions and keynotes introduced Pivotal and how it reduces the cost of change &amp;ndash; starting with VP of Cloud R&amp;amp;D Onsi Fakhouri.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;The talk by &lt;a href="https://twitter.com/onsijoe"&gt;@onsijoe&lt;/a&gt; is online - reduce cost of change &amp;amp; distribution -&amp;gt; &lt;a href="https://t.co/f1GRyxGFX7"&gt;&lt;a href="https://t.co/f1GRyxGFX7"&gt;https://t.co/f1GRyxGFX7&lt;/a&gt;&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Sterling (@csterwa) &lt;a href="https://twitter.com/csterwa/status/760656926749233152"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;We looked Pivotal&amp;rsquo;s culture of improving communication to improve software, and we looked at its culture of inclusion and diversity.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/cdavisafc"&gt;@cdavisafc&lt;/a&gt; sharing a pivotal moment in her life. &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/2VS7k6Yd6p"&gt;pic.twitter.com/2VS7k6Yd6p&lt;/a&gt;&lt;/p&gt;&amp;mdash; ritam (@ritam) &lt;a href="https://twitter.com/ritam/status/760513152324739072"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/phillip_webb/status/758824415547109376"&gt;Surprisingly viral tweeter&lt;/a&gt; and Spring Boot project lead Philip Webb defined DevOps for all of us that have been wondering:&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&amp;quot;by simply dropping two pizzas into any organisation, teams will form around them, and then you have devops&amp;quot; - &lt;a href="https://twitter.com/phillip_webb"&gt;@phillip_webb&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/pivotal"&gt;@pivotal&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sticky Touchthing (@monkchips) &lt;a href="https://twitter.com/monkchips/status/760530876073517056"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and then proceeded to drop an epically amusing and informative keynote about the history of Spring as a series of feedback loops and how that informs the cloud native future.&lt;/p&gt;
+&lt;p&gt;We then looked at how technologies like Cloud Foundry and Spring are the secret sauce enabling agility and speed-of-development.&lt;/p&gt;
+&lt;p&gt;Today we saw great talks on all aspects of the development lifecycle, including agile product management with Pivotal Tracker.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Scaling your product team while staying agile - great talk by &lt;a href="https://twitter.com/danpodsedly"&gt;@danpodsedly&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://twitter.com/pivotal"&gt;@Pivotal&lt;/a&gt; &lt;a href="https://t.co/pdR8MgHwj3"&gt;pic.twitter.com/pdR8MgHwj3&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pivotal Tracker (@pivotaltracker) &lt;a href="https://twitter.com/pivotaltracker/status/760627266992820224"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;And we saw great talks on open-source projects that played an important role in the Spring ecosystem, like Google&amp;rsquo;s gRPC..&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; 4:20pm at Bristlecone 7! watch &lt;a href="https://twitter.com/bretmcg"&gt;@bretmcg&lt;/a&gt; &amp;amp; i create microservices w/ &lt;a href="https://twitter.com/grpcio"&gt;@grpcio&lt;/a&gt; + bidirectional streaming. &lt;a href="https://t.co/LmkVDRqXpS"&gt;&lt;a href="https://t.co/LmkVDRqXpS"&gt;https://t.co/LmkVDRqXpS&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ray Tsang (@saturnism) &lt;a href="https://twitter.com/saturnism/status/760614330077282304"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and we saw Ordina release the 1.0 version of their Spring Boot Dashboard, &lt;strong&gt;today&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Excited that our Microservices Dashboard 1.0.0 has just been released to maven central live &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt;! &lt;a href="https://t.co/FDY3QwzLUz"&gt;&lt;a href="https://t.co/FDY3QwzLUz"&gt;https://t.co/FDY3QwzLUz&lt;/a&gt;&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andreas Evers (@andreasevers) &lt;a href="https://twitter.com/andreasevers/status/760607472566493188"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and we saw Stormpath unveil 1.0 of their SDK and auto-configuration for Spring Boot &lt;strong&gt;today&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Watching &lt;a href="https://twitter.com/lhazlewood"&gt;@lhazlewood&lt;/a&gt; introduce &lt;a href="https://twitter.com/goStormpath"&gt;@goStormpath&lt;/a&gt; and &lt;a href="https://twitter.com/springboot"&gt;@springBoot&lt;/a&gt; &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1pgo?src=hash"&gt;#s1pgo&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/oauth?src=hash"&gt;#oauth&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/security?src=hash"&gt;#security&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/sso?src=hash"&gt;#sso&lt;/a&gt; &lt;a href="https://t.co/7iYEhiCQHL"&gt;pic.twitter.com/7iYEhiCQHL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Josh Long (龙之春, जोश) (@starbuxman) &lt;a href="https://twitter.com/starbuxman/status/760638049243979776"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;We saw talks that looked at the integration opportunities that you get when you combine the best toolkit for building cloud-native applications (Spring), and a cloud (Cloud Foundry).&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Slides from my &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt; talk on Extending the Platform with &lt;a href="https://twitter.com/springboot"&gt;@springboot&lt;/a&gt; and &lt;a href="https://twitter.com/cloudfoundry"&gt;@cloudfoundry&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://t.co/wvVc201qm1"&gt;&lt;a href="https://t.co/wvVc201qm1"&gt;https://t.co/wvVc201qm1&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kenny Bastani (@kennybastani) &lt;a href="https://twitter.com/kennybastani/status/760611768162844673"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;We saw great talks from Pivotal customers who are doing amazing things with Pivotal technology and culture to deliver real value to their customers.&lt;/p&gt;
+&lt;p&gt;In particular, the talk on how Accenture is helping Comcast deliver better software on top of Pivotal Cloud Foundry was pretty epic!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;How &lt;a href="https://twitter.com/Accenture"&gt;@Accenture&lt;/a&gt; is helping &lt;a href="https://twitter.com/comcast"&gt;@Comcast&lt;/a&gt; migrating legacy to cloud-native and &lt;a href="https://twitter.com/pivotalcf"&gt;@pivotalcf&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/YesYouCan?src=hash"&gt;#YesYouCan&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/MjjmGEtDQt"&gt;pic.twitter.com/MjjmGEtDQt&lt;/a&gt;&lt;/p&gt;&amp;mdash; dekt (@dekt) &lt;a href="https://twitter.com/dekt/status/760607269834723328"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;And so was this talk from Citi&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Pulling apart a monolith best done by decomposing, refactoring, and rewriting loop says Brad Miller &lt;a href="https://twitter.com/Citi"&gt;@Citi&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/3n56DWJPO1"&gt;pic.twitter.com/3n56DWJPO1&lt;/a&gt;&lt;/p&gt;&amp;mdash; Coté (@cote) &lt;a href="https://twitter.com/cote/status/760526379590950912"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;And a great talk on Unikernels&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Very interesting talk about Unikernels (&lt;a href="https://t.co/4yWDglOfpd"&gt;&lt;a href="https://t.co/4yWDglOfpd"&gt;https://t.co/4yWDglOfpd&lt;/a&gt;&lt;/a&gt;) from &lt;a href="https://twitter.com/Idit_Levine"&gt;@Idit_Levine&lt;/a&gt; at &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt; &lt;a href="https://t.co/rag7nzZRwd"&gt;pic.twitter.com/rag7nzZRwd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bart Blommaerts (@DaggieBe) &lt;a href="https://twitter.com/DaggieBe/status/760620886852448256"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and of course there are lots of selifes and wonderful banner art!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;You gotta love &lt;a href="https://twitter.com/starbuxman"&gt;@starbuxman&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/3qnfgTzZYA"&gt;pic.twitter.com/3qnfgTzZYA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Richardson (@crichardson) &lt;a href="https://twitter.com/crichardson/status/760531184665309184"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;and of course &lt;a href="http://twitter.com/snicoll"&gt;Stephane&lt;/a&gt; and &lt;a href="http://twitter.com/starbuxman"&gt;I&lt;/a&gt; shared our love for great banner art!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Spring Advocate Josh Long shows off his fancy banner while Spring Boot Dev Stephane Nicoll teaches v1.4. &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/wC5I5gXozb"&gt;pic.twitter.com/wC5I5gXozb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nicholas Eden-Walker (@JinpaLhawang) &lt;a href="https://twitter.com/JinpaLhawang/status/760551095085076480"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;We cannot wait to discover what is going to happen tomorrow &amp;ndash; this is just day &lt;strong&gt;one&lt;/strong&gt; ! Check back here for tomorrow&amp;rsquo;s day 2 wrap up!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tool Suite 3.8.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/03/spring-tool-suite-3-8-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2016-08-03:2578</id>
+    <updated>2016-08-03T00:21:53Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 3.8.1 release of the Spring Tool Suite, our Eclipse-based tooling.&lt;/p&gt;
+&lt;p&gt;STS 3.8.1 focuses on fixing existing issues. The list of fixed issues include:&lt;/p&gt;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Spring Boot Dashboard works behind a proxy again&lt;/li&gt;&#xD;
+&lt;li&gt;Assert templates now use JUnit or AssertJ, depending on what is on the classpath of the project&lt;/li&gt;&#xD;
+&lt;li&gt;Fixed an issue with the Groovy-Eclipse m2e connector with missing source folders&lt;/li&gt;&#xD;
+&lt;li&gt;Added an action to jump to the ngrok admin web UI directly from the boot dashboard&lt;/li&gt;&#xD;
+&lt;li&gt;Fixed an issue with the port of a boot app not showing up in the dashboard&lt;/li&gt;&#xD;
+&lt;li&gt;and more...&lt;/li&gt;&#xD;
+&lt;/ul&gt;
+&lt;p&gt;To download the distributions, please go visit:&lt;/p&gt;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Spring Tool Suite: &lt;a href="https://spring.io/tools/sts/all"&gt;https://spring.io/tools/sts/all&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;
+&lt;p&gt;Detailed new and noteworthy notes can be found here: &lt;a href="http://docs.spring.io/sts/nan/v381/NewAndNoteworthy.html"&gt;STS 3.8.1 New &amp;amp; Noteworthy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring IO Platform Athens RC1</title>
     <link rel="alternate" href="https://spring.io/blog/2016/07/29/spring-io-platform-athens-rc1" />
@@ -1230,457 +1397,5 @@ git merge --no-ff contract-change-pr&lt;/code&gt;&lt;/pre&gt;
     <id>tag:spring.io,2016-07-20:2563</id>
     <updated>2016-07-20T22:17:43Z</updated>
     <content type="html">&lt;p&gt;A new Spring Web Flow 2.4.4 maintenance release is now available for download or use from Maven and Gradle builds. This release extends compatibility to Hibernate 5.2 and also includes several mainly JSF related fixes.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Notes on Reactive Programming Part III: A Simple HTTP Server Application</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/20/notes-on-reactive-programming-part-iii-a-simple-http-server-application" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Dave Syer</name>
-    </author>
-    <id>tag:spring.io,2016-07-20:2562</id>
-    <updated>2016-07-20T13:51:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;In this article we continue the series on &lt;a href="https://spring.io/blog/2016/06/13/notes-on-reactive-programming-part-ii-writing-some-code"&gt;Reactive Programming&lt;/a&gt;, and the focus is less on learning the basic APIs and more on more concrete use cases and writing code that actually does something useful. We will see how Reactive is a useful abstraction for concurrent programming, but also that it has some very low level features that we should learn to treat with respect and caution. If we start to use these features to their full potential we can take control of layers in our application that previously were invisible, hidden by containers, platforms and frameworks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="bridging-from-blocking-to-reactive-with-spring-mvc"&gt;&lt;a class="anchor" href="#bridging-from-blocking-to-reactive-with-spring-mvc"&gt;&lt;/a&gt;Bridging from Blocking to Reactive with Spring MVC&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Being Reactive forces you to look at the world differently. Instead of asking for something and getting it (or not getting it), everything is delivered as a sequence (&lt;code&gt;Publisher&lt;/code&gt;) and you have to subscribe to it. Instead of waiting for an answer, you have to register a callback. It&amp;#8217;s not so hard when you get used to it, but unless the whole world turns on its head and becomes Reactive, you are going to find you need to interact with an old-style blocking API&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Suppose we have a blocking method that returns an &lt;code&gt;HttpStatus&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;private RestTemplate restTemplate = new RestTemplate();
-
-private HttpStatus block(int value) {
-    return this.restTemplate.getForEntity("http://example.com/{value}", String.class, value)
-            .getStatusCode();
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;and we want to call it repeatedly with different arguments and aggregate the results. It&amp;#8217;s a classic "scatter-gather" use case, which you would get, for instance, if you had a paginated back end needed to summarize the "top N" items across multiple pages. Since the details of the non-reactive (blocking) operation are not relevant to the scatter-gather pattern, we can push them down into a method called &lt;code&gt;block()&lt;/code&gt;, and implement it later. Here&amp;#8217;s a (bad) example that calls the back end and aggregates into an object of type &lt;code&gt;Result&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;Flux.range(1, 10) &lt;b class="conum"&gt;(1)&lt;/b&gt;
-    .log()
-    .map(this::block) &lt;b class="conum"&gt;(2)&lt;/b&gt;
-    .collect(Result::new, Result::add) &lt;b class="conum"&gt;(3)&lt;/b&gt;
-    .doOnSuccess(Result::stop) &lt;b class="conum"&gt;(4)&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="colist arabic"&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;make 10 calls&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;blocking code here&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;collect results and aggregate into a single object&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;at the end stop the clock (the result is a &lt;code&gt;Mono&amp;lt;Result&amp;gt;&lt;/code&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Don&amp;#8217;t do this at home. It&amp;#8217;s a "bad" example because, while the APIs are technically being used correctly, we know that it is going to block the calling thread; this code is more or less equivalent to a for loop with the call to &lt;code&gt;block()&lt;/code&gt; in the body of the loop. A better implementation would push the call to &lt;code&gt;block()&lt;/code&gt; onto a background thread. We can do that by wrapping it in a method that returns a &lt;code&gt;Mono&amp;lt;HttpStatus&amp;gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;private Mono&amp;lt;HttpStatus&amp;gt; fetch(int value) {
-    return Mono.fromCallable(() -&amp;gt; block(value)) &lt;b class="conum"&gt;(1)&lt;/b&gt;
-        .subscribeOn(this.scheduler);            &lt;b class="conum"&gt;(2)&lt;/b&gt;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="colist arabic"&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;blocking code here inside a Callable to defer execution&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;subscribe to the slow publisher on a background thread&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;scheduler&lt;/code&gt; is declared separately as a shared field: &lt;code&gt;Scheduler scheduler = Schedulers.parallel()&lt;/code&gt;. Then we can declare that we want to &lt;code&gt;flatMap()&lt;/code&gt; the sequence instead of using &lt;code&gt;map()&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;Flux.range(1, 10)
-    .log()
-    .flatMap(                             &lt;b class="conum"&gt;(1)&lt;/b&gt;
-        this::fetch, 4)                   &lt;b class="conum"&gt;(2)&lt;/b&gt;
-    .collect(Result::new, Result::add)
-    .doOnSuccess(Result::stop)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="colist arabic"&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;drop down to a new publisher to process in parallel&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;concurrency hint in flatMap&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="embedding-in-a-non-reactive-server"&gt;&lt;a class="anchor" href="#embedding-in-a-non-reactive-server"&gt;&lt;/a&gt;Embedding in a Non-Reactive Server&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If we wanted to run the scatter-gather code above in a non-reactive server like a servlet container, we could use Spring MVC, like this:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@RequestMapping("/parallel")
-public CompletableFuture&amp;lt;Result&amp;gt; parallel() {
-    return Flux.range(1, 10)
-      ...
-      .doOnSuccess(Result::stop)
-      .toFuture();
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you read the Javadocs for &lt;code&gt;@RequestMapping&lt;/code&gt; you will find that a method can return a &lt;code&gt;CompletableFuture&lt;/code&gt; "which the application uses to produce a return value in a separate thread of its own choosing". The separate thread in this case is provided by "scheduler", which is a thread pool, so the processing is happening on multiple threads, 4 at a time because of the way that &lt;code&gt;flatMap()&lt;/code&gt; is called.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="no-such-thing-as-a-free-lunch"&gt;&lt;a class="anchor" href="#no-such-thing-as-a-free-lunch"&gt;&lt;/a&gt;No Such Thing as a Free Lunch&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The scatter-gather with a background thread is a useful pattern but it isn&amp;#8217;t perfect&amp;#8201;&amp;#8212;&amp;#8201;it&amp;#8217;s not blocking the caller, but it&amp;#8217;s blocking something, so it&amp;#8217;s just moving the problem around. There are some practical implications. We have an HTTP server with (probably) non-blocking IO handlers, passing work back to a thread pool, one HTTP request per thread&amp;#8201;&amp;#8212;&amp;#8201;all of this is happening inside a servlet container (e.g. Tomcat). The request is processed asynchronously, so the worker thread in Tomcat isn&amp;#8217;t blocked, and the thread pool that we created in our "scheduler" is processing on up to 4 concurrent threads. We are processing 10 back end requests (calls to &lt;code&gt;block()&lt;/code&gt;) so there is a maximum, theoretical benefit of using the scheduler of 4 times lower latency. In other words, if processing all 10 requests one after the other in a single thread takes 1000ms, we might see a processing time of 250ms for a single incoming request at our HTTP service. We should emphasise the "might" though: it&amp;#8217;s only going to go that fast if there is no contention for the processing threads (in both stages, the Tomcat workers, and the application scheduler). If you have a server with a large number of cores, very low concurrency, i.e. a small number of clients connecting to your application, and hardly any chance that two will make a request at the same time, then you will probably see close to the theoretical improvement. As soon as there are multiple clients trying to connect, they will all be competing for the same 4 threads, and the latency will drift up, and could even be worse than that experienced by a single client with no background processing. We can improve the latency for concurrent clients by creating the scheduler with a larger thread pool, e.g.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;    private Scheduler scheduler = Schedulers.newParallel("sub", 16);&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;(16 threads.) Now we are using more memory for the threads and their stacks, and we can expect to see lower latency for low concurrency, but not necessarily for high concurrency if our hardware has fewer than 16 cores. We also do not expect higher throughput under load: if there is contention for the threads, there is a high cost for managing those resources and that has to be reflected somwehere in a metric that matters. If you are interested in more detailed analysis of that kind of trade off, some detailed analyses of how performance metrics scale under load can be found in a blog series by &lt;a href="https://robharrop.github.io/"&gt;Rob Harrop&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock tip"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Tip&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-Tomcat allocates 100 threads for processing HTTP requests by default. That is excessive if we know all the processing is going to be on our scheduler thread pool. There is an impedance mismatch: the scheduler thread pool can be a bottleneck because it has fewer threads than the upstream Tomcat thread pool. This highlights the fact that performance tuning can be very hard, and, while you might have control of all the configuration, it&amp;#8217;s a delicate balance.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We can do better than a fixed thread pool if we use a scheduler that adjusts its capacity according to demand. Reactor has a convenience for that, so if you try the same code with &lt;code&gt;Schedulers.elastic()&lt;/code&gt; (you can call it anywhere; there is only one instance), you will see that under load more threads are created.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="reactive-all-the-way-down"&gt;&lt;a class="anchor" href="#reactive-all-the-way-down"&gt;&lt;/a&gt;Reactive all the Way Down&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The bridge from blocking to reactive is a useful pattern, and is easy to implement using available technology in Spring MVC (as shown above). The next stage in the Reactive journey is to break out of blocking in application threads completely, and to do that requires new APIs and new tools. Ultimately we have to be Reactive all the way down the stack, including servers and clients. This is the goal of Spring Reactive, which is a new framework, orthogonal to Spring MVC, but meeting the same needs, and using a similar programming model.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock note"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Note&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-Spring Reactive started as a standalone project, but is folded into the Spring Framework in version 5.0 (first milestone June 2016).
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The first step to fully Reactive in our scatter-gather example would be to replace &lt;code&gt;spring-boot-starter-web&lt;/code&gt; with &lt;code&gt;spring-boot-starter-web-reactive&lt;/code&gt; on the classpath. In Maven:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependency&amp;gt;
-	&amp;lt;groupId&amp;gt;org.springframework.boot.experimental&amp;lt;/groupId&amp;gt;
-	&amp;lt;artifactId&amp;gt;spring-boot-starter-web-reactive&amp;lt;/artifactId&amp;gt;
-	&amp;lt;version&amp;gt;0.1.0-SNAPSHOT&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;or in Gradle:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;repositories {
-    ...
-    mavenLocal()
-}
-
-
-dependencies {
-	compile('org.springframework.boot.experimental:spring-boot-starter-web-reactive:0.1.0-SNAPSHOT')
-    ...
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;(At the time of writing there are snapshots of this experimental library in repo.spring.io, or you could build and install locally from &lt;a href="https://github.com/bclozel/spring-boot-reactive-web"&gt;GitHub&lt;/a&gt;.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Then in the controller, we can simply lose the bridge to &lt;code&gt;CompletableFuture&lt;/code&gt; and return an object of type &lt;code&gt;Mono&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@RequestMapping("/parallel")
-public Mono&amp;lt;Result&amp;gt; parallel() {
-    return Flux.range(1, 10)
-            .log()
-            .flatMap(this::fetch, 4)
-            .collect(Result::new, Result::add)
-            .doOnSuccess(Result::stop);
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Take this code and put it in a Spring Boot application and it will run in Tomcat, Jetty or Netty, depending on what it finds on the classpath. Tomcat is the default server in that starter, so you have to exclude it and provide a different one if you want to switch. All three have very similar characteristics in terms of startup time, memory usage and runtime resource usage.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We still have the blocking backend call in &lt;code&gt;block()&lt;/code&gt;, so we still have to subscribe on a thread pool to avoid blocking the caller. We can change that if we have a non-blocking client, e.g. instead of using &lt;code&gt;RestTemplate&lt;/code&gt; we use the new &lt;code&gt;WebClient&lt;/code&gt; then we might do this instead to use a non-blocking client:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;private WebClient client = new WebClient(new ReactorHttpClientRequestFactory());
-
-private Mono&amp;lt;HttpStatus&amp;gt; fetch(int value) {
-    return this.client.perform(HttpRequestBuilders.get("http://example.com"))
-            .extract(WebResponseExtractors.response(String.class))
-            .map(response -&amp;gt; response.getStatusCode());
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Note that the &lt;code&gt;WebClient.perform()&lt;/code&gt; (or the &lt;code&gt;WebResponseExtractor&lt;/code&gt; to be precise) has a Reactive return type, which we have transformed into a &lt;code&gt;Mono&amp;lt;HttpStatus&amp;gt;&lt;/code&gt;, but we have not subscribed to it. We want the framework to do all the subscribing, so now we are Reactive all the way down.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock warning"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Warning&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-Methods in Spring Reactive that return a &lt;code&gt;Publisher&lt;/code&gt; &lt;strong&gt;are&lt;/strong&gt; non-blocking, but in general a method that returns a &lt;code&gt;Publisher&lt;/code&gt; (or &lt;code&gt;Flux&lt;/code&gt;, &lt;code&gt;Mono&lt;/code&gt; or &lt;code&gt;Observable&lt;/code&gt;) is only a hint that it might be non-blocking. If you are writing such methods it is important to analyse (and preferably test) whether they block, and to let callers know explicitly if they might do.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock note"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Note&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-The trick we played just now of using a non-blocking client to simplify the HTTP stack works in regular Spring MVC as well. The result of the &lt;code&gt;fetch()&lt;/code&gt; method above can be converted to a &lt;code&gt;CompletableFuture&lt;/code&gt; and passed out of a regular &lt;code&gt;@RequestMapping&lt;/code&gt; method (in Spring Boot 1.3 for instance).
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="inversion-of-control"&gt;&lt;a class="anchor" href="#inversion-of-control"&gt;&lt;/a&gt;Inversion of Control&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Now we can remove the concurrency hint after the call to &lt;code&gt;fetch()&lt;/code&gt; in the HTTP request handler:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@RequestMapping("/netty")
-public Mono&amp;lt;Result&amp;gt; netty() {
-    return Flux.range(1, 10) &lt;b class="conum"&gt;(1)&lt;/b&gt;
-        .log() //
-        .flatMap(this::fetch) &lt;b class="conum"&gt;(2)&lt;/b&gt;
-        .collect(Result::new, Result::add)
-        .doOnSuccess(Result::stop);
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="colist arabic"&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;make 10 calls&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;drop down to a new publisher to process in parallel&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Taking into account that we don&amp;#8217;t need the extra callable and subscriber thread at all, this code is a lot cleaner than when we had to bridge to the blocking client, which can be attributed to the fact that the code is Reactive all the way down. The Reactive &lt;code&gt;WebClient&lt;/code&gt; returns a &lt;code&gt;Mono&lt;/code&gt;, and that drives us immediately to select &lt;code&gt;flatMap()&lt;/code&gt; in the transformation chain, and the code we need just falls out. It&amp;#8217;s a nicer experience to write it, and it&amp;#8217;s more readable, so it&amp;#8217;s easier to maintain. Also, since there is no thread pooling and no concurrency hint, there is no magic factor of 4 to plug into our performance expectations. There is a limit somewhere, but it&amp;#8217;s not imposed by our choices in the application tier any more, nor is it limited by anything in the server "container". It&amp;#8217;s not magic, and there are still laws of physics, so the backend calls are all still going to take 100ms or so each, but with low contention we might even see all 10 requests complete in roughly the same time it takes for one. As the load on the server increases latency and throughput will naturally degrade, but in a way that is governed by buffer contention and kernel networking, not by application thread management. It&amp;#8217;s an inversion of control, to lower levels of the stack below the application code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Remember the same application code runs on Tomcat, Jetty or Netty. Currently, the Tomcat and Jetty support is provided on top of Servlet 3.1 asynchronous processing, so it is limited to one request per thread. When the same code runs on the Netty server platform that constraint is lifted, and the server can dispatch requests sympathetically to the web client. As long as the client doesn&amp;#8217;t block, everyone is happy. Performance metrics for the netty server and client probably show similar characteristics, but the Netty server is not restricted to processing a single request per thread, so it doesn&amp;#8217;t use a large thread pool and we might expect to see some differences in resource utilization. We will come back to that later in another article in this series.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock tip"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Tip&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-in the &lt;a href="https://github.com/dsyer/reactive-notes"&gt;sample code&lt;/a&gt; the "reactive" sample has Maven profiles "tomcat", "tomcatNext" (for Tomcat 8.5), "jetty" and "netty", so you can easily try out all the different server options without changing a line of code.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock note"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Note&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-the blocking code in many applications is not HTTP backend calls, but database interactions. Very few databases support non-blocking clients at this point in time (MongoDB and Couchbase are notable exceptions, but even those are not as mature as the HTTP clients). Thread pools and the blocking-to-reactive pattern will have a long life until all the database vendors catch up on the client side.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="still-no-free-lunch"&gt;&lt;a class="anchor" href="#still-no-free-lunch"&gt;&lt;/a&gt;Still No Free Lunch&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We have whittled down our basic scatter-gather use case until the code is very clean, and very sympathetic to the hardware it runs on. We wrote some simple code and it was stacked up and orchestrated very nicely into a working HTTP service using Spring. On a sunny day everyone is more than happy with the outcome. But as soon as there are errors, e.g. a badly behaved network connection, or a back end service that suffers from poor latency, we are going to suffer.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The first, most obvious way to suffer is that the code we wrote is declarative, so it&amp;#8217;s hard to debug. When errors occur the diagnostics can be very opaque. Using the raw, low-level APIs, like Reactor without Spring, or even down to the level of Netty without Reactor would probably make it even worse, because then we would have to build a lot of error handling ourselves, repeating the boiler plate every time we interact with the network. At least with Spring and Reactor in the mix we can expect to see stack traces logged for stray, uncaught exceptions. They might not be easy to understand though because they happen on threads that we don&amp;#8217;t control, and they sometimes show up as quite low level concerns, from unfamiliar parts of the stack.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Another source of pain is that if we ever make a mistake and block in one of our Reactive callbacks, we will be holding up &lt;strong&gt;all&lt;/strong&gt; requests on the same thread. With the servlet-based containers every request is isolated to a thread, and blocking doesn&amp;#8217;t hold up other requests because they are be processed on different threads. Blocking all requests is still a recipe for trouble, but it only shows up as increased latency with roughly a constant factor per request. In the Reactive world, blocking a single request can lead to increased latency for all requests, and blocking all requests can bring a server to its knees because the extra layers of buffers and threads are not there to take up the slack.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="conclusion"&gt;&lt;a class="anchor" href="#conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It&amp;#8217;s nice to be able to control all the moving parts in our asynchronous processing: every layer has a thread pool size and a queue. We can make some of those layers elastic, and try and adjust them according to how much work they do. But at some point it becomes a burden, and we start looking for something simpler, or leaner. Analysis of scalability leads to the conclusion that it is often better to shed the extra threads, and work with the constraints imposed by the physical hardware. This is an example of "mechanical sympathy", as is famously exploited by LMAX to great effect in the &lt;a href="https://lmax-exchange.github.io/disruptor/"&gt;Disruptor Pattern&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We have begun to see the power of the Reactive approach, but remember that with power comes responsibility. It&amp;#8217;s radical, and it&amp;#8217;s fundamental. It&amp;#8217;s "rip it up and start again" territory. So you will also hopefully appreciate that Reactive isn&amp;#8217;t a solution to all problems. In fact it isn&amp;#8217;t a solution to any problem, it merely facilitates the solution of a certain class of problems. The benefits you get from using it might be outweighed by the costs of learning it, modifying your APIs to be Reactive all the way down, and maintaining the code afterwards, so tread carefully.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - July 19th, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/19/this-week-in-spring-july-19th-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-07-19:2560</id>
-    <updated>2016-07-19T13:44:39Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring!&lt;/em&gt; This week I am in Cincinnati and Columbus, Ohio, and Los Angeles and San Francisco, California talking to customers and doing meetups.&lt;/p&gt;
-&lt;p&gt;This is my favorite time of year! As we lead to &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt;, there&amp;rsquo;s so much good stuff being released that one can hardly keep up! I am &lt;em&gt;really&lt;/em&gt; looking forward to this year&amp;rsquo;s &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt; show, coming in early August. It&amp;rsquo;s an amazing time to build applications, and SpringOne Platform is in a unique position to capture the larger discussion: why do we #devops, #cloud, #agile, or #microservice? Join the discussion August 1-4, 2016 in beautiful Las Vegas and let&amp;rsquo;s find out!&lt;/p&gt;
-&lt;p&gt;So, let’s get to it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Integration and messaging ninja Artem Bilan &lt;a href="https://spring.io/blog/2016/07/12/spring-for-apache-kafka-1-0-2-available-now"&gt;just announced Spring for Apache Kafka 1.0.2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;and &lt;a href="https://spring.io/blog/2016/07/18/spring-amqp-1-6-1-available-now"&gt;Spring AMQP 1.6.1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I &lt;a href="https://twitter.com/snicoll/status/753639081008041984"&gt;love this tweet&lt;/a&gt; from Spring Boot ninja Stéphane Nicoll ‏explaining that Spring Boot 1.3.7 will release the same day as Spring Boot 1.4.0.RELEASE, July 28th, just in time for SpringOne Platform!&lt;/li&gt;
-  &lt;li&gt;I &lt;a href="http://www.journaldev.com/7969/spring-boot-tutorial"&gt;like this Spring Boot tutorial&lt;/a&gt;, though I disagree with one claim. Spring Boot is about reducing the time to develop applications compared to &lt;em&gt;all&lt;/em&gt; technologies.&lt;/li&gt;
-  &lt;li&gt;Our buddy Eugen Paraschiv has put together &lt;a href="http://www.baeldung.com/spring-boot-starters"&gt;a nice look at Spring Boot&amp;rsquo;s starters&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Eugen also put &lt;a href="http://www.baeldung.com/spring-boot-application-configuration"&gt;together a great look at configuration in Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;want to build Java EE and other &lt;a href="https://jaxenter.com/playing-with-spring-boot-docker-in-netbeans-ide-127672.html"&gt;types of applications quickly with Spring Boot and NetBeans and Docker? I like this cool post on JAXEnter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Dave Burke put together a nice look &lt;a href="http://nixmash.com/java/rss-feeds-with-spring-boot/"&gt;at consuming RSS feeds with Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Have you seen the &lt;a href="http://www.jetbrains.com/help/idea/2016.2/spring-boot.html"&gt;new Spring Boot features in IntelliJ 16.2&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;Pascal Alma is continuing his look at deploying applications based on Spring Boot to AWS. In the first installment he showed the easy approach, using BoxFuse, and now he is spelling out the most painful approach: &lt;a href="https://pragmaticintegrator.wordpress.com/2016/07/12/run-your-spring-boot-application-on-aws-using-elastic-beanstalk/"&gt;using AWS directly to deploy Spring Boot applications manually&lt;/a&gt;. (*Or*, &lt;a href="http://run.pivotal.io"&gt;you could just use Pivotal Web Services&lt;/a&gt; and run &lt;code&gt;cf push -p my.jar myapp&lt;/code&gt; and be done with it!)&lt;/li&gt;
-  &lt;li&gt;I dig this talk on building &lt;a href="https://www.youtube.com/watch?v=RcofDO079NM"&gt;cloud native and secure applications with Spring Boot&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring AMQP 1.6.1 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/18/spring-amqp-1-6-1-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2016-07-18:2559</id>
-    <updated>2016-07-18T18:33:33Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;It is my pleasure to announce that the Spring AMQP &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;amp;version=15423"&gt;1.6.1&lt;/a&gt; maintenance release &lt;a href="http://projects.spring.io/spring-amqp/"&gt;is available now&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As usual, thanks to the community for any feedback and contribution all the ways!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release contains several critical bug fixes, therefore an upgrade is highly recommended.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We haven&amp;#8217;t switched &lt;code&gt;master&lt;/code&gt; branch to &lt;code&gt;2.0&lt;/code&gt; yet, but that is really our intention in the nearest future to start enjoying a new Spring 5.0 and Java 8 foundation for Spring AMQP project code base!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-amqp/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-amqp"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-amqp/reference/html/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring for Apache Kafka 1.0.2 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/12/spring-for-apache-kafka-1-0-2-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2016-07-12:2558</id>
-    <updated>2016-07-12T19:23:02Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;It is my pleasure to announce that the Spring for Apache Kafka &lt;a href="https://github.com/spring-projects/spring-kafka/milestone/8?closed=1"&gt;1.0.2&lt;/a&gt; maintenance release &lt;a href="http://projects.spring.io/spring-kafka/"&gt;is available now&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As usual, thanks to the community for any feedback and contribution all the ways!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release contains several critical bug fixes, therefore an upgrade is highly recommended. The master branch has now switched to &lt;code&gt;1.1&lt;/code&gt; and we are starting migrating to &lt;a href="https://github.com/spring-projects/spring-kafka/pull/121"&gt;Kafka 0.10&lt;/a&gt; and other features on the matter with possible &lt;code&gt;Milestone 1&lt;/code&gt; later this month.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-kafka/reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For more details about Spring for Apache Kafka , check &lt;a href="https://2016.event.springoneplatform.io/schedule/sessions/spring_for_apache_kafka.html"&gt;Gary Russell&amp;#8217;s session&lt;/a&gt; at &lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;, which is taking place in Las Vegas between August 1-4 this year. There are many other great talks so &lt;a href="https://2016.event.springoneplatform.io/schedule/sessions"&gt;check the agenda&lt;/a&gt; and &lt;a href="https://2016.event.springoneplatform.io/register"&gt;get your ticket&lt;/a&gt; if you haven’t done so already.&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring  - July 12th, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/12/this-week-in-spring-july-12th-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-07-12:2557</id>
-    <updated>2016-07-12T18:47:47Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Dublin, Ireland and London, UK, and Boston, Massachusetts, giving open workshops at Pivotal Dublin and London and speaking to local customers. It&amp;rsquo;s been a fun week and there&amp;rsquo;s a &lt;em&gt;lot&lt;/em&gt; to cover! So, let&amp;rsquo;s get to it!&lt;/p&gt;
-&lt;p&gt;This is my favorite time of year! As we lead to &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt;, there&amp;rsquo;s so much good stuff being released that one can hardly keep up! I am &lt;em&gt;really&lt;/em&gt; looking forward to this year&amp;rsquo;s &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt; show, coming in early August. It&amp;rsquo;s an amazing time to build applications, and SpringOne Platform is in a unique position to capture the larger discussion: why do we #devops, #cloud, #agile, or #microservice? Join the discussion August 1-4, 2016 in beautiful Las Vegas and let&amp;rsquo;s find out!&lt;/p&gt;
-&lt;p&gt;So, let’s get to it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/12/spring-cloud-data-flow-1-0-ga-released"&gt;Spring Cloud Data Flow 1.0 has been released&lt;/a&gt;! Hurray!! There are &lt;a href="https://spring.io/blog/2016/07/12/spring-cloud-data-flow-for-apache-yarn-1-0-0-released"&gt;YARN&lt;/a&gt;, &lt;a href="https://spring.io/blog/2016/07/12/spring-cloud-data-flow-for-cloud-foundry-1-0-0-m4-now-available"&gt;Cloud Foundry&lt;/a&gt;, and &lt;a href="https://spring.io/blog/2016/07/12/spring-cloud-data-flow-for-kubernetes-1-0-ga-released"&gt;Kubernetes&lt;/a&gt; adapters, as well.&lt;/li&gt;
-  &lt;li&gt;Dzone asked me to put together a refcard &lt;a href="https://dzone.com/refcardz/learn-microservices-in-java"&gt;on building microservices with Java&lt;/a&gt; and it went live last week. In this refcard we talk about the motivations behind microservices, and the things that you&amp;rsquo;ll need to address when building production worthy services in a distributed system (microservices). Naturally, we talk about Spring Cloud but I also mention competitive offerings where available.&lt;/li&gt;
-  &lt;li&gt;The first &lt;a href="https://spring.io/blog/2016/07/05/spring-boot-1-4-0-rc1-available-now"&gt;release candidate of Spring Boot 1.4&lt;/a&gt; is now available, &lt;em&gt;packed&lt;/em&gt; with a &lt;em&gt;lot&lt;/em&gt; of great things! This new release features, among other things, a unified &lt;code&gt;@EntityScan&lt;/code&gt; for JPA, MongoDB, Neo4j, Couchbase and Cassandra, an auto-configured &lt;code&gt;RestTemplateBuilder&lt;/code&gt;, support for pure REST client tests via &lt;code&gt;@RestClientTest&lt;/code&gt;, support for Jest (the Elasticsearch REST client), and upgrades to Spring Integration 4.3, Spring AMQP 1.6, Spring REST Docs 1.1, MongoDB Java Driver 3 &lt;em&gt;and more&lt;/em&gt;! Download the bits and kick the tires right now!&lt;/li&gt;
-  &lt;li&gt;Spring Batch lead and Spring Cloud Task lead Michael Minella&amp;rsquo;s just &lt;a href="https://spring.io/blog/2016/07/11/spring-cloud-task-1-0-1-release-is-now-available"&gt;announced Spring Cloud Task 1.0.1.RELEASE&lt;/a&gt;, the first recommended GA release for Spring Cloud Task. The blog includes a really nice look at the evolution that led to Spring Cloud Task and the motivations behind it, as well as look at all he exciting features in Spring Cloud Task itself! Great read, check it out.&lt;/li&gt;
-  &lt;li&gt;Spring Tool Suite lead an all &lt;a href="https://spring.io/blog/2016/07/06/spring-tool-suite-3-8-0-released"&gt;around great guy Martin Lippert just announced Spring Tool Suite 3.8.0, based on Eclipse Neon, is now available&lt;/a&gt;. Eclipse Neon is an &lt;em&gt;awesome&lt;/em&gt; update packed with new features and Spring Tool Suite integrates the best-of-breed, stabilized and integrated features on top of Eclipse Neon and adds to it new Spring Boot code templates, improved Spring Boot &lt;code&gt;.yml&lt;/code&gt; file configuration and editing, and a slew of productivity enhancements for Spring Boot itself.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/07/spring-security-4-1-1-released"&gt;Spring Security lead Rob Winch announced Spring Security 4.1.1.RELEASE&lt;/a&gt; has been released. It includes resolutions for over 50 issues, mitigates CVE-2016-5007 and a few notable enhancements: &lt;code&gt;MvcRequestMatcher&lt;/code&gt; provides deep integration with Spring MVC to ensure consistent path matching strategies for authorization rules, CORS Support that can leverage Spring MVC’s CORS configuration, and &lt;code&gt;CookieCsrfTokenRepository.withHttpOnlyFalse()&lt;/code&gt; for easy AngularJS application integration.&lt;/li&gt;
-  &lt;li&gt;Spring IO Platform lead and all around great guy Andy Wilkinson &lt;a href="https://spring.io/blog/2016/07/08/spring-io-platform-2-0-6-release"&gt;just announced Spring IO Platform 2.0.6, which updates numerous libraries&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Security lead Rob Winch just released &lt;a href="https://spring.io/blog/2016/07/08/cve-2016-5007-spring-security-mvc-path-matching-inconsistency"&gt;a fix for CVE 2016-5007 which addresses Spring MVC and Spring Security path matching inconsistencies&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Integration &lt;a href="https://spring.io/blog/2016/07/08/java-dsl-for-spring-integration-1-2-m1-and-1-1-3-are-available"&gt;ninja Artem Bilan just announced Spring Integration Java DSL 1.2.M1 and 1.1.3, which - among many other things - supports Apache Kafka 0.9 and runtime registration of flows&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Our newest Spring Cloud teammate, Ryan Baxter, &lt;a href="https://spring.io/blog/2016/07/11/spring-cloud-brixton-sr3-is-available"&gt;just announced that Spring Cloud SR3 is now available and is a recommended update&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;I really like Laurent Doguin&amp;rsquo;s &lt;a href="https://dzone.com/articles/give-some-ratpack-love-to-your-spring-boot-applica"&gt;nice post on using Ratpack with a Spring Boot application&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Want to know how &lt;a href="http://blog.takipi.com/tabs-vs-spaces-how-they-write-java-in-google-twitter-mozilla-and-pied-piper/"&gt;different companies like Twitter, Google and Mozilla prefer their Java code styled&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;I really enjoyed this roundup &lt;a href="http://wikibon.com/architectural-considerations-for-open-source-paas-and-container-platforms/"&gt;of different architectural considerations when choosing a PaaS&lt;/a&gt;. &lt;a href="https://twitter.com/rseroter"&gt;Big Hat tip to Richard Seroter&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/products/spring-cloud-services-1-1-now-available"&gt;the new cut of Spring Cloud Services - which standup Spring Cloud OSS services on Cloud Foundry&lt;/a&gt;&lt;br/&gt; is &lt;em&gt;packed&lt;/em&gt; with cool features and updated compatibility, and definitely worth a look. It includes release train compatibility with Spring Cloud Brixton, Spring Boot 1.3, asynchronous service provisioning and zero downtime upgrades/updates, highly-available topologies for the Config Server and Service Registry, enhancements to the Config Server Git Backend, and so much more! Get it while its hot!&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>

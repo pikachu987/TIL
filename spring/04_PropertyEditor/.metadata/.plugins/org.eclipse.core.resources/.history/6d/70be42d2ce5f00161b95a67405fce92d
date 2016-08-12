@@ -1,0 +1,9 @@
+package com.company.ex1;
+
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+
+public class ThresholdRequiedBeanFactoryPostProcessor implements BeanFactoryPostProcessor{
+	private int defaultThreshold;
+	
+	
+}

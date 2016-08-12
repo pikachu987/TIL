@@ -1,0 +1,5 @@
+package com.company.ex1;
+
+public interface ThresholdRequired {
+	public void setThreshold(int threshold);
+}

@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.company.ex1.ThresholdRequired"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.BeanFactoryPostProcessor"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.ConfigurableListableBeanFactory"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.config.BeanDefinition"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="org.springframework.beans.FatalBeanException"/>
+<fullyQualifiedTypeName name="com.company.ex1.ThresholdRequied"/>
+<fullyQualifiedTypeName name="org.springframework.beans.MutablePropertyValues"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.company.ex1.DataCollector"/>
+</qualifiedTypeNameHistroy>
