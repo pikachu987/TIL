@@ -1,2 +1,5 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/01_ExtendPoint/src/main/resources/applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/01_ExtendPoint/src/main/resources/ex2_applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/01_ExtendPoint/src/main/resources/ex3_applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/02_PropertyEditor/src/main/resources/ex1_applicationContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\n<activePage index\="0"/>
 eclipse.preferences.version=1

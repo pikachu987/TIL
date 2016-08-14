@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=01_ExtendPoint/src\/main\/java&lt;com.company.ex2{StockReader.java[StockReader" modifiers="513" timestamp="1470999466000"/>
+<typeInfo handle="=01_ExtendPoint/\/Users\/guanho\/.m2\/repository\/org\/springframework\/spring-beans\/4.2.4.RELEASE\/spring-beans-4.2.4.RELEASE.jar&lt;org.springframework.beans.factory.config(BeanPostProcessor.class[BeanPostProcessor" modifiers="1537" timestamp="1461245128000"/>
+<typeInfo handle="=01_ExtendPoint/\/Users\/guanho\/.m2\/repository\/org\/springframework\/spring-core\/4.2.4.RELEASE\/spring-core-4.2.4.RELEASE.jar&lt;org.springframework.core(Ordered.class[Ordered" modifiers="1537" timestamp="1461245307000"/>
+</typeInfoHistroy>

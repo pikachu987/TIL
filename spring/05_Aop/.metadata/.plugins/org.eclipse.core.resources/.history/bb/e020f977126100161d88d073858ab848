@@ -1,0 +1,9 @@
+package com.company.ex2;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Main {
+	public static void main(String[] args) {
+		
+	}
+}
