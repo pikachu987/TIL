@@ -1,0 +1,18 @@
+package com.company.ex_1;
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
+public class MemberRegistValidator implements Validator{
+
+	@Override
+	public boolean supports(Class<?> clazz) {
+		return MemberRegistValidator.class.isAssignableFrom(clazz);
+	}
+
+	@Override
+	public void validate(Object target, Errors errors) {
+		=
+	}
+
+}
