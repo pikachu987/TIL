@@ -5,7 +5,30 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-15T06:29:03Z</updated>
+  <updated>2016-08-16T12:43:32Z</updated>
+  <entry>
+    <title>This Week in Spring - August 16th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/16/this-week-in-spring-august-16th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-08-16:2585</id>
+    <updated>2016-08-16T12:43:32Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Since we last spoke I&amp;rsquo;ve presented at conferences and to customers in London, Beijing, Shanghai and Singapore - where I am now. Tomorrow, Wednesday, I&amp;rsquo;ll be speaking &lt;a href="http://www.meetup.com/singasug/events/233028592/"&gt;at the Singapore Spring Meetup&lt;/a&gt; - join me! It&amp;rsquo;s been quite a few days!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data ninja Mark Paluch has done another &lt;a href="https://spring.io/blog/2016/08/15/managing-your-database-secrets-with-vault"&gt;great post looking at Spring Cloud Vault&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2016/08/12/spring-security-4-1-2-released"&gt;just announced Spring Security 4.1.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration ninja Artem Bilan just announced &lt;a href="https://spring.io/blog/2016/08/12/spring-for-apache-kafka-1-0-3-available-now"&gt;Spring for Apache Kafka 1.0.3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this deck to &lt;a href="http://www.slideshare.net/SpringCentral/spring-boot-paypal"&gt;learn about how Spring Boot is used at PayPal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked my buddy Richard Seroter&amp;rsquo;s review &lt;a href="https://seroter.wordpress.com/2016/08/09/enterprises-fighting-back-spring-boot-is-the-best-and-other-springone-platform-takeaways/"&gt;of our SpringOne Platform event a few weeks ago&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved Camille Fournier&amp;rsquo;s post on some real-life architecture patterns of microservices and, particularly, her observations on the challenges of &lt;a href="https://medium.com/@skamille/microservices-real-architectural-patterns-68bd83bbb6cd#.hkk55wlwk"&gt;a monorepo or a monolithic application and how it relates to human dynamics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Mitsuyuki Shiiba, on the Hatena blog, put together a brief &lt;a href="http://bufferings.hatenablog.com/entry/2016/08/09/073802"&gt;and essential look at Pivotal&amp;rsquo;s Reactor project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I&amp;rsquo;m seeing this a lot in the work I&amp;rsquo;m doing in the last few years, and thought this post was interesting: &lt;a href="http://www.information-age.com/technology/cloud-and-virtualisation/123461817/why-businesses-have-reignited-search-paas-field-dreams"&gt;why businesses are rediscovering PaaS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Some cool videos going up recently from the Cloud Foundry foundation, including this, &lt;a href="https://www.youtube.com/watch?v=Ue_ArLRs00E&amp;feature=youtu.be"&gt;Does Cloud Foundry Support Containers&lt;/a&gt;, and this, &lt;a href="https://www.cloudfoundry.org/grape-up-revisits-cloud-foundry-udp-voip-and-beyond/"&gt;Grape Up Revisits Cloud Foundry: UDP, VoIP, and Beyond!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked Rafael Salerno&amp;rsquo;s blog on &lt;a href="http://salerno-rafael.blogspot.sg/2016/08/spring-cloud-netflix-how-works-service.html"&gt;understanding service registration and discovery with Spring Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Managing your Database Secrets with Vault</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/15/managing-your-database-secrets-with-vault" />
@@ -701,84 +724,6 @@ public Flux&amp;lt;Alert&amp;gt; getAccountAlerts(@PathVariable Long id) {&#xD;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration-aws/"&gt;Project Page&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-aws/blob/master/README.md"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration 4.3.1, 4.2.9, 4.1.9, 4.0.9 are available</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/26/spring-integration-4-3-1-4-2-9-4-1-9-4-0-9-are-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2016-07-26:2567</id>
-    <updated>2016-07-26T14:55:35Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring community,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;I&amp;#8217;m pleased to announce that a number of Spring Integration &lt;code&gt;4.x.x&lt;/code&gt; (&lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15576"&gt;4.3.1&lt;/a&gt;, &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15577"&gt;4.2.9&lt;/a&gt;, &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15459"&gt;4.1.9&lt;/a&gt;, &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15400"&gt;4.0.9&lt;/a&gt;) maintenance versions have been released. It&amp;#8217;s strongly recommended for everyone to upgrade because these releases contain some important bug fixes and improvements.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We do not anticipate releasing more versions of the for &lt;code&gt;4.1.x&lt;/code&gt; and &lt;code&gt;4.0.x&lt;/code&gt; branches. If you use these in your projects, consider upgrading to &lt;code&gt;4.3.x&lt;/code&gt; as soon as possible.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;While you can find all the changes for &lt;code&gt;4.3.1&lt;/code&gt; in its &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=15576"&gt;Release Notes&lt;/a&gt;, here are some highlights:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;It is a foundation for upcoming Spring Boot 1.4 GA;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Routers can now resolve &lt;code&gt;channelKey&lt;/code&gt; as a &lt;code&gt;Class&amp;lt;?&amp;gt;&lt;/code&gt; correctly. Previously such a configuration produced the following exception:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;MessagingException: unsupported return type for router [class java.lang.Class];&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Messaging Gateway now supports &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; as return type for "receive-only" methods:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Gateway(replyChannel="ingestMessages")
-Message&amp;lt;String&amp;gt; getMessage();&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Previously such a configuration produced the following exception:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;ClassCastException: java.lang.String cannot be cast to org.springframework.messaging.Message&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Channel auto-creating and late binding improvements;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;IdempotentReceiverInterceptor&lt;/code&gt; (as well as any &lt;code&gt;HandleMessageAdvice&lt;/code&gt;) can now be configured as a part of &lt;code&gt;&amp;lt;request-handler-advice-chain&amp;gt;&lt;/code&gt;, although it is applied to the &lt;code&gt;MessageHandler.handleMessage()&lt;/code&gt; method;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;And special thanks to good &lt;a href="https://spring.io/team/dsyer"&gt;Dr. Syer&lt;/a&gt; for his valuable contribution, as usual. This time it was a new feature with &lt;code&gt;LockRegistryLeaderInitiator&lt;/code&gt; to control leadership in your clustered application using Spring Integration distributed &lt;code&gt;LockRegistry&lt;/code&gt; implementation, e.g. &lt;code&gt;JdbcLockRegistry&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Next up: Spring Integration 5.0, based on Spring Framework 5.0 and some Reactive Streams support.
-Don&amp;#8217;t miss &lt;a href="https://springoneplatform.io/"&gt;SpringOne Platform&lt;/a&gt; conference the next week in Las Vegas to hear from us about all the new features and future plans!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.md"&gt;Contributions&lt;/a&gt; | &lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt; (&lt;code&gt;spring-integration&lt;/code&gt; tag)&lt;/p&gt;
 &lt;/div&gt;</content>
   </entry>
 </feed>

@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="02_Validator"/>
 <aop-project name="01_MVC"/>
+<aop-project name="03_ETC"/>
 </aop-reference-model>

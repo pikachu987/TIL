@@ -172,3 +172,309 @@ public String regist(@ModelAttribute("memberInfo") MemberRegistRequest regReq){
 <td>java.text.DateFormat에 정의된 패턴을 사용한다.</td>
 </tr>
 </table>
+
+##### @NumberFormat 애노테이션을 이용한 숫자 변환
+
+@NumberFormat 애노테이션은 특정 형식을 갖는 문자열을 숫자 타입으로 변환할 때 사용된다. (org.springframework.format.annotation 패키지에 속해 있다.) 사용 방법은 @DateTimeFormat 애노테이션과 비슷하며, @NumberFormat 애노테이션의 속성은 다음과 같다.
+
+<table>
+<tr><th>속성</th><th>값</th></tr>
+<tr>
+<td>pattern</td>
+<td>java.text.NumberFormat에 따른 숫자 형식을 입력한다.</td>
+</tr>
+<tr>
+<td>style</td>
+<td>@NumberFormat 의 중첩 타입인 Style열거 타입에 정의된 값을 사용한다.
+<br>*  Style.NUMBER : 현재 로케일을 위한 숫자 형식<br>* Style.CURRENCY : 현재 로케일을 위한 통화 형식<br>* Style.PERPECT : 현재로케일을 위한 백분율 형</td>
+</tr>
+</table>
+
+##### 글로벌 변환기 등록하기
+
+WebDataBinder / @InitBinder 를 이용하는 방법은 단일 컨트롤러에만 적용된다. 경우에 따라 전체 컨트롤러에 동일한 변환 방식을 적용하고 싶을 때가 있는데, 이 때에는 ConversionService를 직접 생성해서 등록하는 방법을 사용한다. ConversionService를 설정할 떄에는 스프링 MVC가 기본으로 사용하는 FormattingConversionServiceFactoryBean를 사용하면 된다.
+
+~~~~
+<mvc:annotation-driven conversion-service="formattingConversionServie" />
+
+<bean id="formattingConversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+	<property name="formatters">
+		<set>
+			<bean class="com.company.MoneyFormatter" />
+		</set>
+	</property>
+</bean>
+~~~~
+
+@EnableWebMvc 애노테이션을 사용한다면, 다음과 같이 WebMvcConfigurerAdapter 클래스의 addFormatters() 메서드를 재정의해서 registry에 Formatter를 등록하면 된다.
+
+~~~~
+import org.springframework.format.FormatterRegistry;
+
+@Configuration
+@EnableWebMvc
+public class Config extends WebMvcConfigurerAdapter{
+
+	@Override
+	public void addFormatters(FormatterRegistry registry){
+		registry.addFormatter(new MoneyFormatter());
+	}
+}
+~~~~
+
+#### HTTP 세션 사용
+
+트래픽이 작거나 단일 서버에서 동작하는 웹 어플리케이션의 경우 서블릿의 HttpSession을 이용해서 사용자 로그인 상태를 유지하는 경우가 많다. 스프링은 컨트롤러에 HttpSession을 처리하기 위한 기능이 있다.
+
+여러 화면에 걸처서 진행되는 작업을 처리하면, 화면과 화면 사이에 데이터를 공유해야 할 일이 생긴다.
+
+이런 상황에스 스프링은 @SessionAttributes 애노테이션을 지원한다.
+
+* 클래스에 @SessionAttributes를 적용하고, 세션으로 공유할 객체의 모델 이름을 지정한다.
+* 컨트롤러 메서드에서 객체를 모델에 추가한다.
+* 공유한 모델의 사용이 끝나면 SessionStatus를 사용해서 세션에서 객체를 제거한다.
+
+~~~~
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+@Controller
+@SessionAttributes("tempForm");
+public class Controller{
+
+	@RequestMapping("temp")
+	public String tmpe1(Model model){
+		model.addAttribute("tempForm", new TempForm());
+		return "..";
+	}
+
+	@RequestMapping("temp2")
+	public String tmpe2(@ModelAttribute("tempForm") TempForm temeForm, BindingResult result){
+		new TempFormValidator().validate(tempForm, result);
+		if(result.hasErrors(){
+			return "..";
+		}else return "..";
+	}
+~~~~
+
+~~~~
+<form:form commandName="tempForm" action="/temp2">
+
+....
+
+</form:form>
+~~~~
+
+또 다른 방법으로는 @ModelAttribute메서드를 사용하는 것이다.
+
+~~~~
+@Controller
+@SessionAttributes("tempForm");
+public class Controller{
+
+	@ModelAttribute("tempForm")
+	public TempFOrm formDate(){
+		return new TempForm();
+	}
+
+	@RequestMapping("temp")
+	public String tmpe1(Model model){
+		return "..";
+	}
+
+	@RequestMapping("temp2")
+	public String tmpe2(@ModelAttribute("tempForm") TempForm temeForm, BindingResult result){
+		new TempFormValidator().validate(tempForm, result);
+		if(result.hasErrors(){
+			return "..";
+		}else return "..";
+	}
+
+~~~~
+
+
+위 코드처럼 @ModelAttribute가 적용된 메서드에서 모델 객체를 생성하면 @RequestMapping메서드에 Model에 객체를 추가할 필요가 없다. 위 코드를 보면 formDate()에  @ModelAttribute 메서드가 적용되어 있는데, 이 경우 매번 새로운 TempForm()객체가 생성되기 때문에 이상하지만 스프링은 @ModelAttritebu가 적용된 메서드를 실행하기 전에 세션에 동일 이름을 갖는 객체가 존재하면 그 객체를 모델 객체로 사용한다.
+
+~~~~
+@RequestMapping
+public String temp(@ModelAttribute("tempForm") TempForm formDate, SessionStatus sessionStatus){
+	sessionStatus.setComplete();
+}
+~~~~
+세션에서 객체 제거. 
+
+
+#### 익셉션 처리
+
+* @ExceptionHandler 애노테이션
+* @ControllerAdvice 애노테이션을 이용한 공통 익셉션
+* @ResponseStatus 애노테이션
+
+~~~~
+@Controller
+public class Controller{
+
+
+	@RequestMapping()
+	public String foo(){
+
+	}
+
+	@ExceptionHandler(ArithmeticException.class)
+	public String handleException(){
+		
+		return "error/exception";
+	}
+
+}
+
+~~~~
+
+> ExceptionHandeler 처리?
+> 스프링 MVC는 컨트롤러에서 익셉션이 발생하면 HandlerExceptionResolver에 처리를 위임한다. HandlerExceptionResolver에는 여러 종류가 존재하는데, MVC 설정(mvc:annotation-driven) 태그나  @EnabelWebMvc 애노테이션)을 사용할 경우 내부적으로 ExceptionHandlerExceptionResolver를 등록한다. 이 클래스는 @ExceptionHandler 애노테이션이 적용된 메서드를 이용해서 익셉션을 처리하는 기능을 제공하고 있다. MVC 설정을 사용할 경우 다음의 순서대로 HandlerExceptionResolver를 사용하게 된다.
+> 1. ExceptionHandlerExceptionResolver : 발생한 익셉션과 매칭되는 @Exception Handler 메서드를 이용해서 익셉션을 처리한다.
+> 2. DefaultHandlerExceptionResolver : 스프링이 발생시키는 익셉션에 대한 처리. 예를 들어 , 요청 URL에 매핑되는 컨트롤러가 없을 경우 NoHandlerFoundException 이 발생하는데 이 경우 DefaultHandlerExceptionResolver는 404 에러 코드를 응답으로 전송한다.
+> 3. ResponseStatusExceptionResolver : 익셉션 타입에 @ResponseStatus 애노테이션이 적용되어 있을 경우, @ResponseStatus 애노테이션의 값을 이용해서 응답 코드를 전송한다.
+DispatcherServlet은 익셉션이 발생하면 가장 먼저 ExceptionHandlerExceptionResolver에 익셉션 처리를 요청한다. 만약 익셉션에 매핑되는 @ExceptionHandler메서드가 존재하지 않으면 ExceptionHandlerExceptionResolver 는 익셉션을 처리하지 않는다. 익셉션이 처리되지 않으면 그 다음 차례인 DefaultHandlerExceptionResolver 를 사용하고, 여기서도 익셉션을 처리하지 않으면 마지막으로   ResponseStatusExceptionResolver를 사용한다. 여기서도 처리하지 않으면 컨테이너가 익셉션을 처리하게 만든다.
+
+##### @ControllerAdvice 를 이용한 공통 익셉션 처리
+~~~~
+@ControllerAdvice("com.company")
+public class CommonExceptionHandler{
+	@ExceptionHandler(RuntimeException.calss)
+	public String handleRuntimeException(){    
+		return "error/commonException";
+	}
+}
+~~~~
+
+지정한 범위를 설정할수 있다. 이 클래스가 동작하려면 스프링빈으로 등록해주어야 한다.
+
+1. 같은 컨트롤러에 위치한 @ExceptionHandler 메서드중 해당 익셉션을 처리할 수 있는 메서드를 검색
+2. 같은 클래스에 위치한 메서드가 익셉션을 처리할 수 없을 경우, @ControllerAdvice 클래스에 위치한 @ExceptionHandler 메서드 검색
+
+@ControllerAdvice의 속성
+
+<table>
+<tr><th>속성</th><th>타입</th><th>설명</th></tr>
+<tr>
+<td>value<br>basePackages</td>
+<td>String[]</td>
+<td>공통 설정을 적용할 컨트롤러들이 속하는 기준 패키지</td>
+</tr>
+<tr>
+<td>annotations</td>
+<td>Class<? extends Annotation>[]</td>
+<td>특정 애노테이션이 적용된 컨트롤러 대상</td>
+</tr>
+<tr>
+<td>assignableTypes</td>
+<td>Class<?>[]</td>
+<td>특정 타입 또는 그 하위 타입인 컨트롤러 대상</td>
+</tr>
+</table>
+
+
+~~~~
+
+##### @ResponseStatus 를 이용한 익셉션의 응답 코드 설정
+
+~~~~
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class NoFileInfoException extends Exception{}
+~~~~
+
+@ResponseStatus의 값은 HttpStatus를 사용한다. HttpStatus열거 타입은 여러 응답 코드를 위한 열거 값을 정의하고 있다.
+
+org.springframework.http.HttpStatus 열거 타입에서 주로 사용되는 값.
+
+* OK(200, "OK")
+* MOVEN_PERMANENTLY(301, "Moved Permanently")
+* NOT_MODIFIED(304, "Not Modified")
+* TEMPORARY_REDIRECT(307, "Temporary Redirect")
+* BAD_REQUEST(400, "Bad Request")
+* UNAUTHORIZED(401, "Unauthorized")
+* PAYMENT_REQUIRED(402, "Payment Required")
+* FORBIDDN(403, "Forbidden")
+* NOT_FOUND(404, "Not Found")
+* METHOD_NOT_ALLOW(405, "Method Not Allow")
+* NOT_ACCEPTABLE(406, "Not Acceptable")
+* UNSUPPORTED_MEDIA_TYPE(415, "Unsupported Media Type")
+* TOO_MANY_REQUESTS(429, "Too Many Requests")
+* INTERNAL_SERVER_ERROR(500, "Internal Server Error")
+* NOT_IMPLEMENTED(501, "Not Implemented")
+* SERVICE_UNAVAILABLE(503, "Service Unavailable")
+
+> 서비스/도메인/영속성 영역의 익셉션 코드에서는 @ResponseStatus를 사용하지 말것
+> 컨트롤러 영역의 익셉션이 아닌 서비스/도메인/영속성 영역의 익셉션에 @ResponseStatus애노테이션을 적용하지 않도록 하자. @ResponseStatus 애노테이션은 그 자체가 HTTP 요청/응답 영역인 UI 처리의 의미를 내포하고 있기 때문에 서비스/도메인/영속성 영역의 코드에 @ResponseStatus 애노테이션을 사용하면 UI영역에 의존하는 결과를 만든다. 이 경우 UI를 HTTP에서 소켓을 직접 이용하는 방식으로 변경하면 서비스/도메인/영속성 코드도 함께 영향을 받을 가능성이 높아진다.
+
+
+#### 컨트롤러 메서드의 파라미터 타입과 리턴타입
+
+@RequestMapping 애노테이션이 적용된 메서드에서 사용할 수 있는 파라미터 타입
+
+<table>
+<tr><th>파라미터</th><th>설명</th></tr>
+<tr>
+<td>HttpServletRequest, HttpServletResponse</td>
+<td>요청/응답 처리를 위한 서블릿 API</td>
+</tr>
+<tr>
+<td>HttpSession</td>
+<td>HTTP 세션을 위한 서블릿 API</td>
+</tr>
+<tr>
+<td>org.springframe.ui.Model, org.springframework.ui.ModelMap, java.util.Map</td>
+<td>뷰에 데이터를 전달하기 위한 모델</td>
+</tr>
+<tr>
+<td>@RequestParam</td>
+<td>HTTP 요청 파라미터 값</td>
+</tr>
+<tr>
+<td>@RequestHeader, @CookieValue</td>
+<td>요청 헤더와 쿠키 값</td>
+</tr>
+<tr>
+<td>@PathVariable</td>
+<td>경로 변수</td>
+</tr>
+<tr>
+<td>커맨드객체</td>
+<td>요청 데이터를 저장할 객체</td>
+<tr>
+<td>Errors, BindingResult</td>
+<td>검증 결과를 보관할 객체, 커맨드 객체 바로 뒤에 위치해야함</td>
+</tr>
+<tr>
+<td>@RequestBody(파라미터에 적용)</td>
+<td>요청 몸체를 객체로 변환. 요청 몸체의 JSON이나 XML을 알맞게 객체로 변환.</td>
+</tr>
+<tr>
+<td>Writer, OutputStream</td>
+<td>응답 결과를 직접 쓸 때 사용할 출력 스트림</td>
+</tr>
+</table>
+
+리턴타입
+
+<table>
+<tr><th>리턴 타입</th><th>설명</th></tr>
+<tr>
+<td>String</td>
+<td>뷰 이름</td>
+</tr>
+<tr>
+<td>void</td>
+<td>컨트롤러에서 응답을 직접 생성</td>
+</tr>
+<tr>
+<td>ModelAndView</td>
+<td>모델과 뷰 정보를 함께 리턴</td>
+</tr>
+<tr>
+<td>객체</td>
+<td>메서드에 @ResponseBody가 적용된 경우, 리턴 객체를 JSON이나 XML과 같은 알맞은 응답으로 변환</td>
+</tr>
+</table>
+
+리턴 타입이 void 인 경우 컨트롤러에서 직접 응답을 생성하는 것을 뜻한다.
