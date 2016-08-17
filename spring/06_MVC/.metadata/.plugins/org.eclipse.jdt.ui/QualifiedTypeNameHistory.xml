@@ -33,4 +33,11 @@
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseStatus"/>
 <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.EnableWebMvc"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Import"/>
+<fullyQualifiedTypeName name="com.company.MvcConfig"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="com.company.config.MeasuringInterceptor"/>
 </qualifiedTypeNameHistroy>

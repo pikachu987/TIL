@@ -180,3 +180,220 @@ preHandler() 메서드를 컨트롤러/핸들러 객체를 실행하기 전에 �
 postHandle() 메서드는 컨트롤러/핸들러가 정상적으로 실행된 이후에 추가 기능을 구현 할 때 상요한다. 만약 컨트롤러가 익셉션을 발생하면 postHandle() 메서드는 실행되지 않는다. afterCompletion() 메서드는 클라이언트에 뷰를 전송한 뒤에 실행된다. 만약 컨트롤러를 실행하는 과정에서 익셉션이 발생하면, 이 메서드의 네 번째 파라미터로 전달된다. 익셉션이 발생하지 않았다면 네 번째 파라미터는 null이 된다. 따라서 컨트롤러 실행 이후에 예기치 않게 발생한 익셉션을 로그로 남긴다거나 실행 시간을 기록하는 등의 후처리를 하기에 적합한 메서드이다.
 
 org.springframework.web.servlet.handler.HandlerInterceptorAdapter 클래스는 HandlerInterceptor 인터페이스를 구현하고 있는데 각 메서드는 아무 기능도 수행하지 않는다. 따라, HandlerInterceptor 인터페이스의 메서드를 모두 구현할 필요가 없다면, HandlerInterceptorAdapter 클래스를 상속받은 뒤 필요한 메서드만 재정의 하면 된다.
+
+
+#####  HandlerInterceptor 설정하기
+
+ HandlerInterceptor를 구현했다면, 다음으로 할 작업은 HandlerInterceptor이다.
+ 
+ ~~~~
+ <mvc:interceptors>
+ 	<bean id="measuringInterceoptor" class="com.company.MeasuringInterceptor" /> 
+ </mvc:interceptors>
+ ~~~~
+ 
+&lt;mvc:interceptors&gt; 태그는 HandlerInterceptor 설정과 경로설정을 함께 설정할 때 사용된다. 위 설정의 경우  &lt;mvc:interceptors&gt; 태그 내부에 정의한 빈 객체를 핸들러 인터셉터로 사용하고, DispatcherServlet이 처리하는 요청에 대해 핸들러 인터셉터를 적용하게 된다.
+
+
+자바기반은
+~~~~
+@Configuration
+@EnableWebMvc
+public class Config extends WebMvcConfigurerAdapter{
+	@Override
+	public void addInterceptors(InterceptorRegistry registry){
+		registry.addInterceptor(measuringInterceptor());
+	}
+    
+	@Bean
+	public MeasuringInterceptor measuringInterceptor(){
+		return new MeasuringInterceptor();
+	}
+}
+~~~~
+
+앞서 설정은 DispatcherServlet이 처리하는 모든 요청에 대해 핸들러 인터셉터를 적용하는데, 만약 특정 요청 경로에 대해서만 핸들러 인터셉터를 적용하고 싶다면 중첩 태그를 사용
+~~~~
+<mvc:interceptors>
+	<mvc:interceptor>
+		<mvc:mapping path="/event/**"/>
+		<mvc:mapping path="/folders/**"/>
+		<bean class="com.company.MeasuringInterceptor" />
+	</mvc:interceptor>
+</mvc:interceptors>
+~~~~
+
+위 설정에서  &lt;mvc:mapping&gt;은 핸들러 인터셉터를 적용할 요청 경로 패턴을 지정한다.( 이 경로는 컨텍스트 경로를 제외한 나머지 경로와 매핑된다.)  &lt;mvc:mapping&gt; 태그로 지정한 경로 패턴에 적용될 핸들러 인터셉터는 <bean>태그를 이용해서 지정한다.
+
+자바 설정을 이용한다면  addPathPatterns() 메서드를 이용해서 경로 패턴 목록을 지정해주면 된다.
+
+~~~~
+@Configuration
+@EnableWebMvc
+public class Config extends WebMvcConfigurerAdapter{
+	@Override
+	public void addInterceptors(InterceptorRegistry registry){
+		registry.addInterceptor(measuringInterceptor())
+			.addPathPatterns("/event/**", "/folders/**);
+	}
+}
+
+~~~~
+
+##### HandlerInterceptor의 실행순서
+
+한 요청 경로에 대해 두 개 이상의 핸들러 인터셉터를 적용할 수 도 있다. 
+
+특정 경로 패턴에 대해 핸들러 인터셉터를 적용하고 싶지 않다면  &lt;mvc:exclude-mapping path="" /&gt; 태그 또는 excludePathPatterns() 메서드를 이용해서 제외할 경로 패턴을 지정한다.
+
+~~~~
+-XML 설정
+<mvc:interceptors>
+	<mvc:interceptor>
+		<mvc:mapping path="/acl/**"/>
+		<mvc:exclude-mappgin path="/alc/modify" />
+		<bean class="com.company.CommonMOdelInterceptor" />
+	</mvc:interceptor>
+</mvc:interceptors>
+
+- JAVA 설정
+@Override
+public void addInterceptors(InterceptorRegistry registry){
+	registry.addInterceptor(commonModelInterceptor())
+	.addPathPatterns("/acl/**", "/header/**", "/newevent/**")
+	.excludePathPatterns("/acl/modify");
+}
+~~~~
+
+
+
+#### WebApplicationContext 계층
+
+~~~~
+<context-param>
+	<param-name>contextConfiguration</param-name>
+	<param-value>/WEB-INF/service.xml, /WEB-INF/persistene.xml</param-value>
+</context-param>
+
+<listener>
+	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+<servlet>
+	<servlet-name>front</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>rest</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+
+~~~~
+
+
+실제로 ContextLoaderListener와 DispatcherServlet은 각각 WebApplicationContext 객체를 생성한다.
+ContextLoaderListener 가 생성하는 WebApplicationContext는 웹 어플리케이션에서 루트 컨텍스트가 되며, DispatcherServlet 이 생성하는 WebApplicationContext는 루트 컨텍스트를 부모로 사용하는 자식 컨텍스트가 된다. 이때 자식은 root가 제공하는 빈을 사용할 수 있기 때문에 DispatcherServlet이 공통으로 필요로 하는 빈을 ContextLoaderListener 를 이용하여 설정하는 것이다.
+
+ContextLoaderListener는 contextConfigLocation 컨텍스트 파라미터를 명시하지 않으면 /WEB-INF/applicationContext.xml을 설정파일로 사용한다. 또한, 클래스패스에 위치한 파일로부터 설정 정보를 읽어오고 싶다면 다음과 같이 'classpath:'접두어를 사용하면 된다.
+
+~~~~
+<context-param>
+	<param-name>contextConfiguration</param-name>
+	<param-value>classpath:config/service.xml, classpath:config/persistene.xml</param-value>
+</context-param>
+
+<listener>
+	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+~~~~
+
+@Configuration 설정 클래스를 사용한다면, 다음과 같이 contextClass 컨텍스트 파라미터를 이용해서 WebApplicationContext 구현체로 AnnotationConfigWebApplicationContext를 지정해주고, contextConfigLocation 컨텍스트 파라미터의 값으로 사용할 자바 설정 클래스를 지정해주면 된다.
+
+~~~~
+<context-param>
+	<param-name>contextClass</param-name>
+	<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+</context-param>
+
+~~~~
+
+
+#### DelegatingFilterProxy를 이용한 서블릿 필터 등록
+
+~~~~
+<filter>
+	<filter-name>profileFilter</filter-name>
+	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	<init-param>
+		<param-name>targetBeanName</param-name>
+		<param-value>webProgileBean</param-value>
+	</init-param>
+	<init-param>
+		<param-name>contextAttribute</param-name>
+		<param-value>org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcher</param-value>
+	</init-param>
+</filter>
+
+
+<servlet>
+	<servlet-name>dispatcher</servlet-name>
+	<servlet-class>org.sprinframework.web.servlet.DispatcherServlet</servlet-class>
+	....
+</servlet>
+
+~~~~
+
+위 코드의 경우 profileFilter는 그 요청을 targetBeanName 초기화 파라미터로 지정한 빈에 위임한다.
+
+DelegatingFilterProxy가 사용할 빈 객체는 다음의 두 가지 중 한 군데에 등록될 것이다.
+
+* DispatcherServlet이 생성한 WebApplicationContext
+* ContextLoaderListener가 생성한 루트 WebApplicationContext
+
+이 중, DispatcherServlet이 생성한 스프링 컨테이너에 필터로 사용할 빈 객체가 존재한다면, contextAttribute 초기화 파라미터를 이용해서 DispatcherServlet이 컨테이너를 보관할 때 사용하는 속성 이름을 지정해야 한다. 속성 이름은 "org.springframework.web.servlet.FrameworkServlet.CONTEXT.[서블릿이름]" 의 형식을 갖는다.
+
+
+##### 핸들러, HandlerMapping, HandlerAdapter
+
+DispatcherServlet은 웹 요청을 실제로 처리하는 개체의 타입을 @Controller 애노테이션을 구현한 클래스로 제한하지 않는다. 실제로 거의 모든 종류의 객체로 웹 요청을 처리할 수 있다. 그래서 웹 요청을 처리하는 객체를 좀 더 범용적은 의미로 핸들러(Handler) 라고 부른다.
+
+MVC 설정을 이용하면 최소 두 개 이상의 HandlerMapping이 등록된다. 각 HandlerMapping은 우선순위를 갖고 있으며, 요청이 들어왔을때 DispatcherServlet은 우선순위에 따라 HandlerMapping에 요청을 처리할 핸들러 객체를 의뢰한다.
+
+&lt;mvc:annotation-driven&gt; 설정의나 @EnableWebMvc 애노테이션을 사용하면 다음과 같은 HandlerMapping과 HandlerAdapter를 등록한다.
+
+<table>
+<tr><th>빈 클래스</th><th>설명</th></tr>
+<tr>
+<td>RequestMappingHandlerMapping</td>
+<td>@Controller 적용 빈 객체를 핸들러로 사용하는 HandlerMapping 구현. 적용 우선순위 높음</td>
+</tr>
+<tr>
+<td>SimpleUrlHandlerMapping</td>
+<td><mvc:defalut-servlet-handler />, <mvc:view-controller /> 또는 <mvc:resources /> 태그를 사용할 때 등록되는 HandlerMapping구현, URL과 핸들러 객체를 매핑함. 적용 우선순위 낮음</td>
+</tr>
+<tr>
+<td>RequestMappingHandlerAdapter</td>
+<td>@Controller 적용 빈 객체에 대한 어댑터</td>
+</tr>
+<tr>
+<td>HttpRequestHandlerAdapter</td>
+<td>HttpRequestHandler 타입의 객체에 대한 어댑태</td>
+</tr>
+<tr>
+<td>SimpleControllerHandlerAdapter</td>
+<td>Controller 인터페이스를 구현한 객체에 대한 어댑터.</td>
+</tr>
+</table>
+
+@Controller 애노테이션 기반의 컨트롤러는 주로 개발자가 구현할 코드이다.
+
+HttpRequestHandler 인터페이스는 주로 스프링이 기본으로 제공하는 핸들러 클래스가 구현하고 있다. 예를 들어, 디폴트 서블릿 핸들러 설정을 위해 다음의 태그를 사용했다.
+
+~~~~
+<mvc:default-servlet-handler />
+~~~~
+위 설정을 하면, 아래 설정과 같이 HttpRequestHandler 인터페이스를 구현한 DefaultServletHttpRequestHandler 클래스와 SimpleUrlHandlerMapping 클래스를 빈으로 등록한다.
+
+<mvc:annotation-driven /> 태그가 등록하는 RequestMappingHandlerMapping의 우선순위가 <mvc:default-servlet-handler /> 태그가 등록하는 SimpleUrlHandlerMapping 의 우선순위보다 높다. 따라서, 특정 요청이 들어올 경우 RequestMappingHandlerMapping을 먼저 확인하고 SimpleUrlHandlerMpaaing 을 확인한다.
+

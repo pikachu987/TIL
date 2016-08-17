@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;04_Setting/src/main/java/com/company/fig&apos; to &apos;config&apos;" description="Rename resource &apos;fig&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/company/fig" name="config" stamp="1471439149260" updateReferences="true"/>&#x0A;<refactoring comment="Move &apos;MvcConfig.java&apos; to &apos;config&apos;" description="Move &apos;MvcConfig.java&apos; to &apos;config&apos;" destination="src/main/java/com/company/config" element1="src/main/java/com/company/MvcConfig.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1471439340838" updateReferences="true"/>
+</session>

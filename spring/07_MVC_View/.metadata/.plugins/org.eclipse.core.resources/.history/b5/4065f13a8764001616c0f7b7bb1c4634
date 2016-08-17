@@ -1,0 +1,22 @@
+package config;
+
+import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+/***
+ * 
+ * root-context.xml
+ * @author guanho
+ *
+ */
+@Configuration
+@Import(MvcConfig.class)
+public class RootConfig {
+	@Bean
+	public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer(){
+		PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
+        return ppc;
+	}
+	
+}

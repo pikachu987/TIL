@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="02_Validator"/>
+<aop-project name="04_Setting"/>
 <aop-project name="01_MVC"/>
 <aop-project name="03_ETC"/>
 </aop-reference-model>

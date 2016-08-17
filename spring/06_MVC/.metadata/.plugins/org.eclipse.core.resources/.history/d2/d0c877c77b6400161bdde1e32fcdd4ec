@@ -1,0 +1,14 @@
+package com.company.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import com.company.MvcConfig;
+
+@Configuration
+@EnableWebMvc
+@Import(MvcConfig.class)
+public class Config {
+
+}

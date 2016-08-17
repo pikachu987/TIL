@@ -1,0 +1,37 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("/view")
+public class ViewController {
+	@RequestMapping(value="/index", method=RequestMethod.GET)
+	public ModelAndView view(){
+		System.out.println("ddd");
+		ModelAndView mav = new ModelAndView("index");
+		try {
+			mav.addObject(loginType());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return mav;
+	}
+	
+	
+	@ModelAttribute("loginTypes")
+	protected List<String> loginType() throws Exception{
+		List<String> loginTypes = new ArrayList<>();
+		loginTypes.add("가가");
+		loginTypes.add("나나");
+		loginTypes.add("다다");
+		return loginTypes;
+	}
+}
