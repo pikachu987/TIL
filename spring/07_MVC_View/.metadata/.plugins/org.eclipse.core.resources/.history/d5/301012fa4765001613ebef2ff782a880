@@ -1,0 +1,32 @@
+<%@ page contentType="text/html; charset=utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<body>
+
+<form:form commandName="loginCommand">
+<form:label path="email">회원ID</form:label>
+<form:input path="email"/>
+<form:errors path="email" />
+<br>
+<form:hidden path="securityLevel"/>
+<br>
+<form:password path="password"/>
+<br>
+<%-- <form:select path="loginType" items="${loginTypes }" /> --%>
+<form:select path="loginType">
+	<form:option value="">---선택---</form:option>
+	<form:options items="${loginTypes }"/>
+</form:select>
+<form:select path="hobby">
+	<form:options items="${favorityHobby }" itemLabel="hobby" itemValue="key"/>
+</form:select>
+<br>
+<form:checkboxes items="${os }" path="os"/>
+
+</form:form>
+
+
+</body>
+</html>

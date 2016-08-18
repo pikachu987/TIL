@@ -1,0 +1,40 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import net.madvirus.spring4.chap08.auth.LoginCommandValidator;
+
+@Controller
+@RequestMapping("/view")
+public class ViewController {
+	@RequestMapping(value="/index", method=RequestMethod.GET)
+	public ModelAndView view(LoginCommand loginCommand){
+		loginCommand.setSecurityLevel(SecurityLevel.HIGH);
+		ModelAndView mav = new ModelAndView("index");
+		return mav;
+	}
+	
+	
+	@ModelAttribute("loginTypes")
+	protected List<String> loginType() throws Exception{
+		List<String> loginTypes = new ArrayList<>();
+		loginTypes.add("가가");
+		loginTypes.add("나나");
+		loginTypes.add("다다");
+		return loginTypes;
+	}
+	
+	@InitBinder
+	protected void initBinder(WebDataBinder binder) {
+		binder.setValidator(new LoginCommandValidator());
+	}
+}

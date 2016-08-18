@@ -1,0 +1,9 @@
+package com.company;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@C
+@RequestMapping("/view")
+public class Controller {
+	
+}

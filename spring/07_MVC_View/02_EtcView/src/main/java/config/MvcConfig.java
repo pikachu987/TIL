@@ -1,0 +1,68 @@
+package config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.view.BeanNameViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.company.Download;
+import com.company.ExcelDownload;
+import com.company.PdfDownload;
+
+/**
+ * servlet-context.xml
+ * @author guanho
+ *
+ */
+@Configuration
+@EnableWebMvc
+@ComponentScan(
+		basePackages="com.company",
+ 		excludeFilters=@ComponentScan.Filter(Configuration.class)
+)
+public class MvcConfig extends WebMvcConfigurerAdapter{
+	
+	@Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
+
+	
+	@Bean
+	public BeanNameViewResolver vbeanNameViewResolver(){
+		BeanNameViewResolver viewResolver = new BeanNameViewResolver();
+		viewResolver.setOrder(1);
+		return viewResolver;
+	}
+	
+	
+	@Bean
+	public ViewResolver viewResolver(){
+		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+		resolver.setPrefix("/WEB-INF/view/");
+		resolver.setSuffix(".jsp");
+		resolver.setOrder(2);
+		return resolver;
+	}
+	
+	
+	@Bean(name="download")
+	public Download fileDown(){
+		return new Download();
+	}
+	
+	@Bean(name="pageRank")
+	public ExcelDownload excelDownload(){
+		return new ExcelDownload();
+	}
+	
+	@Bean(name="pdf")
+	public PdfDownload pdf(){
+		return new PdfDownload();
+	}
+}

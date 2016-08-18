@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.aop.ThrowsAdvice"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Import"/>
 <fullyQualifiedTypeName name="config.MvcConfig"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.company.Hobby"/>
+<fullyQualifiedTypeName name="com.company.CheckboxOs"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.view.AbstractView"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.net.URLEncoder"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="org.springframework.util.FileCopyUtils"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="com.company.Download"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.view.document.AbstractExcelView"/>
+<fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFWorkbook"/>
+<fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFSheet"/>
+<fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFRow"/>
+<fullyQualifiedTypeName name="org.apache.poi.hssf.usermodel.HSSFCell"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.company.PageRank"/>
+<fullyQualifiedTypeName name="com.company.ExcelDownload"/>
+<fullyQualifiedTypeName name="com.lowagie.text.pdf.PdfDocument"/>
+<fullyQualifiedTypeName name="com.company.PdfDownload"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.view.document.AbstractPdfView"/>
+<fullyQualifiedTypeName name="com.lowagie.text.Font"/>
 </qualifiedTypeNameHistroy>

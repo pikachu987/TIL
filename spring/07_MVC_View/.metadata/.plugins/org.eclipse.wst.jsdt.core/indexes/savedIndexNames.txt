@@ -1,7 +1,3 @@
 INDEX VERSION 1.3+/Users/guanho/Documents/git/pikachu987/TIL/spring/07_MVC_View/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-3386088487.index
 3891879295.index
-2324509495.index
-1544324455.index
-1906570704.index
-3764497524.index
+3175645891.index

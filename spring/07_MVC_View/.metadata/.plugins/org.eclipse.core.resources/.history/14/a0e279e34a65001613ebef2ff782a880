@@ -1,0 +1,21 @@
+package com.company;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.view.AbstractView;
+
+public class Download extends AbstractView{
+	public Download() {
+		setContentType("application/download; charset=utf-8"); 
+	}
+	@Override
+	protected void renderMergedOutputModel(Map<String, Object> arg0, HttpServletRequest arg1, HttpServletResponse arg2)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
