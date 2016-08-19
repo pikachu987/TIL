@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="org.springframework.util.FileCopyUtils"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="com.company.Download"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.view.BeanNameViewResolver"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
@@ -36,4 +35,15 @@
 <fullyQualifiedTypeName name="com.company.PdfDownload"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.view.document.AbstractPdfView"/>
 <fullyQualifiedTypeName name="com.lowagie.text.Font"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.LocaleResolver"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ReloadableResourceBundleMessageSource"/>
+<fullyQualifiedTypeName name="org.springframework.util.PropertiesPersister"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ResourceBundleMessageSource"/>
 </qualifiedTypeNameHistroy>

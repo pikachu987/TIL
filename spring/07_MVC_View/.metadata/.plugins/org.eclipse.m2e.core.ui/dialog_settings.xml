@@ -14,6 +14,9 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/guanho/Documents/git/pikachu987/TIL/spring/07_MVC_View/03_Locale"/>
+			<item value="/Users/guanho/Documents/git/pikachu987/TIL/spring/07_MVC_View/servlet2"/>
+			<item value="/Users/guanho/Documents/git/pikachu987/TIL/spring/07_MVC_View/servlet"/>
 			<item value="/Users/guanho/Documents/git/pikachu987/TIL/spring/07_MVC_View/02_EtcView"/>
 			<item value="/Users/guanho/Documents/study/spring/spring4-master/mvnprj/spring4-chap08"/>
 			<item value="/Users/guanho/Documents/git/pikachu987/TIL/spring/07_MVC_View/01_View"/>

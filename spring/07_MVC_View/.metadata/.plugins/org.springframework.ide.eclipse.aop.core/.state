@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="02_EtcView"/>
+<aop-project name="03_Locale"/>
 <aop-project name="01_View"/>
 </aop-reference-model>
