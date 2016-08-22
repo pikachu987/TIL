@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.w3c.dom.views.AbstractView"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.support.AbstractDispatcherServletInitializer"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.support.XmlWebApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.web.filter.CharacterEncodingFilter"/>
+<fullyQualifiedTypeName name="config.Initializer"/>
+<fullyQualifiedTypeName name="javax.servlet.Filter"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer"/>
+<fullyQualifiedTypeName name="config.MvcConfig"/>
+</qualifiedTypeNameHistroy>

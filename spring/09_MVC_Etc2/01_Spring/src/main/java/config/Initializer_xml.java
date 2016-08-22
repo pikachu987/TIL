@@ -1,0 +1,62 @@
+//package config;
+//
+//import javax.servlet.Filter;
+//
+//import org.springframework.web.context.WebApplicationContext;
+//import org.springframework.web.context.support.XmlWebApplicationContext;
+//import org.springframework.web.filter.CharacterEncodingFilter;
+//import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
+//
+//public class Initializer_xml extends AbstractDispatcherServletInitializer{
+//
+//	@Override
+//	protected WebApplicationContext createServletApplicationContext() {
+//		XmlWebApplicationContext servletAppContext = new XmlWebApplicationContext();
+//		servletAppContext.setConfigLocation("/WEB-INF/dispatcher.xml");
+//		return servletAppContext;
+//	}
+//	
+//	
+//	
+//	
+//	@Override
+//	protected String getServletName() {
+//		return "dispatcher";
+//	}
+//	
+//	
+//	
+//	@Override
+//	protected String[] getServletMappings() {
+//		return new String[]{"/"};
+//	}
+//	
+//	
+//	
+//	
+//	@Override
+//	protected boolean isAsyncSupported() {
+//		return super.isAsyncSupported();
+//	}
+//	
+//	
+//	
+//	
+//	@Override
+//	protected WebApplicationContext createRootApplicationContext() {
+//		XmlWebApplicationContext rootAppContext = new XmlWebApplicationContext();
+//		rootAppContext.setConfigLocation("/WEB-INF/root.xml");
+//		return rootAppContext;
+//	}
+//	
+//	
+//	
+//	
+//    @Override
+//    protected Filter[] getServletFilters() {
+//    	CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
+//    	encodingFilter.setEncoding("UTF-8");
+//    	Filter[] filters = new Filter[]{encodingFilter};
+//    	return filters;
+//    }
+//}

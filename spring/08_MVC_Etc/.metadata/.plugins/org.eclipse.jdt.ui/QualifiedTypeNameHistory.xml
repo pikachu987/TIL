@@ -9,9 +9,19 @@
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlAccessType"/>
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlType"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.company.GuestMessage"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.company.GuestMessageList"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartResolver"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartHttpServletRequest"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="javax.servlet.http.Part"/>
+<fullyQualifiedTypeName name="org.springframework.util.FileCopyUtils"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 </qualifiedTypeNameHistroy>

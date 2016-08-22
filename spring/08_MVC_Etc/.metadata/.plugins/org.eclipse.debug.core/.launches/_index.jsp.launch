@@ -2,10 +2,10 @@
 <launchConfiguration type="org.eclipse.wst.server.ui.launchConfigurationType">
 <stringAttribute key="client-id" value="org.eclipse.wst.server.ui.web"/>
 <stringAttribute key="launchable-adapter-id" value="org.eclipse.jst.server.tomcat.web"/>
-<stringAttribute key="module-artifact" value="org.eclipse.jst.jee.server:01_XmlJson///index.jsp"/>
+<stringAttribute key="module-artifact" value="org.eclipse.jst.jee.server:02_Upload///index.jsp"/>
 <stringAttribute key="module-artifact-class" value="org.eclipse.wst.server.core.util.WebResource"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/01_XmlJson"/>
+<listEntry value="/02_Upload"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
