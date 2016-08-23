@@ -1,0 +1,131 @@
+package utils.setup;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import javax.servlet.http.HttpServletRequest;
+
+import org.json.simple.JSONObject;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
+
+import utils.SmsPost;
+import utils.Utils;
+
+@EnableAsync
+public class AsyncService {
+	
+	@Async
+	@SuppressWarnings("unchecked")
+	public void token(HashMap<String, Object> map){
+		try {
+			String gcmId = (String)map.get("memoGcmId");
+			if(gcmId != null && !gcmId.trim().equals("")){
+				JSONObject messageJson = new JSONObject();
+				messageJson.put("message", map);
+				JSONObject sendJson = new JSONObject();
+				sendJson = new JSONObject();
+				sendJson.put("to", gcmId);
+				sendJson.put("data", messageJson);
+				java.net.URL url = new java.net.URL("https://gcm-http.googleapis.com/gcm/send");
+				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+				
+				/**IOS추가**/
+				String gcmAppType = (String)map.get("gcmAppType");
+				if(gcmAppType != null && !gcmAppType.trim().equals("") && gcmAppType.trim().equals("ios")){
+					conn.setRequestProperty("Authorization", "key=AIzaSyDuV6Ote-TA3vkqicsinVFJrTX2snY2PUg");
+					JSONObject notificationIOSJson = new JSONObject();
+					Integer memoPush = Utils.getIntegerValue(map.get("memoPush"));
+					if(memoPush != null && memoPush == 0){
+						notificationIOSJson.put("sound", "default");
+						notificationIOSJson.put("badge", ""+map.get("memoCnt"));
+						sendJson.put("priority", "high");
+						sendJson.put("content_available", false);
+						notificationIOSJson.put("body", map.get("gcmMessage"));
+					}
+					sendJson.put("notification", notificationIOSJson);
+				}else{
+					conn.setRequestProperty("Authorization", "key=AIzaSyBfQD7b0ggWvbk_AwdggRpxDiS1rTXaikE");
+				}
+				/**IOS추가**/
+				
+				
+				conn.setRequestProperty("Content-Type", "application/json");
+				conn.setRequestProperty("project_id", "1030015706154");
+				conn.setRequestMethod("POST");
+				conn.setDoOutput(true);
+				OutputStream outputStream = conn.getOutputStream();
+				outputStream.write(sendJson.toString().getBytes("UTF-8"));
+				InputStream inputStream = conn.getInputStream();
+				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+				StringBuilder sb = new StringBuilder();
+				String line = null;
+				while ((line = reader.readLine()) != null) sb.append(line + "\n");
+				if(inputStream != null) inputStream.close();
+			}
+		} catch (Exception e) {e.printStackTrace();}
+	}
+	
+	
+	
+	@Async
+	public void sendMsg(String msg, String hp){
+		try {
+			SmsPost sms = new SmsPost();
+			sms.sendMsg("sms", "sijeon", hp, msg, "0232750500", "", "");
+		} catch (Exception e) {e.printStackTrace();}
+	}
+	
+	@Async
+	@SuppressWarnings("unchecked")
+	public static void token(String type, String msg, HttpServletRequest request){
+		boolean is_108 = (request.getLocalAddr().indexOf("192.168.0.108") == -1);
+		boolean is_104 = (request.getLocalAddr().indexOf("192.168.0.104") == -1);
+		boolean localhost = (request.getLocalAddr().indexOf("localhost") == -1);
+		boolean ipv6 = (request.getLocalAddr().indexOf("0:0:0:0:0:0:0:1") == -1);
+		if(is_108 == true && is_104 == true && localhost == true && ipv6 == true){
+			try {
+				JSONObject toJson = new JSONObject();
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+				
+				toJson.put("type", type);
+				toJson.put("msg", msg);
+				toJson.put("cd", sdf.format(new Date()));
+				JSONObject messageJson = new JSONObject();
+				messageJson.put("message", toJson);
+				
+				JSONObject sendJson = new JSONObject();
+				sendJson = new JSONObject();
+				sendJson.put("to", "/topics/sijeonNotify");
+				sendJson.put("data", messageJson);
+				
+				java.net.URL url = new java.net.URL("https://gcm-http.googleapis.com/gcm/send");
+				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+				conn.setRequestProperty("Authorization", "key=AIzaSyBfQD7b0ggWvbk_AwdggRpxDiS1rTXaikE");
+				conn.setRequestProperty("Content-Type", "application/json");
+				conn.setRequestProperty("project_id", "1030015706154");
+				conn.setRequestMethod("POST");
+				conn.setDoOutput(true);
+				OutputStream outputStream = conn.getOutputStream();
+				outputStream.write(sendJson.toString().getBytes("UTF-8"));
+				InputStream inputStream = conn.getInputStream();
+				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+				StringBuilder sb = new StringBuilder();
+				String line = null;
+				try {
+					while ((line = reader.readLine()) != null) sb.append(line + "\n");
+				}catch (IOException e) {
+					e.printStackTrace();
+				}finally {try {inputStream.close();} catch (IOException e) {e.printStackTrace();}}
+				System.out.println(String.format("result : %s", sb.toString()));
+				System.out.println(sendJson.toString());
+			} catch (Exception e) {e.printStackTrace();}
+		}
+	}
+}

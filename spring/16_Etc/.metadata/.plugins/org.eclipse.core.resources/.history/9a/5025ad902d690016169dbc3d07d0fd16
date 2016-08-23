@@ -1,0 +1,25 @@
+package com.company;
+
+
+import javax.mail.internet.MimeMessage;
+
+import org.springframework.mail.SimpleMailMessage;
+
+public class SimpleNotifier {
+	MailSender mailSender = new MailSender();
+	MimeMessage message = mailSender.createMimeMessage();
+	public void sendMail(String email, String title, String context) {
+		SimpleMailMessage message = new SimpleMailMessage();
+		message.setSubject("hi");
+		message.setFrom("pikachu987@naver.com");
+		message.setText("hih");
+		message.setTo(email);
+		try {
+			mailSender.send(message);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

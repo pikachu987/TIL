@@ -1,0 +1,132 @@
+package com.company.scheduler;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+
+@Component
+public class Scheduler{
+	@Resource(name="schedulerService")
+	private SchedulerService schedulerService;
+	
+	//certification delete  회원인증 매일 아침 6시 삭제
+	@Scheduled(cron = "0 0 6 * * ?")
+	public void cron(){
+		SchedulerUtils.setWriterLoggerDate("certification");
+		schedulerService.certificationAllDelete();
+	}
+	
+	
+	//leaflet view, down, share, good, reply 초기화 시키기 매일 3시
+	@Scheduled(cron = "0 0 3 * * ?")
+	public void cron2(){
+		SchedulerUtils.setWriterLoggerDate("leaflet");
+		schedulerService.leafletCountUpdate();
+	}
+	
+	
+	//주간 월요일 12시 gcm, 메시지 주간 통계
+	@Scheduled(cron = "0 0 12 ? * MON")
+	public void cron3(){
+		try{
+			SchedulerUtils.setWriterLoggerDate("gcm");
+			String hpTmp = null;
+			String content = "";
+			HashMap<String, Object> memoMap = new HashMap<String, Object>();
+			List<HashMap<String, Object>> gcmList = schedulerService.gcmPushListWeek();
+			List<HashMap<String, Object>> listSql = new ArrayList<HashMap<String,Object>>();
+			List<HashMap<String, Object>> listGcm = new ArrayList<HashMap<String,Object>>();
+			for(int i=0;i<gcmList.size();i++){
+				HashMap<String, Object> gcmMap = gcmList.get(i);
+				Integer gcmType = 8;
+				Integer view = (SchedulerUtils.getIntegerValue(gcmMap.get("view")) == null?0:SchedulerUtils.getIntegerValue(gcmMap.get("view")));
+				Integer good = (SchedulerUtils.getIntegerValue(gcmMap.get("good")) == null?0:SchedulerUtils.getIntegerValue(gcmMap.get("good")));
+				Integer reply = (SchedulerUtils.getIntegerValue(gcmMap.get("reply")) == null?0:SchedulerUtils.getIntegerValue(gcmMap.get("reply")));
+				Integer leaflet_key = (SchedulerUtils.getIntegerValue(gcmMap.get("leaflet_key")) == null?0:SchedulerUtils.getIntegerValue(gcmMap.get("leaflet_key")));
+				String hp = (String)gcmMap.get("hp");
+				String gcmId = (String)gcmMap.get("gcmId");
+				Integer push = (SchedulerUtils.getIntegerValue(gcmMap.get("push")) == null?1:SchedulerUtils.getIntegerValue(gcmMap.get("push")));
+				Integer memoCnt = (SchedulerUtils.getIntegerValue(gcmMap.get("memoCnt")) == null?0:SchedulerUtils.getIntegerValue(gcmMap.get("memoCnt")));
+				String language = (String)gcmMap.get("language");
+				if(language == null || language.trim().equals("") || language.trim().equals("ko") || language.trim().equals("kr")) language = "ko";
+				String gcmMsg = SchedulerUtils.tokenGetMessage(gcmType, null, language);
+				Integer memoType = gcmType;
+				String memoGetHp = hp;
+				String memoGiveHp = null;
+				Integer memoSubSeq = null;
+				String memoGcmId = gcmId;
+				Integer memoPush = push;
+				String gcmMessage = gcmMsg;
+				
+				if(hpTmp == null){
+					hpTmp = hp;
+					memoMap.put("memoType", memoType);
+					memoMap.put("memoGetHp", memoGetHp);
+					memoMap.put("memoGiveHp", memoGiveHp);
+					memoMap.put("memoSubSeq", memoSubSeq);
+					memoMap.put("memoGcmId", memoGcmId);
+					memoMap.put("memoPush", memoPush);
+					memoMap.put("memoCnt", memoCnt);
+					memoMap.put("gcmMessage", gcmMessage);
+				}
+				if(hpTmp.equals(hp)){
+					HashMap<String, Object> gcmMapTmp = null;
+					try{gcmMapTmp = gcmList.get(i+1);}catch(Exception e){}
+					
+					if(gcmMapTmp == null || !((String)gcmMapTmp.get("hp")).equals(hp)){
+						if(language.equals("ko")) content += leaflet_key+"번 전단지 주간 View "+view+", Reply "+reply+", Star "+good;
+						else content += "Weekly flyers No."+leaflet_key+" had a View "+view+",a Reply "+reply+",a Star "+good;
+					}else{
+						if(language.equals("ko")) content += leaflet_key+"번 전단지 주간 View "+view+", Reply "+reply+", Star "+good+"\r\n";
+						else content += "Weekly flyers No."+leaflet_key+" had a View "+view+",a Reply "+reply+",a Star "+good+"\r\n";
+					}
+				}else{
+					listGcm.add(memoMap);
+					memoMap.put("memoContent", content);
+					listSql.add(memoMap);
+					
+					hpTmp = hp;
+					content = "";
+					memoMap = new HashMap<String, Object>();
+					memoMap.put("memoType", memoType);
+					memoMap.put("memoGetHp", memoGetHp);
+					memoMap.put("memoGiveHp", memoGiveHp);
+					memoMap.put("memoSubSeq", memoSubSeq);
+					memoMap.put("memoGcmId", memoGcmId);
+					memoMap.put("memoPush", memoPush);
+					memoMap.put("memoCnt", memoCnt);
+					memoMap.put("gcmMessage", gcmMessage);
+					
+					HashMap<String, Object> gcmMapTmp = null;
+					try{gcmMapTmp = gcmList.get(i+1);}catch(Exception e){}
+					
+					if(gcmMapTmp == null || !((String)gcmMapTmp.get("hp")).equals(hp)){
+						if(language.equals("ko")) content += leaflet_key+"번 전단지 주간 View "+view+", Reply "+reply+", Star "+good;
+						else content += "Weekly flyers No."+leaflet_key+" had a View "+view+",a Reply "+reply+",a Star "+good;
+					}else{
+						if(language.equals("ko")) content += leaflet_key+"번 전단지 주간 View "+view+", Reply "+reply+", Star "+good+"\r\n";
+						else content += "Weekly flyers No."+leaflet_key+" had a View "+view+",a Reply "+reply+",a Star "+good+"\r\n";
+					}
+				}
+				if(i == gcmList.size()-1){
+					listGcm.add(memoMap);
+					memoMap.put("memoContent", content);
+					listSql.add(memoMap);
+				}
+			}
+			
+			SchedulerUtils.sendGcm(listGcm);
+			for(HashMap<String, Object> temp : listGcm){
+				SchedulerUtils.writerLogger("▶▶▶▶"+temp.toString());
+			}
+			
+			schedulerService.gcmPushListcreate(listSql);
+		}catch(Exception e){e.printStackTrace();}
+	}
+}
