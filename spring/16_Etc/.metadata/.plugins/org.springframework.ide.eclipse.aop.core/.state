@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="Mail"/>
 <aop-project name="Task"/>
+<aop-project name="RestTemplate"/>
 </aop-reference-model>

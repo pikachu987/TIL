@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/Users/guanho/Documents/git/pikachu987/TIL/spring/16_Etc/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/guanho/Documents/git/pikachu987/TIL/spring/16_Etc/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Mail" path="/Mail" reloadable="true" source="org.eclipse.jst.jee.server:Mail"/><Context docBase="/Users/guanho/Documents/git/pikachu987/TIL/spring/16_Etc/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Task" path="/Task" reloadable="true" source="org.eclipse.jst.jee.server:Task"/></Host>
+      <Context docBase="/Users/guanho/Documents/git/pikachu987/TIL/spring/16_Etc/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/guanho/Documents/git/pikachu987/TIL/spring/16_Etc/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/RestTemplate" path="/RestTemplate" reloadable="true" source="org.eclipse.jst.jee.server:RestTemplate"/></Host>
     </Engine>
   </Service>
 </Server>

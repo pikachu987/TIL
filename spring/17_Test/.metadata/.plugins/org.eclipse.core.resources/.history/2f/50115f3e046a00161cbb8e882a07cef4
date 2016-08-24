@@ -1,0 +1,25 @@
+package com.company;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.filter.DelegatingFilterProxy;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+
+@WebAppConfiguration
+public class Test3 {
+	private MockMvc mockMvc;
+	
+	@Before
+	public void setup(){
+		DelegatingFilterProxy securityFilter = new DelegatingFilterProxy();
+		securityFilter.setBeanName("springSecurityFilterChain");
+		securityFilter.setServletContext(context.get);
+	}
+}

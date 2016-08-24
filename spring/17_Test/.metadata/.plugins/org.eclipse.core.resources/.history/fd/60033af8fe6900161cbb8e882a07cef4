@@ -1,0 +1,34 @@
+package com.company;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertThat;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration
+public class Test_8 {
+	@Autowired
+	private Calculator calculator;
+	
+	@DirtiesContext
+	@Test
+	public void sum(){
+		assertThat(calculator.sum(1,2), equalTo(3L));
+	}
+	
+	@Test
+	public void sum2(){
+		assertThat(calculator.sum(2,2), equalTo(4L));
+	}
+	
+	@Test
+	public void sum3(){
+		assertThat(calculator.sum(4,2), equalTo(6L));
+	}
+}

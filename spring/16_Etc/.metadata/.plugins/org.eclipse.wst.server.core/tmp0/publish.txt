@@ -1,3 +1,2 @@
 #Tomcat publish data
-#Tue Aug 23 23:18:34 KST 2016
-org.eclipse.jst.jee.server\:/binary\:/Users/guanho/.m2/repository/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar=WEB-INF/lib/spring-web-4.0.4.RELEASE.jar
+#Wed Aug 24 21:43:25 KST 2016

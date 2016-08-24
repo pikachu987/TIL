@@ -1,0 +1,17 @@
+package com.company;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberDAO {
+	public String insert(){
+		System.out.println("insert");
+		return "insert";
+	}
+	public void delete(){
+		System.out.println("delete");
+	}
+	public int count(){
+		return 22;
+	}
+}

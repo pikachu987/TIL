@@ -1,0 +1,12 @@
+package com.company;
+
+import org.junit.Before;
+
+public class Test_1 {
+	private Calculator calculator;
+	
+	@Before
+	public void setup(){
+		
+	}
+}

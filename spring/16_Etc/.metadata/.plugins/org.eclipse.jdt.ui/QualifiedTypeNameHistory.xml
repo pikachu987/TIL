@@ -20,4 +20,14 @@
 <fullyQualifiedTypeName name="config.TaskConfig"/>
 <fullyQualifiedTypeName name="org.springframework.scheduling.annotation.SchedulingConfigurer"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.InterceptorRegistry"/>
+<fullyQualifiedTypeName name="org.springframework.web.client.AsyncRestTemplate"/>
+<fullyQualifiedTypeName name="org.springframework.util.concurrent.ListenableFuture"/>
+<fullyQualifiedTypeName name="org.springframework.util.concurrent.ListenableFutureCallback"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
 </qualifiedTypeNameHistroy>

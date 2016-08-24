@@ -10,7 +10,7 @@
 
 | 목록 | 프로젝트 |
 |---|---|
-| 00_maven |
+| 00_maven | projectLayout |
 | 01_DI | 01_Example
 | | 02_Example_factory
 | 02_Beanlife_cycle_and_scope | 01_Example
@@ -25,30 +25,30 @@
 |  | 02_Validator
 |  | 03_ETC
 |  | 04_Setting
-| 07_MVC_View | 01_View
-|  | 02_EtcView
-|  | 03_Locale
-| 08_MVC_Etc | 01_XmlJSON
-|  | 02_Upload
-|  | 03_WebSocket -미완료
-| 09_MVC_Etc2 | 
+| 07_MVC_View | 01_View |
+|  | 02_EtcView |
+|  | 03_Locale |
+| 08_MVC_Etc | 01_XmlJSON |
+|  | 02_Upload |
+|  | 03_WebSocket -미완료 |
+| 09_MVC_Etc2 | 01_Spring |
 | 10_Database - 미완료 | 
 | 11_Transaction - 미완료 | 
 | 12_ORM - 미완료 | 
-| 13_JPA | Ex_1_JPA
-|  | Ex_2_JPA
-|  | Ex_3_JPA_Java
-|  | Ex_4_JPA_Query
-|  | Ex_5_JPA_Custom
-| 14_WebApplication | 01_webApplication
+| 13_JPA | Ex_1_JPA |
+|  | Ex_2_JPA |
+|  | Ex_3_JPA_Java |
+|  | Ex_4_JPA_Query |
+|  | Ex_5_JPA_Custom | 
+| 14_WebApplication | 01_webApplication |
 |  | 02_webApplication
 | 15_Security - 미완료 | 
-| 16_Etc - 미완료 | 
-| 17_Test - 미완료 | 
-| 18_Log - 미완료 | 
-|  | 
-|  | 
-|  |
+| 16_Etc | Mail |
+|  |  Task
+|  |  RestTemplate
+| 17_Test | 01_test
+|  | 02_mock |
+| 18_Log | Log |
 
 
 ~~~~

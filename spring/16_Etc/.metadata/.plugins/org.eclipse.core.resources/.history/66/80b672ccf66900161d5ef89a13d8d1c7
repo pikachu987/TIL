@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.HashMap;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
+
+@Controller
+public class ViewController {
+	@RequestMapping(value="/view", method=RequestMethod.GET)
+	public String view() {
+		RestTemplate restTemplate = new RestTemplate();
+		String body = restTemplate.getForObject("http://www.daum.net", String.class);
+		System.out.println(body);
+		
+		
+		String response = restTemplate.getForObject("/view/{value}", String.class, "hihihi");
+		System.out.println(response);
+		
+		return "index";
+	}
+	
+	@RequestMapping(value="/view/{value}", method=RequestMethod.GET)
+	@ResponseBody
+	public HashMap<String, Object> view(@PathVariable("value") String value) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("value", value);
+		map.put("code", 1);
+		map.put("msg", "성공");
+		return map;
+	}
+}
