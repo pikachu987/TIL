@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "element")
+public class ListXml {
+
+	@XmlElement(name = "book")
+	private List<Element> books;
+
+	public ListXml(List<Element> books) {
+		this.books = books;
+	}
+
+	public List<Element> getBooks() {
+		return books;
+	}
+
+}

@@ -39,7 +39,7 @@ public class Test4 {
 	
 	@Test
 	public void test1() throws Exception{
-		mockMvc.perform(get("/hello").param("name","pikachu987"))
+		mockMvc.perform(get("/v/hello").param("name","pikachu987"))
 		.andExpect(status().isOk())
 		.andExpect(model().attributeExists("hihihi"));
 	}

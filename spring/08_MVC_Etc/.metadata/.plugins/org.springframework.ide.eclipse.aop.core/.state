@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="01_XmlJson"/>
 <aop-project name="02_Upload"/>
+<aop-project name="03_Websocket"/>
 </aop-reference-model>

@@ -1,0 +1,20 @@
+package com.company;
+
+public class Hello {
+	private String greeting;
+	private Hello name;
+
+	public Hello(String greeting, Hello name) {
+		this.greeting = greeting;
+		this.name = name;
+	}
+
+	public String getGreeting() {
+		return greeting;
+	}
+
+	public Hello getName() {
+		return name;
+	}
+
+}

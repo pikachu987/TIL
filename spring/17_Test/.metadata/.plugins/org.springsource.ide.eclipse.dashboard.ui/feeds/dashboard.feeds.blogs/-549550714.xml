@@ -5,7 +5,71 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-24T08:53:56Z</updated>
+  <updated>2016-08-24T19:30:48Z</updated>
+  <entry>
+    <title>Check your Spring Security SAML config - XXE security issue</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/24/check-your-spring-security-saml-config-xxe-security-issue" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2016-08-24:2596</id>
+    <updated>2016-08-24T19:30:48Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;It was brought to our attention that the &lt;a href="https://github.com/spring-projects/spring-security-saml/tree/10fdc14bbc4bb9c2516cf6e8f71000b2243016c7/sample"&gt;spring-security-saml sample&lt;/a&gt; application contained an &lt;a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing"&gt;XML External Entity (XXE) vulnerability&lt;/a&gt;. This meant that a malicious user could view any file that the Spring Application&amp;#8217;s process had access to.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The issue was a direct result of &lt;a href="https://shibboleth.net/community/advisories/secadv_20131213.txt"&gt;OpenSAML Java ParserPool and Decrypter Vulnerable To XML Attacks&lt;/a&gt;. The default behavior of the &lt;code&gt;ParserPool&lt;/code&gt; implementations is fixed in OpenSAML 2.6.1+ (which Spring Security SAML uses). However, the vulnerability is still possible if users construct their own &lt;code&gt;ParserPool&lt;/code&gt; without the proper settings.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonitionblock note"&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="icon"&gt;
+&lt;div class="title"&gt;Note&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="content"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We did not consider this a &lt;a href="https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures"&gt;CVE&lt;/a&gt; because the exploit was only found in the sample application which is not considered production code. However, we expect that our users may have copied this code to create their own applications. For this reason, we wanted to be transparent and communicate the issue and the fix.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="the-fix"&gt;&lt;a class="anchor" href="#the-fix"&gt;&lt;/a&gt;The Fix&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The sample application has been fixed in &lt;a href="https://github.com/spring-projects/spring-security-saml/commit/925c8925fa0d0645d7b177b6e65cfb920fc6782f"&gt;925c892&lt;/a&gt; by removing the customizations to the &lt;code&gt;ParserPool&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Users should ensure that any applications using OpenSAML have been fixed according to the &lt;strong&gt;Recommendations&lt;/strong&gt; section within the &lt;a href="https://shibboleth.net/community/advisories/secadv_20131213.txt"&gt;OpenSAML Security Advisory&lt;/a&gt;. Commit &lt;a href="https://github.com/spring-projects/spring-security-saml/commit/925c8925fa0d0645d7b177b6e65cfb920fc6782f"&gt;925c892&lt;/a&gt; can be used as a model of one way of conforming to the &lt;strong&gt;Recommendations&lt;/strong&gt; section.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="additional-information"&gt;&lt;a class="anchor" href="#additional-information"&gt;&lt;/a&gt;Additional Information&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Prevention_Cheat_Sheet"&gt;OWASP XXE Prevention Cheat Sheet&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://shibboleth.net/community/advisories/secadv_20131213.txt"&gt;OpenSAML Security Advisory&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="credit"&gt;&lt;a class="anchor" href="#credit"&gt;&lt;/a&gt;Credit&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This issue was responsibly disclosed by Max Justicz and Nick Freeman of Bishop Fox (&lt;a href="https://www.bishopfox.com" class="bare"&gt;https://www.bishopfox.com&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Data Flow for Cloud Foundry 1.0.0.RC1 now available</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/24/spring-cloud-data-flow-for-cloud-foundry-1-0-0-rc1-now-available" />
@@ -14,7 +78,7 @@
       <name>Eric Bottard</name>
     </author>
     <id>tag:spring.io,2016-08-24:2595</id>
-    <updated>2016-08-24T08:53:56Z</updated>
+    <updated>2016-08-24T08:53:00Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
 &lt;p&gt;We are pleased to announce the 1.0.0.RC1 release of Spring Cloud Data Flow for Cloud Foundry.&lt;/p&gt;
 &lt;/div&gt;
@@ -24,7 +88,7 @@
 &lt;div class="ulist"&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Builds upon the 1.0.0.RC1 release of Spring Cloud Deployer Cloud Foundry, which itself builds upon Project Reactor 1.0.0.RELEASE and of CF-Java-Client 2.0.0.RELEASE&lt;/p&gt;
+&lt;p&gt;Builds upon the 1.0.0.RC1 release of Spring Cloud Deployer Cloud Foundry, which itself builds upon Project Reactor 3.0.0.RELEASE and of CF-Java-Client 2.0.0.RELEASE&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Adds the ability to orchestrate short-lived &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.0.0.RC1/reference/htmlsingle/#tasks-on-cloudfoundry"&gt;tasks&lt;/a&gt; including Spring Batch Jobs in Cloud Foundry, which can be enabled as an &lt;em&gt;experimental&lt;/em&gt; feature toggle&lt;/p&gt;
@@ -683,25 +747,5 @@ public class MySqlApplication {&#xD;
 &lt;/ul&gt;
 &lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/2.0.7.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow for Apache YARN 1.0.1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/29/spring-cloud-data-flow-for-apache-yarn-1-0-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Janne Valkealahti</name>
-    </author>
-    <id>tag:spring.io,2016-07-29:2574</id>
-    <updated>2016-07-29T08:08:31Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce the release of &lt;a href="http://cloud.spring.io/spring-cloud-dataflow-server-yarn"&gt;Spring Cloud Data Flow for Apache YARN&lt;/a&gt; 1.0.1.RELEASE. &lt;/p&gt;
-&lt;p&gt;Spring Cloud Data Flow for Apache YARN provides support for orchestrating long-running (streaming) and short-lived (task/batch) data microservices on Apache YARN.&lt;/p&gt;
-&lt;p&gt;Apart from usual minor fixes, we have worked on the following themes.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Support for kerberos and integration to automated ambari kerberos setup.&lt;/li&gt;
-  &lt;li&gt;Support for HDFS HA Namenode setup.&lt;/li&gt;
-  &lt;li&gt;New extension to &lt;code&gt;dataflow-shell&lt;/code&gt; adding &lt;code&gt;hadoop fs&lt;/code&gt; basic commands.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For a complete list of changes and improvements, please refer to&lt;br/&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-yarn/issues?q=milestone%3A1.0.1.RELEASE+is%3Aclosed"&gt;1.0.1.RELEASE server release&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-yarn/issues?q=milestone%3A1.0.1.RELEASE+is%3Aclosed"&gt;1.0.1.RELEASE deployer release&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-rpm/issues?q=milestone%3A1.0-2-RELEASE%20is%3Aclosed%20"&gt;1.0-2.RELEASE rpm release&lt;/a&gt; and &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-ambari-rpm/issues?q=milestone%3A1.0-2-RELEASE%20is%3Aclosed%20"&gt;1.0-2.RELEASE ambari plugin release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The Spring Cloud Data Flow team will be talking at &lt;a href="https://springoneplatform.io/"&gt;Spring One Platform&lt;/a&gt;, which will be taking place in Las Vegas between August 1-4 this year. There are many other great talks so check the &lt;a href="https://2016.event.springoneplatform.io/schedule/sessions"&gt;agenda&lt;/a&gt; and get your &lt;a href="https://2016.event.springoneplatform.io/register"&gt;ticket&lt;/a&gt; if you haven’t done so already.&lt;/p&gt;</content>
   </entry>
 </feed>

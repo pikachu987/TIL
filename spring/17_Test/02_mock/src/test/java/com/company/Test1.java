@@ -35,7 +35,7 @@ public class Test1 {
 	@Test
 	public void sum() throws Exception{
 		//Spring MVC에 get방식 요청. 이때 name으로 pikachu987 전송
-		mockMvc.perform(get("/hello").param("name","pikachu987"))
+		mockMvc.perform(get("/v/hello").param("name","pikachu987"))
 		//응답결과 200인지 검사
 		.andExpect(status().isOk())
 		//응답 결과 모델에 이름이 hihihi인 값이 있는지 검사

@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ViewController {
@@ -13,11 +14,18 @@ public class ViewController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/hello", method=RequestMethod.GET)
+	@RequestMapping(value="/v/hello", method=RequestMethod.GET)
 	public String view2(@RequestParam("name") String name, Model model) {
+		System.out.println("hello : "+name);
 		if(name.equals("pikachu987")){
-			model.addAttribute("hihihi", "aaa");
+			model.addAttribute("hihihi", "1");
 		}
+		return "index";
+	}
+	
+	@RequestMapping(value="/v/hello.json", method=RequestMethod.GET)
+	@ResponseBody
+	public String test3() {
 		return "index";
 	}
 }

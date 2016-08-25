@@ -38,7 +38,7 @@ public class Test3 {
 	
 	@Test
 	public void sum() throws Exception{
-		mockMvc.perform(get("/hello").param("name","pikachu987"))
+		mockMvc.perform(get("/v/hello").param("name","pikachu987"))
 		.andExpect(status().isOk())
 		.andExpect(model().attributeExists("hihihi"));
 	}

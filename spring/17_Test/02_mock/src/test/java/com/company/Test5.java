@@ -35,7 +35,7 @@ public class Test5 {
 	
 	@Test
 	public void test1() throws Exception{
-		mockMvc.perform(get("/hello.json").contextPath("/spring4").contentType(MediaType.APPLICATION_JSON).content("{\"name\":\"aaa\"}"))
+		mockMvc.perform(get("/v/hello.json").contextPath("/02_mock").contentType(MediaType.APPLICATION_JSON).content("{\"name\":\"aaa\"}"))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$.code", equalTo("hihi")));
 	}

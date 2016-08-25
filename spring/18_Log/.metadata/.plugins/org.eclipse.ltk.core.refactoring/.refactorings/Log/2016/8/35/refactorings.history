@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Log/src/main/resources/logback.xml&apos; to &apos;log4j.xml&apos;" description="Rename resource &apos;logback.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/logback.xml" name="log4j.xml" stamp="1472132791850" updateReferences="true"/>
+</session>

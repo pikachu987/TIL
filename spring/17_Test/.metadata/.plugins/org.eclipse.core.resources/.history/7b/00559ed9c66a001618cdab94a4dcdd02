@@ -1,0 +1,36 @@
+package com.company;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = { "title", "price", "isbn" })
+public class Element {
+
+	private String title;
+	private int price;
+	private String isbn;
+
+	public Element() {
+	}
+
+	public Element(String title, int price, String isbn) {
+		this.title = title;
+		this.price = price;
+		this.isbn = isbn;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+}
