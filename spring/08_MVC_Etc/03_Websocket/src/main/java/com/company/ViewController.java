@@ -10,4 +10,24 @@ public class ViewController {
 	public String view() {
 		return "index";
 	}
+	
+	@RequestMapping(value="/ex1", method=RequestMethod.GET)
+	public String ex1() {
+		return "ex1";
+	}
+	
+	@RequestMapping(value="/ex2", method=RequestMethod.GET)
+	public String ex2() {
+		return "ex2";
+	}
+	
+	@RequestMapping(value="/ex3", method=RequestMethod.GET)
+	public String ex3() {
+		return "ex3";
+	}
+	
+	@RequestMapping(value="/ex4", method=RequestMethod.GET)
+	public String ex4() {
+		return "ex4";
+	}
 }
