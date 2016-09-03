@@ -1,0 +1,49 @@
+<%@ page contentType="text/html; charset=utf-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>에코</title>
+<script src="//cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var sock;
+		
+		function sendMessage(){
+			sock = new SockJS("ws://localhost:8080/03_Websocket/echo.sockjs");
+			sock.onmessage = onMessage;
+			sock.onclose = onClose;
+			sock.onopen = function(){
+				sock.send($('#msg').val());
+			};
+		}
+		
+		function onMessage(e){
+			var data = e.data;
+			$('#chatArea').append(data+"<br>");
+			sock.close();
+		}
+		
+		function onClose(e){
+			$('#chatArea').append('연결 끊김<br>');
+		}
+		
+		$('#send').click(function(){
+			sendMessage();
+		});
+	});
+</script>
+<style>
+#chatArea {
+	width: 200px; height: 100px; overflow-y: auto; border: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<div id="chatArea"></div>
+    <br/>
+    <input type="text" id="msg">
+    <input type="button" id="send" value="전송">
+</body>
+</html>

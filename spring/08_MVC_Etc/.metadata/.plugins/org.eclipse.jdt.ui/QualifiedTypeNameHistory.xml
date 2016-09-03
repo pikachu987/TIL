@@ -31,4 +31,6 @@
 <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.springframework.web.socket.WebSocketSession"/>
+<fullyQualifiedTypeName name="com.company.ex3.EchoHandlerSock"/>
+<fullyQualifiedTypeName name="com.company.ex4.ChatWebSocketHandlerSock"/>
 </qualifiedTypeNameHistroy>

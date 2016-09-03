@@ -79,7 +79,7 @@ XML을 사용할 경우
 	<websocket:handlers>
 		<websocket:mapping handler="echoHandler" path="/echo.sockjs" />
 		<websocket:mapping handler="chatHandler" path="/chat.sockjs" />
-		<websocket:sockjs />
+		<websocket:sockjs /> <!-- SockJS 서버 지원 -->
 	</websocket:handlers>
 	
 	<mvc:default-servlet-handler />
@@ -382,3 +382,119 @@ script
 > 웹 소켓 서버를 지원하는 컨테이너에 따라 서버의 동작 방식이 일부 다를 수 있다. Tomcat 7.0.52버전은 웹소켓 클라이언트가 연결되면, 직접 연결을 종료하기 전까지 연결을 유지한다. 반면에 Jetty 9버전의 경우 Ping/Pong 메시지를 이용해서 클라이언트가 연결을 유지하고 있는지 확인한다. 따라서, Jetty를 서버로 사용할 때 웹 브라우저가 Ping에 대한 응답으로 Pong을 전송하지 않으면 Jetty는 연결이 정상이 아닌것으로 간주하고 마지막 메시지 송수신 이후 일정 시간(default: 300s) 이 지나면 연결을 끊는다. 문제는 웹 브라우저마다 Ping/Pong을 지원할지 여부가 다르고, Ping/Pong을 지원하더라도 스프링에서 제대로 처리하지 못하는 경우가 있다는 점이다. 따라서, 이를 고려해서 웹컨테이너를 선택하고 클라이언트 코드는 연결이 끊기면 재열결을 하는 처리가 필요하다.
 
 > 네트워크-웹소켓 읽어볼 내용 : http://www.infoq.com/articles/Web-Sockets-Proxy-Servers
+
+
+
+ ### SockJS 지원
+ 
+ 웹소켓이 웹 브라우저에 적용되기 이전에 클라이언트와 서버간에 데이터를 주고 받기 위한 다양한 기법이 존재했는데, 이런 기법들 역시 브라우저 종류와 버전마다 다르게 적용해야 했다. ex)iframe, Long_Polling
+ 또한 웹소켓을 지원하면 직접 웹소켓을 쓰기도 한다. 문제는 각 방식에 따라 자바스크립트코드와 서버코드를 작성해야 했는데 이런 불편함을해소하기 위해 SockJS가 나왔다.
+ 
+> http://caniuse.com/websockets
+
+> SockJS
+> SockJS는 이런 다양한 우회 기법들을 추상화해서 웹소켓과 유사한 API로 웹 서버와 웹 브라우저가 통신할수 있도록 해준다. 실제로  SocketJS가 제공하는 클라이언트 API를 이용해서 작성한 코드는 웹소켓API를 이용해서 작성한 코드와 거의 동일하다.
+> SockJS는 다양한 환경을 위한 서버 모듈과 클라이언트 모듈을 제공하고 있다. 예를 들어, sockjs-client는 웹브라우저를 위한 자바 스크립트 모듈로서 브라우저환경에 상관없이 SockJS API를 이용해서 서버와 클라이언트가 양방향 통신을 할 수 있도록 만들어준다. 실제 SockJS가 내부적으로 웹소켓, Long-Polling등을 사용할지 여부는 몰라도 된다.
+> SockJS 클라이언트와 통신할 수 있는 SockJS 서버는 웹소켓, Long-POling 등 SockJS 클라이언트가 사용하는 다양한 방식을 지원한다. 현재 SockJS를 지원하는 서버로는 Node.js, 파이썬, 자바,Vert.x 서버 등이 있으며, 이들 서버를 사용하면 단일 서버 API를 이용해서 SockJS 클라이언트와 양방향 통신하는 서버를 만들수 있다.
+
+스프링 웹소켓 모듈을 사용하면 SockJS 서버를 만들 수 있다.
+
+--xml
+~~~~
+<websocket:sockjs /> <!-- SockJS 서버 지원 -->
+~~~~
+
+--java
+~~~~
+package config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+
+import com.company.ex1.EchoHandler;
+import com.company.ex2.ChatWebSocketHandler;
+
+@Configuration
+@EnableWebSocket <!-- SockJS -->
+public class WsConfig implements WebSocketConfigurer {  <!-- SockJS -->
+
+	@Override
+	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+		registry.addHandler(echoHandler(), "/echo.sockjs").withSockJS();  <!-- SockJS -->
+	}
+
+	@Bean
+	public EchoHandler echoHandler() {
+		return new EchoHandler();
+	}
+	
+	@Bean
+	public ChatWebSocketHandler chatHandler() {
+		return new ChatWebSocketHandler();
+	}
+
+}
+~~~~
+
+SockJS를 사용하는 자바스크립트 코드는 다음과 같이 SockJS 자바스크립트 클라이언트 코드를 이용해서 서버에 접속하면 된다.
+웹소켓과 차이점은 WebSocket 대신 SockJS를 사용하고 ws 대신 http를 사용한다.
+
+~~~~
+<script src="//cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var sock;
+		
+		
+		$('#enter').click(function(){
+			sock = new SockJS("http://localhost:8080/03_Websocket/chat.sockjs");
+			sock.onopen = onOpen;
+			sock.onmessage = onMessage;
+			sock.onclose = onClose;
+		});
+		$('#disconnect').click(function(){
+			sock.close();
+		});
+		
+		
+		function onOpen(e){
+			$('#chatArea').append('연결<br>');
+		}
+		function onMessage(e){
+			var data = e.data;
+			if(data.substring(0,4) == "msg:"){
+				$('#chatArea').append(data.substring(4)+"<br>");
+			}
+		}
+		function onClose(e){
+			$('#chatArea').append('연결 끊김<br>');
+		}
+		
+		$('#send').click(function(){
+			send();
+		});
+		
+		$('#msg').keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode == '13'){
+				send();
+			}
+			event.stopPropagation();
+		});
+		
+		function send(){
+			var nickname = $('#nickname').val();
+			var msg = $('#msg').val();
+			sock.send("msg:"+nickname+":"+msg)
+			$('#msg').val("");
+		}
+	});
+</script>
+~~~~
+
+> 현재의 다양한 환경-브라우저, 웹서버의 지원여부, 네트워크 장비의 웹소켓 지원- 을 고려하면, 웹브라우저에서 웹소켓 API를 직접 사용하는 것 보다는 SockJS를 사용하는 것이 안정적으로 양방향을 지원하는 방법이다. 브라우저와 네트워크구성을 마음대로 결정할 수 있는 환경이 아니라면 웹소켓 API를 직접 사용하지 말고 SockJS를 사용하는 것이 바람직하다. 
+> 관련 내용 - https://github.com/sockjs/sockjs-client
