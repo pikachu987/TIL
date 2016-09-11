@@ -20,11 +20,6 @@
                                 <state key="normal" title="페이스북으로 로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="facebookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x3b-ae-cy4"/>
                                 </connections>
