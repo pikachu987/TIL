@@ -28,9 +28,9 @@
 		6E76684E1D8674C500C3124A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76684D1D8674C500C3124A /* UIKit.framework */; };
 		6E7668591D86802600C3124A /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668551D86802600C3124A /* AdobeCreativeSDKCore.framework */; };
 		6E76685A1D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E7668561D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle */; };
-		6E76685B1D86802600C3124A /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668571D86802600C3124A /* AdobeCreativeSDKImage.framework */; };
 		6E76685C1D86802600C3124A /* AdobeCreativeSDKImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E7668581D86802600C3124A /* AdobeCreativeSDKImageResources.bundle */; };
 		6E76685E1D8682E900C3124A /* eat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E76685D1D8682E900C3124A /* eat.jpg */; };
+		6E7668601D86892E00C3124A /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76685F1D86892E00C3124A /* AdobeCreativeSDKImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,9 +79,9 @@
 		6E76684F1D8676DC00C3124A /* AdobeImageEditor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdobeImageEditor-Bridging-Header.h"; sourceTree = "<group>"; };
 		6E7668551D86802600C3124A /* AdobeCreativeSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKCore.framework; sourceTree = "<group>"; };
 		6E7668561D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdobeCreativeSDKCoreResources.bundle; sourceTree = "<group>"; };
-		6E7668571D86802600C3124A /* AdobeCreativeSDKImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKImage.framework; sourceTree = "<group>"; };
 		6E7668581D86802600C3124A /* AdobeCreativeSDKImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdobeCreativeSDKImageResources.bundle; sourceTree = "<group>"; };
 		6E76685D1D8682E900C3124A /* eat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eat.jpg; sourceTree = "<group>"; };
+		6E76685F1D86892E00C3124A /* AdobeCreativeSDKImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 				6E76684A1D86732700C3124A /* CoreData.framework in Frameworks */,
 				6E7668481D86732100C3124A /* Accelerate.framework in Frameworks */,
 				6E7668461D86731A00C3124A /* libsqlite3.0.tbd in Frameworks */,
-				6E76685B1D86802600C3124A /* AdobeCreativeSDKImage.framework in Frameworks */,
+				6E7668601D86892E00C3124A /* AdobeCreativeSDKImage.framework in Frameworks */,
 				6E7668441D86731100C3124A /* MobileCoreServices.framework in Frameworks */,
 				6E7668421D86730900C3124A /* libc++.tbd in Frameworks */,
 				6E7668401D8672FE00C3124A /* libz.1.2.5.tbd in Frameworks */,
@@ -158,9 +158,9 @@
 		6E0040811D7F89B3003F93B1 /* AdobeImageEditor */ = {
 			isa = PBXGroup;
 			children = (
+				6E76685F1D86892E00C3124A /* AdobeCreativeSDKImage.framework */,
 				6E7668551D86802600C3124A /* AdobeCreativeSDKCore.framework */,
 				6E7668561D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle */,
-				6E7668571D86802600C3124A /* AdobeCreativeSDKImage.framework */,
 				6E7668581D86802600C3124A /* AdobeCreativeSDKImageResources.bundle */,
 				6E0040821D7F89B3003F93B1 /* AppDelegate.swift */,
 				6E0040841D7F89B3003F93B1 /* ViewController.swift */,
