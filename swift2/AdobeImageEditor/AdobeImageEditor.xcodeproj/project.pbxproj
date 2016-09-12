@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E0040831D7F89B3003F93B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0040821D7F89B3003F93B1 /* AppDelegate.swift */; };
+		6E0040851D7F89B3003F93B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0040841D7F89B3003F93B1 /* ViewController.swift */; };
+		6E0040881D7F89B3003F93B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0040861D7F89B3003F93B1 /* Main.storyboard */; };
+		6E00408A1D7F89B3003F93B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0040891D7F89B3003F93B1 /* Assets.xcassets */; };
+		6E00408D1D7F89B3003F93B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E00408B1D7F89B3003F93B1 /* LaunchScreen.storyboard */; };
+		6E0040981D7F89B3003F93B1 /* AdobeImageEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0040971D7F89B3003F93B1 /* AdobeImageEditorTests.swift */; };
+		6E0040A31D7F89B3003F93B1 /* AdobeImageEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0040A21D7F89B3003F93B1 /* AdobeImageEditorUITests.swift */; };
+		6E7668381D8672D200C3124A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668371D8672D200C3124A /* OpenGLES.framework */; };
+		6E76683A1D8672DC00C3124A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668391D8672DC00C3124A /* MessageUI.framework */; };
+		6E76683C1D8672E500C3124A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76683B1D8672E500C3124A /* QuartzCore.framework */; };
+		6E76683E1D8672EE00C3124A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76683D1D8672EE00C3124A /* StoreKit.framework */; };
+		6E7668401D8672FE00C3124A /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76683F1D8672FE00C3124A /* libz.1.2.5.tbd */; };
+		6E7668421D86730900C3124A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668411D86730900C3124A /* libc++.tbd */; };
+		6E7668441D86731100C3124A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668431D86731100C3124A /* MobileCoreServices.framework */; };
+		6E7668461D86731A00C3124A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668451D86731A00C3124A /* libsqlite3.0.tbd */; };
+		6E7668481D86732100C3124A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668471D86732100C3124A /* Accelerate.framework */; };
+		6E76684A1D86732700C3124A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668491D86732700C3124A /* CoreData.framework */; };
+		6E76684C1D8674B200C3124A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76684B1D8674B200C3124A /* Foundation.framework */; };
+		6E76684E1D8674C500C3124A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E76684D1D8674C500C3124A /* UIKit.framework */; };
+		6E7668591D86802600C3124A /* AdobeCreativeSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668551D86802600C3124A /* AdobeCreativeSDKCore.framework */; };
+		6E76685A1D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E7668561D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle */; };
+		6E76685B1D86802600C3124A /* AdobeCreativeSDKImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7668571D86802600C3124A /* AdobeCreativeSDKImage.framework */; };
+		6E76685C1D86802600C3124A /* AdobeCreativeSDKImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E7668581D86802600C3124A /* AdobeCreativeSDKImageResources.bundle */; };
+		6E76685E1D8682E900C3124A /* eat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6E76685D1D8682E900C3124A /* eat.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E0040941D7F89B3003F93B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E0040771D7F89B3003F93B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E00407E1D7F89B3003F93B1;
+			remoteInfo = AdobeImageEditor;
+		};
+		6E00409F1D7F89B3003F93B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E0040771D7F89B3003F93B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E00407E1D7F89B3003F93B1;
+			remoteInfo = AdobeImageEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E00407F1D7F89B3003F93B1 /* AdobeImageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdobeImageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0040821D7F89B3003F93B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E0040841D7F89B3003F93B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E0040871D7F89B3003F93B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E0040891D7F89B3003F93B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E00408C1D7F89B3003F93B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E00408E1D7F89B3003F93B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0040931D7F89B3003F93B1 /* AdobeImageEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdobeImageEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0040971D7F89B3003F93B1 /* AdobeImageEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeImageEditorTests.swift; sourceTree = "<group>"; };
+		6E0040991D7F89B3003F93B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E00409E1D7F89B3003F93B1 /* AdobeImageEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdobeImageEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0040A21D7F89B3003F93B1 /* AdobeImageEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeImageEditorUITests.swift; sourceTree = "<group>"; };
+		6E0040A41D7F89B3003F93B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E7668371D8672D200C3124A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6E7668391D8672DC00C3124A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6E76683B1D8672E500C3124A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6E76683D1D8672EE00C3124A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6E76683F1D8672FE00C3124A /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		6E7668411D86730900C3124A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6E7668431D86731100C3124A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6E7668451D86731A00C3124A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6E7668471D86732100C3124A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		6E7668491D86732700C3124A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6E76684B1D8674B200C3124A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6E76684D1D8674C500C3124A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6E76684F1D8676DC00C3124A /* AdobeImageEditor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdobeImageEditor-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E7668551D86802600C3124A /* AdobeCreativeSDKCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKCore.framework; sourceTree = "<group>"; };
+		6E7668561D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdobeCreativeSDKCoreResources.bundle; sourceTree = "<group>"; };
+		6E7668571D86802600C3124A /* AdobeCreativeSDKImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdobeCreativeSDKImage.framework; sourceTree = "<group>"; };
+		6E7668581D86802600C3124A /* AdobeCreativeSDKImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdobeCreativeSDKImageResources.bundle; sourceTree = "<group>"; };
+		6E76685D1D8682E900C3124A /* eat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eat.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E00407C1D7F89B3003F93B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E76684E1D8674C500C3124A /* UIKit.framework in Frameworks */,
+				6E7668591D86802600C3124A /* AdobeCreativeSDKCore.framework in Frameworks */,
+				6E76684C1D8674B200C3124A /* Foundation.framework in Frameworks */,
+				6E76684A1D86732700C3124A /* CoreData.framework in Frameworks */,
+				6E7668481D86732100C3124A /* Accelerate.framework in Frameworks */,
+				6E7668461D86731A00C3124A /* libsqlite3.0.tbd in Frameworks */,
+				6E76685B1D86802600C3124A /* AdobeCreativeSDKImage.framework in Frameworks */,
+				6E7668441D86731100C3124A /* MobileCoreServices.framework in Frameworks */,
+				6E7668421D86730900C3124A /* libc++.tbd in Frameworks */,
+				6E7668401D8672FE00C3124A /* libz.1.2.5.tbd in Frameworks */,
+				6E76683E1D8672EE00C3124A /* StoreKit.framework in Frameworks */,
+				6E76683C1D8672E500C3124A /* QuartzCore.framework in Frameworks */,
+				6E76683A1D8672DC00C3124A /* MessageUI.framework in Frameworks */,
+				6E7668381D8672D200C3124A /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0040901D7F89B3003F93B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E00409B1D7F89B3003F93B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E0040761D7F89B3003F93B1 = {
+			isa = PBXGroup;
+			children = (
+				6E76684D1D8674C500C3124A /* UIKit.framework */,
+				6E76684B1D8674B200C3124A /* Foundation.framework */,
+				6E7668491D86732700C3124A /* CoreData.framework */,
+				6E7668471D86732100C3124A /* Accelerate.framework */,
+				6E7668451D86731A00C3124A /* libsqlite3.0.tbd */,
+				6E7668431D86731100C3124A /* MobileCoreServices.framework */,
+				6E7668411D86730900C3124A /* libc++.tbd */,
+				6E76683F1D8672FE00C3124A /* libz.1.2.5.tbd */,
+				6E76683D1D8672EE00C3124A /* StoreKit.framework */,
+				6E76683B1D8672E500C3124A /* QuartzCore.framework */,
+				6E7668391D8672DC00C3124A /* MessageUI.framework */,
+				6E7668371D8672D200C3124A /* OpenGLES.framework */,
+				6E0040811D7F89B3003F93B1 /* AdobeImageEditor */,
+				6E0040961D7F89B3003F93B1 /* AdobeImageEditorTests */,
+				6E0040A11D7F89B3003F93B1 /* AdobeImageEditorUITests */,
+				6E0040801D7F89B3003F93B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E0040801D7F89B3003F93B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E00407F1D7F89B3003F93B1 /* AdobeImageEditor.app */,
+				6E0040931D7F89B3003F93B1 /* AdobeImageEditorTests.xctest */,
+				6E00409E1D7F89B3003F93B1 /* AdobeImageEditorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E0040811D7F89B3003F93B1 /* AdobeImageEditor */ = {
+			isa = PBXGroup;
+			children = (
+				6E7668551D86802600C3124A /* AdobeCreativeSDKCore.framework */,
+				6E7668561D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle */,
+				6E7668571D86802600C3124A /* AdobeCreativeSDKImage.framework */,
+				6E7668581D86802600C3124A /* AdobeCreativeSDKImageResources.bundle */,
+				6E0040821D7F89B3003F93B1 /* AppDelegate.swift */,
+				6E0040841D7F89B3003F93B1 /* ViewController.swift */,
+				6E0040861D7F89B3003F93B1 /* Main.storyboard */,
+				6E76685D1D8682E900C3124A /* eat.jpg */,
+				6E0040891D7F89B3003F93B1 /* Assets.xcassets */,
+				6E00408B1D7F89B3003F93B1 /* LaunchScreen.storyboard */,
+				6E00408E1D7F89B3003F93B1 /* Info.plist */,
+				6E76684F1D8676DC00C3124A /* AdobeImageEditor-Bridging-Header.h */,
+			);
+			path = AdobeImageEditor;
+			sourceTree = "<group>";
+		};
+		6E0040961D7F89B3003F93B1 /* AdobeImageEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E0040971D7F89B3003F93B1 /* AdobeImageEditorTests.swift */,
+				6E0040991D7F89B3003F93B1 /* Info.plist */,
+			);
+			path = AdobeImageEditorTests;
+			sourceTree = "<group>";
+		};
+		6E0040A11D7F89B3003F93B1 /* AdobeImageEditorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E0040A21D7F89B3003F93B1 /* AdobeImageEditorUITests.swift */,
+				6E0040A41D7F89B3003F93B1 /* Info.plist */,
+			);
+			path = AdobeImageEditorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E00407E1D7F89B3003F93B1 /* AdobeImageEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0040A71D7F89B3003F93B1 /* Build configuration list for PBXNativeTarget "AdobeImageEditor" */;
+			buildPhases = (
+				6E00407B1D7F89B3003F93B1 /* Sources */,
+				6E00407C1D7F89B3003F93B1 /* Frameworks */,
+				6E00407D1D7F89B3003F93B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdobeImageEditor;
+			productName = AdobeImageEditor;
+			productReference = 6E00407F1D7F89B3003F93B1 /* AdobeImageEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E0040921D7F89B3003F93B1 /* AdobeImageEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0040AA1D7F89B3003F93B1 /* Build configuration list for PBXNativeTarget "AdobeImageEditorTests" */;
+			buildPhases = (
+				6E00408F1D7F89B3003F93B1 /* Sources */,
+				6E0040901D7F89B3003F93B1 /* Frameworks */,
+				6E0040911D7F89B3003F93B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E0040951D7F89B3003F93B1 /* PBXTargetDependency */,
+			);
+			name = AdobeImageEditorTests;
+			productName = AdobeImageEditorTests;
+			productReference = 6E0040931D7F89B3003F93B1 /* AdobeImageEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E00409D1D7F89B3003F93B1 /* AdobeImageEditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0040AD1D7F89B3003F93B1 /* Build configuration list for PBXNativeTarget "AdobeImageEditorUITests" */;
+			buildPhases = (
+				6E00409A1D7F89B3003F93B1 /* Sources */,
+				6E00409B1D7F89B3003F93B1 /* Frameworks */,
+				6E00409C1D7F89B3003F93B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E0040A01D7F89B3003F93B1 /* PBXTargetDependency */,
+			);
+			name = AdobeImageEditorUITests;
+			productName = AdobeImageEditorUITests;
+			productReference = 6E00409E1D7F89B3003F93B1 /* AdobeImageEditorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E0040771D7F89B3003F93B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = guanho;
+				TargetAttributes = {
+					6E00407E1D7F89B3003F93B1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8Z7ZELFAQU;
+					};
+					6E0040921D7F89B3003F93B1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8Z7ZELFAQU;
+						TestTargetID = 6E00407E1D7F89B3003F93B1;
+					};
+					6E00409D1D7F89B3003F93B1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8Z7ZELFAQU;
+						TestTargetID = 6E00407E1D7F89B3003F93B1;
+					};
+				};
+			};
+			buildConfigurationList = 6E00407A1D7F89B3003F93B1 /* Build configuration list for PBXProject "AdobeImageEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E0040761D7F89B3003F93B1;
+			productRefGroup = 6E0040801D7F89B3003F93B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E00407E1D7F89B3003F93B1 /* AdobeImageEditor */,
+				6E0040921D7F89B3003F93B1 /* AdobeImageEditorTests */,
+				6E00409D1D7F89B3003F93B1 /* AdobeImageEditorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E00407D1D7F89B3003F93B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E76685E1D8682E900C3124A /* eat.jpg in Resources */,
+				6E76685C1D86802600C3124A /* AdobeCreativeSDKImageResources.bundle in Resources */,
+				6E76685A1D86802600C3124A /* AdobeCreativeSDKCoreResources.bundle in Resources */,
+				6E00408D1D7F89B3003F93B1 /* LaunchScreen.storyboard in Resources */,
+				6E00408A1D7F89B3003F93B1 /* Assets.xcassets in Resources */,
+				6E0040881D7F89B3003F93B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0040911D7F89B3003F93B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E00409C1D7F89B3003F93B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E00407B1D7F89B3003F93B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0040851D7F89B3003F93B1 /* ViewController.swift in Sources */,
+				6E0040831D7F89B3003F93B1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E00408F1D7F89B3003F93B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0040981D7F89B3003F93B1 /* AdobeImageEditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E00409A1D7F89B3003F93B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E0040A31D7F89B3003F93B1 /* AdobeImageEditorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E0040951D7F89B3003F93B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E00407E1D7F89B3003F93B1 /* AdobeImageEditor */;
+			targetProxy = 6E0040941D7F89B3003F93B1 /* PBXContainerItemProxy */;
+		};
+		6E0040A01D7F89B3003F93B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E00407E1D7F89B3003F93B1 /* AdobeImageEditor */;
+			targetProxy = 6E00409F1D7F89B3003F93B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E0040861D7F89B3003F93B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E0040871D7F89B3003F93B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E00408B1D7F89B3003F93B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E00408C1D7F89B3003F93B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E0040A51D7F89B3003F93B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E0040A61D7F89B3003F93B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E0040A81D7F89B3003F93B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdobeImageEditor",
+				);
+				INFOPLIST_FILE = AdobeImageEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.clubful.AdobeImageEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AdobeImageEditor/AdobeImageEditor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E0040A91D7F89B3003F93B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdobeImageEditor",
+				);
+				INFOPLIST_FILE = AdobeImageEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.clubful.AdobeImageEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AdobeImageEditor/AdobeImageEditor-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		6E0040AB1D7F89B3003F93B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AdobeImageEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clubful.AdobeImageEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdobeImageEditor.app/AdobeImageEditor";
+			};
+			name = Debug;
+		};
+		6E0040AC1D7F89B3003F93B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AdobeImageEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clubful.AdobeImageEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdobeImageEditor.app/AdobeImageEditor";
+			};
+			name = Release;
+		};
+		6E0040AE1D7F89B3003F93B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AdobeImageEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clubful.AdobeImageEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AdobeImageEditor;
+			};
+			name = Debug;
+		};
+		6E0040AF1D7F89B3003F93B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AdobeImageEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clubful.AdobeImageEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AdobeImageEditor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E00407A1D7F89B3003F93B1 /* Build configuration list for PBXProject "AdobeImageEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0040A51D7F89B3003F93B1 /* Debug */,
+				6E0040A61D7F89B3003F93B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0040A71D7F89B3003F93B1 /* Build configuration list for PBXNativeTarget "AdobeImageEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0040A81D7F89B3003F93B1 /* Debug */,
+				6E0040A91D7F89B3003F93B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0040AA1D7F89B3003F93B1 /* Build configuration list for PBXNativeTarget "AdobeImageEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0040AB1D7F89B3003F93B1 /* Debug */,
+				6E0040AC1D7F89B3003F93B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0040AD1D7F89B3003F93B1 /* Build configuration list for PBXNativeTarget "AdobeImageEditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0040AE1D7F89B3003F93B1 /* Debug */,
+				6E0040AF1D7F89B3003F93B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E0040771D7F89B3003F93B1 /* Project object */;
+}
