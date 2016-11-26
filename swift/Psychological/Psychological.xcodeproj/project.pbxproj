@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E576C1A1DE85A1900E2B317 /* CardSpark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E576C191DE85A1900E2B317 /* CardSpark.sks */; };
+		6E63C3361DE7256D00A2EA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C3351DE7256D00A2EA8D /* AppDelegate.swift */; };
+		6E63C3381DE7256D00A2EA8D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E63C3371DE7256D00A2EA8D /* GameScene.sks */; };
+		6E63C33A1DE7256D00A2EA8D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E63C3391DE7256D00A2EA8D /* Actions.sks */; };
+		6E63C33C1DE7256D00A2EA8D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C33B1DE7256D00A2EA8D /* GameScene.swift */; };
+		6E63C33E1DE7256D00A2EA8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C33D1DE7256D00A2EA8D /* GameViewController.swift */; };
+		6E63C3411DE7256D00A2EA8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E63C33F1DE7256D00A2EA8D /* Main.storyboard */; };
+		6E63C3431DE7256D00A2EA8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E63C3421DE7256D00A2EA8D /* Assets.xcassets */; };
+		6E63C3461DE7256D00A2EA8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E63C3441DE7256D00A2EA8D /* LaunchScreen.storyboard */; };
+		6E63C3511DE7256E00A2EA8D /* PsychologicalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C3501DE7256E00A2EA8D /* PsychologicalTests.swift */; };
+		6E63C35C1DE7256E00A2EA8D /* PsychologicalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C35B1DE7256E00A2EA8D /* PsychologicalUITests.swift */; };
+		6E63C36A1DE7268100A2EA8D /* CardDisplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6E63C3691DE7268100A2EA8D /* CardDisplayScene.sks */; };
+		6E63C36C1DE7269900A2EA8D /* CardDisplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C36B1DE7269900A2EA8D /* CardDisplayScene.swift */; };
+		6E63C36E1DE7283800A2EA8D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63C36D1DE7283800A2EA8D /* Card.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E63C34D1DE7256E00A2EA8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E63C32A1DE7256D00A2EA8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E63C3311DE7256D00A2EA8D;
+			remoteInfo = Psychological;
+		};
+		6E63C3581DE7256E00A2EA8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E63C32A1DE7256D00A2EA8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E63C3311DE7256D00A2EA8D;
+			remoteInfo = Psychological;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E576C191DE85A1900E2B317 /* CardSpark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CardSpark.sks; sourceTree = "<group>"; };
+		6E63C3321DE7256D00A2EA8D /* Psychological.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychological.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E63C3351DE7256D00A2EA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E63C3371DE7256D00A2EA8D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		6E63C3391DE7256D00A2EA8D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		6E63C33B1DE7256D00A2EA8D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		6E63C33D1DE7256D00A2EA8D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		6E63C3401DE7256D00A2EA8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E63C3421DE7256D00A2EA8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E63C3451DE7256D00A2EA8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E63C3471DE7256D00A2EA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E63C34C1DE7256E00A2EA8D /* PsychologicalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologicalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E63C3501DE7256E00A2EA8D /* PsychologicalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychologicalTests.swift; sourceTree = "<group>"; };
+		6E63C3521DE7256E00A2EA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E63C3571DE7256E00A2EA8D /* PsychologicalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologicalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E63C35B1DE7256E00A2EA8D /* PsychologicalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychologicalUITests.swift; sourceTree = "<group>"; };
+		6E63C35D1DE7256E00A2EA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E63C3691DE7268100A2EA8D /* CardDisplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CardDisplayScene.sks; sourceTree = "<group>"; };
+		6E63C36B1DE7269900A2EA8D /* CardDisplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDisplayScene.swift; sourceTree = "<group>"; };
+		6E63C36D1DE7283800A2EA8D /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E63C32F1DE7256D00A2EA8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E63C3491DE7256E00A2EA8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E63C3541DE7256E00A2EA8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E63C3291DE7256D00A2EA8D = {
+			isa = PBXGroup;
+			children = (
+				6E63C3341DE7256D00A2EA8D /* Psychological */,
+				6E63C34F1DE7256E00A2EA8D /* PsychologicalTests */,
+				6E63C35A1DE7256E00A2EA8D /* PsychologicalUITests */,
+				6E63C3331DE7256D00A2EA8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E63C3331DE7256D00A2EA8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E63C3321DE7256D00A2EA8D /* Psychological.app */,
+				6E63C34C1DE7256E00A2EA8D /* PsychologicalTests.xctest */,
+				6E63C3571DE7256E00A2EA8D /* PsychologicalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E63C3341DE7256D00A2EA8D /* Psychological */ = {
+			isa = PBXGroup;
+			children = (
+				6E63C3351DE7256D00A2EA8D /* AppDelegate.swift */,
+				6E63C3371DE7256D00A2EA8D /* GameScene.sks */,
+				6E63C3391DE7256D00A2EA8D /* Actions.sks */,
+				6E63C33B1DE7256D00A2EA8D /* GameScene.swift */,
+				6E63C33D1DE7256D00A2EA8D /* GameViewController.swift */,
+				6E63C33F1DE7256D00A2EA8D /* Main.storyboard */,
+				6E63C3421DE7256D00A2EA8D /* Assets.xcassets */,
+				6E63C3441DE7256D00A2EA8D /* LaunchScreen.storyboard */,
+				6E63C3471DE7256D00A2EA8D /* Info.plist */,
+				6E63C3691DE7268100A2EA8D /* CardDisplayScene.sks */,
+				6E63C36B1DE7269900A2EA8D /* CardDisplayScene.swift */,
+				6E63C36D1DE7283800A2EA8D /* Card.swift */,
+				6E576C191DE85A1900E2B317 /* CardSpark.sks */,
+			);
+			path = Psychological;
+			sourceTree = "<group>";
+		};
+		6E63C34F1DE7256E00A2EA8D /* PsychologicalTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E63C3501DE7256E00A2EA8D /* PsychologicalTests.swift */,
+				6E63C3521DE7256E00A2EA8D /* Info.plist */,
+			);
+			path = PsychologicalTests;
+			sourceTree = "<group>";
+		};
+		6E63C35A1DE7256E00A2EA8D /* PsychologicalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E63C35B1DE7256E00A2EA8D /* PsychologicalUITests.swift */,
+				6E63C35D1DE7256E00A2EA8D /* Info.plist */,
+			);
+			path = PsychologicalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E63C3311DE7256D00A2EA8D /* Psychological */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E63C3601DE7256E00A2EA8D /* Build configuration list for PBXNativeTarget "Psychological" */;
+			buildPhases = (
+				6E63C32E1DE7256D00A2EA8D /* Sources */,
+				6E63C32F1DE7256D00A2EA8D /* Frameworks */,
+				6E63C3301DE7256D00A2EA8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Psychological;
+			productName = Psychological;
+			productReference = 6E63C3321DE7256D00A2EA8D /* Psychological.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E63C34B1DE7256E00A2EA8D /* PsychologicalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E63C3631DE7256E00A2EA8D /* Build configuration list for PBXNativeTarget "PsychologicalTests" */;
+			buildPhases = (
+				6E63C3481DE7256E00A2EA8D /* Sources */,
+				6E63C3491DE7256E00A2EA8D /* Frameworks */,
+				6E63C34A1DE7256E00A2EA8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E63C34E1DE7256E00A2EA8D /* PBXTargetDependency */,
+			);
+			name = PsychologicalTests;
+			productName = PsychologicalTests;
+			productReference = 6E63C34C1DE7256E00A2EA8D /* PsychologicalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E63C3561DE7256E00A2EA8D /* PsychologicalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E63C3661DE7256E00A2EA8D /* Build configuration list for PBXNativeTarget "PsychologicalUITests" */;
+			buildPhases = (
+				6E63C3531DE7256E00A2EA8D /* Sources */,
+				6E63C3541DE7256E00A2EA8D /* Frameworks */,
+				6E63C3551DE7256E00A2EA8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E63C3591DE7256E00A2EA8D /* PBXTargetDependency */,
+			);
+			name = PsychologicalUITests;
+			productName = PsychologicalUITests;
+			productReference = 6E63C3571DE7256E00A2EA8D /* PsychologicalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E63C32A1DE7256D00A2EA8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = guanho;
+				TargetAttributes = {
+					6E63C3311DE7256D00A2EA8D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 95YHHS8BGP;
+						ProvisioningStyle = Automatic;
+					};
+					6E63C34B1DE7256E00A2EA8D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 95YHHS8BGP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6E63C3311DE7256D00A2EA8D;
+					};
+					6E63C3561DE7256E00A2EA8D = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 95YHHS8BGP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6E63C3311DE7256D00A2EA8D;
+					};
+				};
+			};
+			buildConfigurationList = 6E63C32D1DE7256D00A2EA8D /* Build configuration list for PBXProject "Psychological" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E63C3291DE7256D00A2EA8D;
+			productRefGroup = 6E63C3331DE7256D00A2EA8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E63C3311DE7256D00A2EA8D /* Psychological */,
+				6E63C34B1DE7256E00A2EA8D /* PsychologicalTests */,
+				6E63C3561DE7256E00A2EA8D /* PsychologicalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E63C3301DE7256D00A2EA8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E576C1A1DE85A1900E2B317 /* CardSpark.sks in Resources */,
+				6E63C3411DE7256D00A2EA8D /* Main.storyboard in Resources */,
+				6E63C3381DE7256D00A2EA8D /* GameScene.sks in Resources */,
+				6E63C3431DE7256D00A2EA8D /* Assets.xcassets in Resources */,
+				6E63C36A1DE7268100A2EA8D /* CardDisplayScene.sks in Resources */,
+				6E63C3461DE7256D00A2EA8D /* LaunchScreen.storyboard in Resources */,
+				6E63C33A1DE7256D00A2EA8D /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E63C34A1DE7256E00A2EA8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E63C3551DE7256E00A2EA8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E63C32E1DE7256D00A2EA8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E63C33C1DE7256D00A2EA8D /* GameScene.swift in Sources */,
+				6E63C33E1DE7256D00A2EA8D /* GameViewController.swift in Sources */,
+				6E63C36E1DE7283800A2EA8D /* Card.swift in Sources */,
+				6E63C3361DE7256D00A2EA8D /* AppDelegate.swift in Sources */,
+				6E63C36C1DE7269900A2EA8D /* CardDisplayScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E63C3481DE7256E00A2EA8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E63C3511DE7256E00A2EA8D /* PsychologicalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E63C3531DE7256E00A2EA8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E63C35C1DE7256E00A2EA8D /* PsychologicalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E63C34E1DE7256E00A2EA8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E63C3311DE7256D00A2EA8D /* Psychological */;
+			targetProxy = 6E63C34D1DE7256E00A2EA8D /* PBXContainerItemProxy */;
+		};
+		6E63C3591DE7256E00A2EA8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E63C3311DE7256D00A2EA8D /* Psychological */;
+			targetProxy = 6E63C3581DE7256E00A2EA8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E63C33F1DE7256D00A2EA8D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E63C3401DE7256D00A2EA8D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E63C3441DE7256D00A2EA8D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E63C3451DE7256D00A2EA8D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E63C35E1DE7256E00A2EA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E63C35F1DE7256E00A2EA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E63C3611DE7256E00A2EA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				INFOPLIST_FILE = Psychological/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.decube.test.Psychological;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6E63C3621DE7256E00A2EA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				INFOPLIST_FILE = Psychological/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.decube.test.Psychological;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6E63C3641DE7256E00A2EA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				INFOPLIST_FILE = PsychologicalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.decube.test.PsychologicalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psychological.app/Psychological";
+			};
+			name = Debug;
+		};
+		6E63C3651DE7256E00A2EA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				INFOPLIST_FILE = PsychologicalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.decube.test.PsychologicalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psychological.app/Psychological";
+			};
+			name = Release;
+		};
+		6E63C3671DE7256E00A2EA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				INFOPLIST_FILE = PsychologicalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.decube.test.PsychologicalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Psychological;
+			};
+			name = Debug;
+		};
+		6E63C3681DE7256E00A2EA8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				INFOPLIST_FILE = PsychologicalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.decube.test.PsychologicalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Psychological;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E63C32D1DE7256D00A2EA8D /* Build configuration list for PBXProject "Psychological" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E63C35E1DE7256E00A2EA8D /* Debug */,
+				6E63C35F1DE7256E00A2EA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E63C3601DE7256E00A2EA8D /* Build configuration list for PBXNativeTarget "Psychological" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E63C3611DE7256E00A2EA8D /* Debug */,
+				6E63C3621DE7256E00A2EA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E63C3631DE7256E00A2EA8D /* Build configuration list for PBXNativeTarget "PsychologicalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E63C3641DE7256E00A2EA8D /* Debug */,
+				6E63C3651DE7256E00A2EA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E63C3661DE7256E00A2EA8D /* Build configuration list for PBXNativeTarget "PsychologicalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E63C3671DE7256E00A2EA8D /* Debug */,
+				6E63C3681DE7256E00A2EA8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E63C32A1DE7256D00A2EA8D /* Project object */;
+}
