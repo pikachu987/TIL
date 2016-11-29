@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ApplyEffect.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Photo.xcscheme</key>
+		<key>ForceTouch.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -17,22 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6E576C5F1DE87E4C00E2B317</key>
+		<key>6E94CF1D1DEC4CE700B5F2B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E576C731DE87E4C00E2B317</key>
+		<key>6E94CF311DEC4CE700B5F2B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E576C7E1DE87E4C00E2B317</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E94CF001DEC49AF00B5F2B9</key>
+		<key>6E94CF3C1DEC4CE700B5F2B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

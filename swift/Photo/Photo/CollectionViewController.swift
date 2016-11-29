@@ -13,13 +13,13 @@ class CollectionViewController: UICollectionViewController {
     let reuseIdentifier = "ImageCell"
     
     var assetsFetchResults: PHFetchResult<PHAsset> = PHFetchResult<PHAsset>()
-    var imageManager: PHCachingImageManager!
+    var imageManger: PHCachingImageManager!
     
     override func viewDidLoad() {
-        PHPhotoLibrary.requestAuthorization { (status) in
-            switch status{
+        PHPhotoLibrary.requestAuthorization() {
+            (status) in switch status {
             case .authorized:
-                self.imageManager = PHCachingImageManager()
+                self.imageManger = PHCachingImageManager()
                 let options = PHFetchOptions()
                 options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
                 self.assetsFetchResults = PHAsset.fetchAssets(with: options)
@@ -39,11 +39,9 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
         let asset: PHAsset = self.assetsFetchResults[indexPath.item]
-        self.imageManager.requestImage(for: asset, targetSize: cell.frame.size, contentMode: PHImageContentMode.aspectFit, options: nil, resultHandler: {(result: UIImage?, info: [AnyHashable: Any]?) in
-            cell.imageView.image = result
-        })
+        self.imageManger.requestImage(for: asset, targetSize: cell.frame.size, contentMode: PHImageContentMode.aspectFit, options: nil, resultHandler: { (result:UIImage?, info: [AnyHashable:Any]?) in cell.imageView.image = result})
         
         return cell
     }
