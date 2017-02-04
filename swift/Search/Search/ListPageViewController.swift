@@ -15,11 +15,10 @@ import UIKit
 
 class ListPageViewController: UIPageViewController{
     weak var pageViewDelegate: ListPageViewControllerDelegate?
-    let storyBoard = "Main"
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
-        return [self.newViewController("searchVC"),
-                self.newViewController("heartVC")]
+        return [self.newViewController("searchVC", storyBoard: "Search"),
+                self.newViewController("heartVC", storyBoard: "Heart")]
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +48,8 @@ class ListPageViewController: UIPageViewController{
         }
     }
     
-    fileprivate func newViewController(_ id: String) -> UIViewController {
-        return UIStoryboard(name: self.storyBoard, bundle: nil).instantiateViewController(withIdentifier: "\(id)")
+    fileprivate func newViewController(_ id: String, storyBoard: String) -> UIViewController {
+        return UIStoryboard(name: storyBoard, bundle: nil).instantiateViewController(withIdentifier: "\(id)")
     }
     
     fileprivate func scrollToViewController(_ viewController: UIViewController, direction: UIPageViewControllerNavigationDirection = .forward) {

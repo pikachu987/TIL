@@ -48,7 +48,7 @@ class SearchViewController: UIViewController {
     var heartOff = UIImage(named: "ic_heart_off")
     
     
-    
+    let interactor = Interactor()
     
     
     
@@ -83,8 +83,15 @@ class SearchViewController: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? ShopViewController {
+            destinationViewController.transitioningDelegate = self
+            destinationViewController.interactor = interactor
+        }
+    }
+    
     @IBAction func menuAction(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "showShop", sender: nil)
     }
     
     
@@ -576,5 +583,23 @@ extension SearchViewController: HeartDelegate{
             }
             idx += 1
         }
+    }
+}
+
+
+
+
+extension SearchViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentMenuAnimator(direction: Direction.right, snapshotNumber: NavHelper.snapshotNumber, menuWidth: NavHelper.menuWidth)
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissMenuAnimator(snapshotNumber: NavHelper.snapshotNumber)
+    }
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted ? interactor : nil
+    }
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted ? interactor : nil
     }
 }
