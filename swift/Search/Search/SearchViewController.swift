@@ -9,20 +9,20 @@
 import UIKit
 import PKCUtil
 import Kanna
-
-enum Sort{
-    case rel
-    case price_asc
-    case price_dsc
-    case date
-    case review
-}
-
-enum ListType{
-    case table, collection
-}
+import CoreData
 
 class SearchViewController: UIViewController {
+    enum Sort{
+        case rel
+        case price_asc
+        case price_dsc
+        case date
+        case review
+    }
+    enum ListType{
+        case table, collection
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var listType: UIButton!
@@ -32,6 +32,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var sortBottomCont: NSLayoutConstraint!
     @IBOutlet weak var listTypeRightCont: NSLayoutConstraint!
     @IBOutlet weak var listTypeBottomCont: NSLayoutConstraint!
+    
+    var appDelegate: AppDelegate?
+    var managedContext: NSManagedObjectContext?
     
     lazy var goodsArray: [GoodsVO] = [GoodsVO]()
     var search = ""
@@ -43,9 +46,18 @@ class SearchViewController: UIViewController {
     var isTouch = true
     var heartOn = UIImage(named: "ic_heart_on")
     var heartOff = UIImage(named: "ic_heart_off")
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.keyboardHide(_:))))
+        
+        self.appDelegate = UIApplication.shared.delegate as? AppDelegate
+        self.managedContext = self.appDelegate?.persistentContainer.viewContext
         
         self.spin.isHidden = false
         self.spin.startAnimating()
@@ -66,7 +78,9 @@ class SearchViewController: UIViewController {
             self.collectionView.isHidden = false
         }
     }
-    
+    func keyboardHide(_ sender: AnyObject){
+        self.view.endEditing(true)
+    }
     
     
     @IBAction func menuAction(_ sender: UIButton) {
@@ -137,6 +151,13 @@ class SearchViewController: UIViewController {
     
     
     
+    
+    
+    
+    
+    
+    
+    
     @IBAction func sortDownAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let touch = event.touches(for: sender)?.first {
             self.touchPoint = touch.previousLocation(in: self.view)
@@ -186,6 +207,15 @@ class SearchViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func resultHtml(_ str: String){
         if str.characters.count == 0{
             return
@@ -211,13 +241,25 @@ class SearchViewController: UIViewController {
                     let element_imgarea = element.css("div.img_area")
                     let element_info = element.css("div.info")
                     
-                    let imgarea_url = element_imgarea.first?.css("a.img").first?["href"]
+                    var imgarea_url = nilTest(element_imgarea.first?.css("a.img").first?["href"])
                     let imgarea_img = element_imgarea.first?.css("a.img").first?.xpath("img").first?["data-original"]
                     let info_title = element_info.first?.css("a.tit").first?.content
-                    let info_price = element_info.first?.css("span.price").first?.xpath("em").first?.xpath("span").first?.content
+                    var info_price = nilTest(element_info.first?.css("span.price").first?.xpath("em").first?.xpath("span").first?.content)
                     let info_date = element_info.first?.css("span.etc").first?.css("span.date").first?.content
                     
-                    let goodsVO = GoodsVO(img: nilTest(imgarea_img), title: nilTest(info_title), price: nilTest(info_price), date: nilTest(info_date), detailUrl: nilTest(imgarea_url))
+                    if !imgarea_url.contains("http"){
+                        if imgarea_url.substring(to: imgarea_url.index(imgarea_url.startIndex, offsetBy: 2)) == "//"{
+                            imgarea_url = "http:\(imgarea_url)"
+                        }else{
+                            imgarea_url = "http://m.shopping.naver.com\(imgarea_url)"
+                        }
+                    }
+                    if info_price == "모바일가격"{
+                        info_price = nilTest(element_info.first?.css("span.price").first?.xpath("em").first?.css("span.num").first?.content)
+                    }
+                    
+                    var goodsVO = GoodsVO(img: nilTest(imgarea_img), title: nilTest(info_title), price: info_price, date: nilTest(info_date), detailUrl: imgarea_url)
+                    goodsVO.isHeart = self.isHeart(goodsVO)
                     self.goodsArray.append(goodsVO)
                 }
                 DispatchQueue.main.async {
@@ -230,11 +272,83 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func keyboardHide(_ sender: AnyObject){
-        self.view.endEditing(true)
+    
+    
+    func isHeart(_ goodsVO: GoodsVO) -> Bool{
+        if self.managedContext != nil{
+            let fetchRequest = NSFetchRequest<Goods>(entityName: "Goods")
+            do{
+                guard let goodsArray = try self.managedContext?.fetch(fetchRequest) else{
+                    return false
+                }
+                for goods in goodsArray{
+                    if goods.detail == goodsVO.detailUrl{
+                        return true
+                    }else if goods.title == goodsVO.title && goods.image == goodsVO.imageUrl && goods.price == goodsVO.price{
+                        return true
+                    }
+                }
+            }catch let error as NSError{
+                print("err : \(error)")
+            }
+        }
+        return false
     }
     
+    
+    
+    func heartOnAction(_ goodsVO: GoodsVO){
+        if self.managedContext != nil{
+            guard let entity = NSEntityDescription.entity(forEntityName: "Goods", in: managedContext!) else{
+                return
+            }
+            let goods = Goods(entity: entity, insertInto: managedContext)
+            goods.image = goodsVO.imageUrl
+            goods.title = goodsVO.title
+            goods.price = goodsVO.price
+            goods.date = goodsVO.date
+            goods.detail = goodsVO.detailUrl
+            goods.saveDT = NSDate()
+            do{
+                try managedContext?.save()
+            }catch let error as NSError{
+                print("err : \(error)")
+            }
+        }
+    }
+    
+    
+    
+    func heartOffAction(_ goodsVO: GoodsVO){
+        if self.managedContext != nil{
+            let fetchRequest = NSFetchRequest<Goods>(entityName: "Goods")
+            do{
+                guard let goodsArray = try self.managedContext?.fetch(fetchRequest) else{
+                    return
+                }
+                for goods in goodsArray{
+                    if goods.detail == goodsVO.detailUrl{
+                        self.managedContext?.delete(goods)
+                    }else if goods.title == goodsVO.title && goods.image == goodsVO.imageUrl && goods.price == goodsVO.price{
+                        self.managedContext?.delete(goods)
+                    }
+                }
+            }catch let error as NSError{
+                print("err : \(error)")
+            }
+        }
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
 
 extension SearchViewController: UITableViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -251,6 +365,15 @@ extension SearchViewController: UITableViewDelegate{
         }
     }
 }
+
+
+
+
+
+
+
+
+
 extension SearchViewController: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -286,6 +409,15 @@ extension SearchViewController: UITableViewDataSource{
         return cell
     }
 }
+
+
+
+
+
+
+
+
+
 extension SearchViewController: UICollectionViewDelegate{
     
 }
@@ -327,6 +459,16 @@ extension SearchViewController: UICollectionViewDataSource{
         return cell
     }
 }
+
+
+
+
+
+
+
+
+
+
 extension SearchViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text?.characters.count != 0{
@@ -344,12 +486,35 @@ extension SearchViewController: UITextFieldDelegate{
     }
 }
 
+
+
+
+
+
+
+
+
+
 extension SearchViewController: SearchDelegate{
     func searchTableViewAction(_ cell: UITableViewCell) {
-        
+        if let indexPath = self.tableView.indexPath(for: cell){
+            let url = self.goodsArray[indexPath.row].detailUrl
+            if #available(iOS 8.0, *) {
+                UIApplication.shared.openURL(NSURL(string: url) as! URL)
+            }else{
+                UIApplication.shared.open(NSURL(string: url) as! URL, options: [:], completionHandler: nil)
+            }
+        }
     }
     func searchCollectionViewAction(_ cell: UICollectionViewCell) {
-        
+        if let indexPath = self.collectionView.indexPath(for: cell){
+            let url = self.goodsArray[indexPath.row].detailUrl
+            if #available(iOS 8.0, *) {
+                UIApplication.shared.openURL(NSURL(string: url) as! URL)
+            }else{
+                UIApplication.shared.open(NSURL(string: url) as! URL, options: [:], completionHandler: nil)
+            }
+        }
     }
     func searchTableHeartAction(_ cell: UITableViewCell, btn: UIButton) {
         if let indexPath = self.tableView.indexPath(for: cell){
@@ -370,6 +535,11 @@ extension SearchViewController: SearchDelegate{
         self.goodsArray[indexPath.row].isHeart = !self.goodsArray[indexPath.row].isHeart
         let row = self.goodsArray[indexPath.row]
         handle()
+        if row.isHeart == true{
+            self.heartOnAction(row)
+        }else{
+            self.heartOffAction(row)
+        }
         UIView.animate(withDuration: 0.2, animations: {
             btn.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         }) { (_) in
@@ -385,6 +555,26 @@ extension SearchViewController: SearchDelegate{
                     btn.transform = CGAffineTransform(scaleX: 1, y: 1)
                 })
             }
+        }
+    }
+}
+
+
+
+extension SearchViewController: HeartDelegate{
+    func heartOff(_ goods: GoodsVO) {
+        var idx = 0
+        for goodsVO in self.goodsArray{
+            if goods.detailUrl == goodsVO.detailUrl{
+                self.goodsArray[idx].isHeart = false
+                self.tableView.reloadData()
+                self.collectionView.reloadData()
+            }else if goods.title == goodsVO.title && goods.imageUrl == goodsVO.imageUrl && goods.price == goodsVO.price{
+                self.goodsArray[idx].isHeart = false
+                self.tableView.reloadData()
+                self.collectionView.reloadData()
+            }
+            idx += 1
         }
     }
 }

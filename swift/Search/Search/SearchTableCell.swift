@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol SearchDelegate {
-    func searchTableViewAction(_ cell: UITableViewCell)
-    func searchCollectionViewAction(_ cell: UICollectionViewCell)
-    func searchTableHeartAction(_ cell: UITableViewCell, btn: UIButton)
-    func searchCollectionHeartAction(_ cell: UICollectionViewCell, btn: UIButton)
+@objc protocol SearchDelegate {
+    @objc optional func searchTableViewAction(_ cell: UITableViewCell)
+    @objc optional func searchCollectionViewAction(_ cell: UICollectionViewCell)
+    @objc optional func searchTableHeartAction(_ cell: UITableViewCell, btn: UIButton)
+    @objc optional func searchCollectionHeartAction(_ cell: UICollectionViewCell, btn: UIButton)
 }
 
 class SearchTableCell: UITableViewCell {
@@ -34,9 +34,9 @@ class SearchTableCell: UITableViewCell {
         self.date.text = ""
     }
     @IBAction func viewAction(_ sender: UIButton) {
-        self.delegate?.searchTableViewAction(self)
+        self.delegate?.searchTableViewAction?(self)
     }
     @IBAction func heartAction(_ sender: UIButton) {
-        self.delegate?.searchTableHeartAction(self, btn: sender)
+        self.delegate?.searchTableHeartAction?(self, btn: sender)
     }
 }

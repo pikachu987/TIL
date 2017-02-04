@@ -27,6 +27,9 @@ class ListPageViewController: UIPageViewController{
         if let initialViewController = orderedViewControllers.first {
             scrollToViewController(initialViewController)
         }
+        if let searchVC = self.orderedViewControllers[0] as? SearchViewController, let heartVC = self.orderedViewControllers[1] as? HeartViewController{
+            heartVC.delegate = searchVC
+        }
         self.pageViewDelegate?.pageViewController?(self, didUpdatePageCount: orderedViewControllers.count)
     }
     

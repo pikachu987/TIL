@@ -15,6 +15,7 @@ struct GoodsVO {
     var price: String
     var date: String
     var detailUrl: String
+    var saveDT: String
     var isHeart: Bool = false
     
     init(img: String, title: String, price: String, date: String, detailUrl: String) {
@@ -23,5 +24,15 @@ struct GoodsVO {
         self.price = price
         self.date = date
         self.detailUrl = detailUrl
+        self.saveDT = ""
+    }
+    
+    init(img: String, title: String, price: String, date: String, detailUrl: String, saveDT: String) {
+        self.imageUrl = img
+        self.title = title
+        self.price = price
+        self.date = date
+        self.detailUrl = detailUrl
+        self.saveDT = saveDT
     }
 }
