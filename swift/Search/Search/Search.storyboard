@@ -319,26 +319,6 @@
                                     <outlet property="delegate" destination="5g5-G1-tTV" id="h7f-xZ-gis"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I13-qy-1Tp">
-                                <rect key="frame" x="315" y="537" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mWx-z5-Zz7"/>
-                                    <constraint firstAttribute="width" constant="50" id="uNs-gK-8dA"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" image="ic_collection"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="listTypeAction:forEvent:" destination="5g5-G1-tTV" eventType="touchUpInside" id="rtg-KP-tDU"/>
-                                    <action selector="listTypeDownAction:forEvent:" destination="5g5-G1-tTV" eventType="touchDown" id="gGt-L1-l3j"/>
-                                    <action selector="listTypeDragAction:forEvent:" destination="5g5-G1-tTV" eventType="touchDragInside" id="LPx-An-9Ja"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-Rc-3U0">
                                 <rect key="frame" x="10" y="537" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -357,6 +337,26 @@
                                     <action selector="sortAction:forEvent:" destination="5g5-G1-tTV" eventType="touchUpInside" id="Tf1-f8-eOr"/>
                                     <action selector="sortDownAction:forEvent:" destination="5g5-G1-tTV" eventType="touchDown" id="2fu-tB-uc2"/>
                                     <action selector="sortDragAction:forEvent:" destination="5g5-G1-tTV" eventType="touchDragInside" id="hjc-Yc-mqt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I13-qy-1Tp">
+                                <rect key="frame" x="315" y="537" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mWx-z5-Zz7"/>
+                                    <constraint firstAttribute="width" constant="50" id="uNs-gK-8dA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="ic_collection"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="listTypeAction:forEvent:" destination="5g5-G1-tTV" eventType="touchUpInside" id="rtg-KP-tDU"/>
+                                    <action selector="listTypeDownAction:forEvent:" destination="5g5-G1-tTV" eventType="touchDown" id="gGt-L1-l3j"/>
+                                    <action selector="listTypeDragAction:forEvent:" destination="5g5-G1-tTV" eventType="touchDragInside" id="LPx-An-9Ja"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mAJ-im-pn2">
@@ -468,7 +468,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="300" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Is-dJ-jv1" id="2KX-dh-Aai">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="49.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbC-gE-xAz">

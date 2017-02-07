@@ -168,14 +168,14 @@ class SearchViewController: UIViewController {
     @IBAction func sortDownAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let touch = event.touches(for: sender)?.first {
             self.touchPoint = touch.previousLocation(in: self.view)
-            self.isTouch = true
         }
+        self.isTouch = true
     }
     @IBAction func listTypeDownAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let touch = event.touches(for: sender)?.first {
             self.touchPoint = touch.previousLocation(in: self.view)
-            self.isTouch = true
         }
+        self.isTouch = true
     }
     @IBAction func sortDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let touch = event.touches(for: sender)?.first {
@@ -183,6 +183,9 @@ class SearchViewController: UIViewController {
                 return
             }
             let point : CGPoint = touch.previousLocation(in: self.view)
+            if self.touchPoint.x == point.x && self.touchPoint.y == point.y{
+                return
+            }
             let addWidth = self.touchPoint.x - point.x
             let addHeight = self.touchPoint.y - point.y
             self.sortLeftCont.constant = self.sortLeftCont.constant-addWidth
@@ -201,6 +204,9 @@ class SearchViewController: UIViewController {
                 return
             }
             let point : CGPoint = touch.previousLocation(in: self.view)
+            if self.touchPoint.x == point.x && self.touchPoint.y == point.y{
+                return
+            }
             let addWidth = self.touchPoint.x - point.x
             let addHeight = self.touchPoint.y - point.y
             self.listTypeRightCont.constant = self.listTypeRightCont.constant+addWidth
