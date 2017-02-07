@@ -14,18 +14,18 @@
 
 ## swift3에서 변경된 사항들
 
-##### NS Prefix 없어짐
+#### NS Prefix 없어짐
 
 > NS는 NextStep의 약자. 스티브 잡스가 깊게 관여한 macOS의 전신인 OS X의 전신인 MacOS전신... 의 OS의 이름이라고 함
 
-##### 싱글톤 변화
+#### 싱글톤 변화
 싱글톤 팩토리가 이름이 축약되고 프로퍼티 형식이됨.
 NSBundle.mainBundle() -> Bumdle.main
 
-##### 열거형 변화
+#### 열거형 변화
 case이름이 전부 소문자로 바뀜
 
-##### C함수들 변화
+#### C함수들 변화
 
 ````
 dispatch_async(dispatch_get_main_queue()) { ... }
@@ -39,7 +39,7 @@ DispatchQueue.main.async { ... }
 
 이렇게 변했다.
 
-##### Access Control
+#### Access Control
 
 기존에는 public, internal, private가
 public, open, internal, private, fileprivate로 바뀜
@@ -49,13 +49,13 @@ public, open, internal, private, fileprivate로 바뀜
 <https://github.com/pikachu987/TIL/tree/master/swift>
 
 
-##### 반환값
+#### 반환값
 
 `` _ = vc.navigationController?.popViewController(animated: true) ``
 
 이렇게 `` _ = ``라는 반환값을 안써주면 경고를 낸다.
 
-##### 탈출클로져
+#### 탈출클로져
 
 ![](escape.png)
 
@@ -98,7 +98,7 @@ let numberArray = [2, 3, 4, 6, 8, 9]
 let newNumbers = numberArray.filter({ $0 % 2 != 0})
 ````
 
-### reduce
+## reduce
 
 리듀스는 컨테이너 내부의 콘텐츠를 하나로 합쳐주는 기능
 
@@ -142,7 +142,7 @@ options:
 
 ## autolayout
 
-##### priority: 높은 priority 값부터 동작함
+#### priority: 높은 priority 값부터 동작함
 
 휴대폰의 화면 해상도가 기기마다 달라서 우선순위를 지정한다.
 
@@ -158,7 +158,7 @@ options:
 
 1번 Label에 1000보다 낮은값(ex 750)을 주면 2번 Label에 지정한 width가 먼저 나오고 1번 Label은 화면크기에 맞춰서 된다.
 
-##### multiplier: 상대적인 비율로 크기를 결정할 수 있다.
+#### multiplier: 상대적인 비율로 크기를 결정할 수 있다.
 
 다양한 슈퍼 뷰의 크기에 대응하기 위한 레이아웃이므로 비율을 통해 레이아웃을 설정해야 하는 경우 사용을 한다.
 
